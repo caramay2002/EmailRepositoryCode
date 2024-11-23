@@ -1,0 +1,26 @@
+﻿<%@ Register TagPrefix="hc" Namespace="Hero.Common.Controls" Assembly="App_Code" %>
+<%@ Register TagPrefix="hc" Namespace="Hero.Membership.Controls" Assembly="App_Code" %>
+
+<hc:Button CssClass="btn" runat="server" />
+<hc:Dialog ButtonCssClass="btn" runat="server" />
+
+<asp:Image SkinID="Badge" CssClass="badge fixie" ImageUrl="~/App_Themes/Gray/Images/badge.png" AlternateText="" Width="125px" Height="125px" runat="server" />
+<asp:Image SkinID="Logo" ImageUrl="~/App_Themes/Gray/Images/logo.gif" AlternateText="" runat="server" />
+<asp:ImageButton SkinID="CalendarButton" ImageUrl="~/App_Themes/Gray/Images/Calendar.png" runat="server" />
+<asp:TextBox CssClass="text" runat="server" />
+<asp:ValidationSummary CssClass="vs" ForeColor="" BackColor="" DisplayMode="BulletList" runat="server" />
+
+<asp:GridView CssClass="gv" GridLines="None" AutoGenerateColumns="false" runat="server">
+  <RowStyle CssClass="gvr" />
+  <HeaderStyle CssClass="gvhr" />
+  <AlternatingRowStyle CssClass="gvar" />
+  <SelectedRowStyle CssClass="gvsr" />
+  <EmptyDataRowStyle CssClass="gvedrs" />
+  <PagerStyle CssClass="gvpr" />
+</asp:GridView>
+
+<asp:DetailsView CssClass="dv" GridLines="None" AutoGenerateRows="false" runat="server">
+  <FieldHeaderStyle CssClass="dvh" />
+  <RowStyle CssClass="dvr" />
+  <AlternatingRowStyle CssClass="dvar" />
+</asp:DetailsView>

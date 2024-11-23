@@ -1,0 +1,157 @@
+﻿@model StaffandTrain.Models.ContactDetails
+
+@{
+    ViewBag.Title = "AddUpdateContact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="container main-ctn">
+    @if (User.IsInRole("Admin"))
+    {
+    <h1 class="title">Prospect Add/Edit Contacts (Admin) </h1>
+    }
+    else
+    {
+        <h1 class="title">Prospect Add/Edit Contacts (Recruiter) </h1>
+    }
+
+    <h3> @ViewBag.compname</h3>
+     
+    @if (@ViewBag.Message != null && @ViewBag.Message == "User Saved" || @ViewBag.Message == "User Updated")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+    @using (Html.BeginForm("SaveContact", "ProspectViewCompany", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="admin-form">
+            <div class="admin-ctn">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Name</label>
+                        @Html.TextBoxFor(x => x.contactfullname, new { name = "ddlcity", @class = "form-control", id = "txtname" ,placeholder="Name" })
+                        @*@Html.DropDownListFor(x => x.citycircle, ViewBag.citycircle as SelectList,new { name = "ddlcity", @class = "form-control", id = "ddlcity" })*@
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Title</label>
+                        @Html.DropDownListFor(x => x.titlestandard, (IEnumerable<SelectListItem>)ViewData["Titlelist"], "Select Title", new { name = "ddltitle", @class = "form-control", id = "ddltitle" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Cell Phone </label>
+
+                        @Html.TextBoxFor(x => x.contactcellphone, new { id = "txtphone", @placeholder = "Phone", @class = "form-control", @maxlength = "20" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Email </label>
+
+                        @Html.TextBoxFor(x => x.contactemail, new { id = "txtemail", @placeholder = "Email", @class = "form-control", @maxlength = "100" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+
+                    <div class="col-sm-12 form-group">
+                        <label>Linked In Url </label>
+
+                        @Html.TextBoxFor(x => x.linkedinprofileurl, new { id = "txtlinkedinurl", @placeholder = "Linked In Url", @class = "form-control", @maxlength = "300" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-12 form-group form-group1">
+                        <label> Combined Notes </label>
+
+                        @Html.TextAreaFor(x => x.combinednotes, new { id = "txtcombined", @placeholder = "Combined Notes", @class = "form-control1 form-control text_area", @rows = "10", @cols = "50" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                      
+                    <input type="hidden" id="hdnlistid" value="@Model.listid" />
+                    <input type="hidden" id="hdnlistid" value="@Model.companyid" name="txtcompid" />
+                    <input type="hidden" id="hdnlistid" value="@Model.contactid" name="txtconid" />
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 form-group">
+                        <hr>
+                        @if (Model.contactid == 0)
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Save Contact</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Update Contact</button>
+                        }
+
+                        @*<a href="/ProspectViewList/Index?listid=@Model.listid&lstname=@Model.listname" class="btn btn-success" id="lnkcreatedata">Back to list </a>*@
+
+                    </div>
+                    <div style="display:none">
+                        @Html.TextBoxFor(x => x.contactid, new { id = "txtcontactid" })
+                        @Html.TextBoxFor(x => x.listid, new { id = "txtlistid" })
+                        @Html.TextBoxFor(x => x.companyid, new { id = "txtcompid" })
+                    </div>
+                </div>
+            </div> <!--end admin-form-->
+
+        </div>
+    }
+</div>
+<script src="~/Custom_JS/ProspectViewCompany_AddUpdatecontact.js" defer></script>
+<script type="text/javascript">
+    //$(document).ready(function () {
+
+
+
+    //    $("#btnsave").click(function () {
+    //        $(".validateTips").html("");
+    //        if ($("#txtname").val().trim() == "") {
+    //            $('#txtname').nextAll(".validateTips:first").html("Enter Name");
+    //            return false;
+    //        }
+    //        //if ($("#txtemail").val().trim() == "") {
+    //        //    $('#txtemail').nextAll(".validateTips:first").html("Enter Email");
+    //        //    return false;
+    //        //}
+    //        if ($("#txtemail").val().trim() != "") {
+    //            if (!validateEmail($("#txtemail").val().trim())) {
+    //                $('#txtemail').nextAll(".validateTips:first").html("Invalid Email");
+    //                return false;
+    //            }
+
+    //        }
+    //        if ($("#txtlinkedinurl").val().trim() != "") {
+
+
+    //            var url = new RegExp('^(http|https|www)://.*$');
+
+    //            if (!url.test($("#txtlinkedinurl").val())) {
+    //                $('#txtlinkedinurl').nextAll(".validateTips:first").html("Enter Valid Url");
+    //                return false;
+    //            }
+               
+               
+    //        }
+
+
+
+
+    //    });
+    //});
+    //function validateEmail(Email) {
+    //    var filter = /^([\w-\.]+)@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    //    if (!filter.test(Email)) {
+    //        return false;
+    //    }
+    //    else {
+    //        return true;
+    //    }
+    //}
+
+
+     </script>

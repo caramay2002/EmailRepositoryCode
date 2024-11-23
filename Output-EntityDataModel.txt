@@ -1,0 +1,11 @@
+﻿The model was generated with warnings or errors.SATConn.edmxPlease see the Error List for more details. These issues must be fixed before running your application.
+Loading metadata from the database took 00:00:03.1027584.
+Generating the model took 00:00:10.5533362.
+Added the connection string to the Web.Config file.
+Writing the .edmx file took 00:00:00.0146842.
+The model was generated with warnings or errors.SATConn.edmxPlease see the Error List for more details. These issues must be fixed before running your application.
+Loading metadata from the database took 00:00:02.5719344.
+Generating the model took 00:00:12.6433744.
+The model was generated with warnings or errors.SATConn.edmxPlease see the Error List for more details. These issues must be fixed before running your application.
+Loading metadata from the database took 00:00:02.8220189.
+Generating the model took 00:00:12.8224549.

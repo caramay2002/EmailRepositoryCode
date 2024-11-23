@@ -1,0 +1,114 @@
+﻿@model StaffandTrain.Models.EmailTemplate
+@{
+    ViewBag.Title = "SaveEmailtemplate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<script src="~/ckeditor/ckeditor.js"></script>*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" defer></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js" defer></script>
+<script src="~/Custom_JS/EmailTep_SaveEmailTemp_JS.js" defer></script>
+<script>
+  @*Added by ST*@
+    //$(function () {
+
+    //    $('.summernote').summernote({
+    //        height: 400,                 // set editor height
+    //        minHeight: 350,             // set minimum height of editor
+    //        maxHeight: null,             // set maximum  height of editor
+    //        onblur: function (e) {
+    //            $('#message').html($('.summernote').code());
+    //        },
+
+    //    });
+    //});
+</script>
+<style>
+    .note-popover .popover-content .dropdown-menu, .card-header.note-toolbar .dropdown-menu {
+        min-width: 41px !important;
+    }
+
+    .note-editable u, .note-editable ul {
+        text-decoration: underline !important;
+    }
+</style>
+<div class="container main-ctn">
+    <h1 class="title">Add/Edit Email Template</h1>
+
+    @if (@ViewBag.Message != null && @ViewBag.Message == "Record Saved" || @ViewBag.Message == "Record Updated")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+    @using (Html.BeginForm("AddeditEmailtemplate", "EmailTemplate", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="admin-form" style="max-width: 820px">
+            <div class="admin-ctn">
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label>Template Name</label>
+                        @Html.TextBoxFor(x => x.TemplateName, new { id = "txttemplatename", @placeholder = "Template Name", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label>Subject</label>
+                        @Html.TextBoxFor(x => x.Subject, new { id = "txtSubject", @placeholder = "Subject", @class = "form-control", })
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-12 form-group">
+                        <label>Grouping Number</label>
+                        @Html.TextBoxFor(x => x.GroupingNumber, new { id = "txtGroupingNumber", @placeholder = "Grouping Number", @class = "form-control", })
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-12 form-group form-group1 ">
+                        <label>Template Body</label>
+                        @Html.TextAreaFor(x => x.EmailBody, new { @class = "ckeditor", @id = "CKEditorContent" })
+                        @*Html.TextAreaFor(x => (x.EmailBody), new { @class = "summernote", @id = "message", @maxlength = "2500", name = "sampleEditor" })*@
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 form-group">
+                        <hr>
+                        @if (Model.TemplateId == 0)
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Save Email Template</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Update Email Template</button>
+                        }
+                        <a href="/EmailTemplate/Index" class="btn btn-success" id="lnkcreatedata">Back to list</a>
+                    </div>
+                    <div style="display:none">
+                        @Html.TextBoxFor(x => x.TemplateId, new { id = "txttemplateid" })
+                        @Html.TextBoxFor(x => x.TemplateIdDecrypt, new { id = "txttemplateiddecrypt" })
+                    </div>
+                </div>
+            </div> <!--end admin-form-->
+
+        </div>
+    }
+</div>
+<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('CKEditorContent', {
+        toolbar: [
+            {
+                name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Image', 'Link', 'Table', 'HorizontalRule',
+                    'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter',
+                    'JustifyRight', 'JustifyBlock', 'Maximize', 'Format', 'Font', 'FontSize']
+            }
+        ],
+
+
+    });
+</script>
+<style>
+    a.cke_button[href="javascript:void('Image')"] {
+        display: none;
+    }
+</style>

@@ -1,0 +1,105 @@
+﻿
+@using StaffandTrain.Common;
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+    Common cm = new Common();
+}
+@if (Model.Count > 0)
+{
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Full Name/Phone/Email/LinkedIn</th>
+                <th>Combined Notes</th>
+                <th>Contact Resume</th>
+                <th>Contact Mover</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var i in Model)
+            {
+                string str = "";
+
+                //if (ViewBag.ConEmail == @i.contactemail)
+                //{
+                if (@i.titlestandard == "CEO" || @i.titlestandard == "EXEC" || @i.titlestandard == "Manager")
+                {
+                    str = "Str_blue";
+                }
+                <tr class="@str">
+                    <td width="30%">
+                        ID: @i.contactid
+                        <br />
+                        Name: @i.contactfullname
+                        <br />
+                        Title: @i.titlestandard
+                        <br />
+                        WPhone: @i.contactphone
+                        <br />
+                        CPhone: @i.contactcellphone
+                        <br />
+                        Email: <a href="mailto:@i.contactemail"> @i.contactemail</a>
+                        <br />
+                        LinkedIn: <a href="@i.linkedinprofileurl" target="_blank">@i.linkedinprofileurl</a>
+                    </td>
+                    <td width="38%"><pre>@i.contactnotes</pre></td>
+                    <td>
+                        <a href="javascript:void(0)" class="conresume" data-resume="@i.contactid">Contact Resume</a>
+                    </td>
+                    <td>
+                        <a href="javascript:void(0)" class="conmove" data-resume="@i.contactid">Contact Mover</a>
+                    </td>
+                    <td>
+                        <a class="btn Edit" href="javascript:void(0)" data-contactid="@cm.Code_Encrypt(CryptorEngine.Encrypt(i.contactid.ToString()))"><i class="fa fa-pencil-square-o"></i></a>
+                        @*<a class="btn Edit" href="/ProspectViewCompanyClient/AddUpdateContact?contactid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.contactid.ToString()))&compname=@i.compname"><i class="fa fa-pencil-square-o"></i></a>*@
+
+                       @if (i.Userid == User.Identity.Name)
+                       {
+
+                        <a href="/ProspectViewCompanyClient/DeleteContact?contactid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.contactid.ToString()))&compid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.companyid.ToString()))" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Contact?");'><i class="fa fa-trash-o"></i></a>
+                       }
+                    </td>
+                </tr>
+                //}
+                @*else
+                    {
+
+                        <tr>
+                            <td>
+                                ID :@i.contactid
+                                <br />
+                                Name :@i.contactfullname
+                                <br />
+                                Title :@i.titlestandard
+                                <br />
+                                WPhone :@i.contactphone
+                                <br />
+                                CPhone :@i.contactcellphone
+                                <br />
+                                Email :<br /><a href="mailto:@i.contactemail"> @i.contactemail</a>
+
+                                <br />
+                                LinkedIn :<br /> <a href="@i.linkedinprofileurl" target="_blank">@i.linkedinprofileurl</a>
+                            </td>
+                            <td>@i.contactnotes</td>
+                            <td>
+                            <a href="javascript:void(0)" class="conresume" data-resume="@i.contactid">Contact Resume</a>
+                            </td>
+                            <td><a href="javascript:void(0)" class="conmove" data-resume="@i.contactid">Contact Mover</a></td>
+                            <td>
+                                <a class="btn Edit" href="/ProspectViewCompanyClient/AddUpdateContact?contactid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.contactid.ToString()))&compname=@i.compname"><i class="fa fa-pencil-square-o"></i></a>
+                                <a href="/ProspectViewCompanyClient/DeleteContact?contactid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.contactid.ToString()))&compid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.companyid.ToString()))" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Contact?");'><i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                    }*@
+
+            }
+
+        </tbody>
+    </table>
+
+
+}

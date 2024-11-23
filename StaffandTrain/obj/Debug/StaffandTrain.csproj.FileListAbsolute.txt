@@ -1,0 +1,180 @@
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\ApplicationInsights.config
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\StaffandTrain.dll.config
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\StaffandTrain.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\StaffandTrain.pdb
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Antlr3.Runtime.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\ClosedXML.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\EntityFramework.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\EntityFramework.SqlServer.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\FastMember.Signed.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.Web.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Newtonsoft.Json.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Owin.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Helpers.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Mvc.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Optimization.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Razor.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.WebPages.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\WebGrease.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\ClosedXML.pdb
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\ClosedXML.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.Web.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Helpers.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Mvc.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Optimization.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.Razor.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.WebPages.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Antlr3.Runtime.pdb
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Newtonsoft.Json.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\EntityFramework.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\EntityFramework.SqlServer.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\obj\Debug\StaffandTrain.csproj.AssemblyReference.cache
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\obj\Debug\StaffandTrain.csproj.CoreCompileInputs.cache
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\obj\Debug\StaffandTrain.csproj.CopyComplete
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\obj\Debug\StaffandTrain.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\obj\Debug\StaffandTrain.pdb
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\csc.exe
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\vbc.exe
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\ApplicationInsights.config
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\csc.exe
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\vbc.exe
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.dll.config
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.pdb
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Antlr3.Runtime.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\ClosedXML.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\EntityFramework.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\EntityFramework.SqlServer.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\FastMember.Signed.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Web.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Newtonsoft.Json.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Owin.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Helpers.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Mvc.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Optimization.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Razor.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\WebGrease.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\ClosedXML.pdb
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\ClosedXML.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Web.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Helpers.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Mvc.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Optimization.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.Razor.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Antlr3.Runtime.pdb
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Newtonsoft.Json.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\EntityFramework.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\EntityFramework.SqlServer.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\obj\Debug\StaffandTrain.csproj.AssemblyReference.cache
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\obj\Debug\StaffandTrain.csproj.CoreCompileInputs.cache
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\obj\Debug\StaffandTrain.csproj.CopyComplete
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\obj\Debug\StaffandTrain.dll
+C:\Users\aiman\Source\Repos\EmailRepositoryCode\StaffandTrain\obj\Debug\StaffandTrain.pdb

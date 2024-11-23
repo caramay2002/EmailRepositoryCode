@@ -1,0 +1,626 @@
+---Exception Details for Date: 11/18/2024 8:52:20 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 8:52:20 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Error Line No : ine 586
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:15:13 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:15:13 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Error Line No : ine 586
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:24:53 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:24:53 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Error Line No : ine 586
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:27:34 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:27:34 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Error Line No : ine 586
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:31:31 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:31:31 PM
+
+StackTrace:    at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Full Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 586
+
+Error Line No : ine 586
+
+Error Message: SmtpException
+
+Exception Type: System.Net.Mail.SmtpException
+
+Error Location : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:36:05 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:36:05 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Error Line No : geName)
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:37:43 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:37:43 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Error Line No : geName)
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:48:05 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions.com
+
+Log Written Date: 11/18/2024 9:48:05 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 590
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName) in E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\Controllers\EmailSendFromController.cs:line 590
+
+Error Line No : ine 590
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 11/18/2024 9:55:32 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: noman.ali@arcanainfo.com
+
+Log Written Date: 11/18/2024 9:55:32 PM
+
+StackTrace:    at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Full Exception: System.Security.Authentication.AuthenticationException: A call to SSPI failed, see inner exception. ---> System.ComponentModel.Win32Exception: The function requested is not supported
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslState.StartSendAuthResetSignal(ProtocolToken message, AsyncProtocolRequest asyncRequest, Exception exception)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessReceivedBlob(Byte[] buffer, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.CheckCompletionBeforeNextReceive(ProtocolToken message, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest, Boolean renegotiation)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Net.TlsStream.ProcessAuthentication(LazyAsyncResult result)
+   at System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.PooledStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Mail.SmtpConnection.Flush()
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Error Line No : geName)
+
+Error Message: AuthenticationException
+
+Exception Type: System.Security.Authentication.AuthenticationException
+
+Error Location : A call to SSPI failed, see inner exception.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+

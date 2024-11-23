@@ -1,0 +1,93 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestDemo</title>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var currentPageNumber = 1;
+            loadData(currentPageNumber);
+
+            $(window).scroll(function () {
+
+                var windowHeight = $(window).scrollTop()+ $(window).height()
+                var docHeight = $(document).height() - 100;
+
+                if ($(window).scrollTop() + $(window).height() > $(document).height() - 10) {
+
+                    currentPageNumber += 1;
+                    loadData(currentPageNumber);
+                }
+
+            })
+
+            function loadData(currentPage)
+            {
+                
+                $.ajax({
+                    type: "POST",
+                    url: "/ProspectListsAdmin/GetList",
+                    data: { PageNumber: currentPage, PageSize: 10 },
+                    dataType: 'json',
+                    success: function (data) {
+
+                        var Usertable = $('#userlist tbody');
+                        $(data).each(function (index, user) {
+                            Usertable.append('<tr><td>' + user.listid + '</td><td>' + user.listname +
+                                '</td><td>' + user.Cnt+
+                                '</td><td> <a onclick="showpopupedit("' + user.listname + '","' + user.listid + '","' + user.restricted +'")" href="javascript:void(0)">Edit <i class="fa fa-pencil-square-o"></i></a> '+
+                                 '</td></tr>'
+                                )
+                        })
+                    }
+                });
+            }
+        })
+    </script>
+    <script>
+        function showpopupedit(lsitname, listid, restricted) {
+           
+            $(".alert").hide();
+            $(".validateTips").text("");
+            $("#myModalLabel").text("Update Prospect");
+            $("#txtlistname").val(lsitname);
+            $("#divcreaterole").hide();
+            $("#divUpdaterole").show();
+            $("#hdnlistid").val(listid);
+            var value = "No";
+            if (restricted == "1") {
+                value = "Yes";
+            }
+            else { value = "No" }
+
+            $("input[name='Restricted'][value='" + value + "']").prop('checked', true);
+            $('#FileManageModal').modal('show');
+        }
+    </script>
+</head>
+<body>
+    <div> 
+        <table id="userlist" border="1" height="1000px" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>List Id</th>
+                    <th>List Name</th>
+                    <th>Count</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+</body>
+</html>

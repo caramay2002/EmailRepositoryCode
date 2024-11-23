@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ced204eb043b4be6993118969dff573d" Name="Diagram1">
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_Membership" Width="1.5" PointX="8" PointY="6.5" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_Paths" Width="1.5" PointX="3" PointY="6.375" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="9.875" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="6.375" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_Profile" Width="1.5" PointX="7.5" PointY="13.875" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_Roles" Width="1.5" PointX="3" PointY="15.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_SchemaVersions" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_Users" Width="1.5" PointX="5.25" PointY="13.375" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.aspnet_WebEvent_Events" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.ASPStateTempApplication" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.ASPStateTempSession" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.BugList" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.CityCircle" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Company" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Companies_ListDeleted" Width="1.5" PointX="10.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Contact" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.EmailTemplate" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Prospecting_Lists" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Subscriber" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.TitleStandard" Width="1.5" PointX="12.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Tracking" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.User_List_Access" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.User_Security" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.User_Security_States" Width="1.5" PointX="14.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.UserProspectingList" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.WhiteBoardName" Width="1.5" PointX="14.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.ErrorLog" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.ExpirationKey" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.InfoRequest" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.JobPosting" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.location" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Newsletter" Width="1.5" PointX="16.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJob" Width="1.5" PointX="9.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs10" Width="1.5" PointX="16.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs11" Width="1.5" PointX="16.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs12" Width="1.5" PointX="5.75" PointY="17.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs13" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs14" Width="1.5" PointX="18.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs15" Width="1.5" PointX="18.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs16" Width="1.5" PointX="11.75" PointY="18.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs17" Width="1.5" PointX="18.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs18" Width="1.5" PointX="13.75" PointY="18.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs2" Width="1.5" PointX="18.75" PointY="16.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs3" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs4" Width="1.5" PointX="2.75" PointY="19.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs5" Width="1.5" PointX="15.75" PointY="19.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs6" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs7" Width="1.5" PointX="20.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs8" Width="1.5" PointX="7.75" PointY="20.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.OpenJobs9" Width="1.5" PointX="20.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Resume" Width="1.5" PointX="20.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.SiteUser" Width="1.5" PointX="20.75" PointY="17.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.State" Width="1.5" PointX="17.75" PointY="20.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.TrainingDocument" Width="1.5" PointX="4.75" PointY="21.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_Applications" Width="1.5" PointX="19.75" PointY="21.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_MembershipUsers" Width="1.5" PointX="21.75" PointY="21.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_Profiles" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_Roles" Width="1.5" PointX="22.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_Users" Width="1.5" PointX="22.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_UsersInRoles" Width="1.5" PointX="9.75" PointY="22.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_WebPartState_Paths" Width="1.5" PointX="22.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_WebPartState_Shared" Width="1.5" PointX="11.75" PointY="22.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.vw_aspnet_WebPartState_User" Width="1.5" PointX="22.75" PointY="13.75" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Me__Appli__2EA5EC27" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Pa__Appli__03F0984C" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Ro__Appli__08B54D69" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Us__Appli__36470DEF" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Me__UserI__2F9A1060" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__04E4BC85" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__05D8E0BE" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Pe__UserI__06CD04F7" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK__aspnet_Pr__UserI__07C12930" />
+        <AssociationConnector Association="Staffandtrain_NewModel.FK_UserProspectingList_UserProspectingList" />
+        <AssociationConnector Association="Staffandtrain_NewModel.aspnet_UsersInRoles" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Worker" Width="1.5" PointX="0.75" PointY="23.25" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.WorkersLog" Width="1.5" PointX="14.375" PointY="23.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Log" Width="1.5" PointX="23.375" PointY="16.75" />
+        <EntityTypeShape EntityType="Staffandtrain_NewModel.Config" Width="1.5" PointX="16.375" PointY="23.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

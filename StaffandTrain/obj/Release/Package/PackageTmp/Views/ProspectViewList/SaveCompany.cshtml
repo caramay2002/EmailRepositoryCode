@@ -1,0 +1,150 @@
+﻿@model StaffandTrain.Models.CompanyModel
+@{
+    ViewBag.Title = "SaveCompany";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container main-ctn">
+    
+    @if (User.IsInRole("Admin"))
+    {
+        <h1 class="title">Prospect Add/Edit Company (Admin)</h1>
+    }
+    else
+    {
+        <h1 class="title">Prospect Add/Edit Company(Recruiter)</h1>
+    }
+   <div>List Name : @Model.listid @Model.listname </div>
+    @if (@ViewBag.Message != null && @ViewBag.Message == "User Saved" || @ViewBag.Message == "User Updated")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+    @using (Html.BeginForm("EditUpdateCompany", "ProspectViewList", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="admin-form">
+            <div class="admin-ctn">
+                <div class="row">
+
+                  
+                    <div class="col-sm-6 form-group">
+                        <label>City Circle</label>
+                            @Html.DropDownListFor(x => x.citycircle, (IEnumerable<SelectListItem>) ViewData["city"], new { name = "ddlcity", @class = "form-control", id = "ddlcity" })
+                            @*@Html.DropDownListFor(x => x.citycircle, ViewBag.citycircle as SelectList,new { name = "ddlcity", @class = "form-control", id = "ddlcity" })*@
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Biz Type</label>
+
+                        @Html.TextBoxFor(x => x.biztype, new { id = "txtbiztype", @placeholder = "Biz Type", @class = "form-control" ,@maxlength="70" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Company Name </label>
+
+                        @Html.TextBoxFor(x => x.name, new { id = "txtname", @placeholder = "Name", @class = "form-control", @maxlength = "70" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group" style="display:none">
+                        <label>Address1 </label>
+
+                        @Html.TextBoxFor(x => x.addr1, new { id = "txtadd1", @placeholder = "Address1", @class = "form-control", @maxlength = "70" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+
+                    <div class="col-sm-6 form-group" style="display:none">
+                        <label>Address2 </label>
+
+                        @Html.TextBoxFor(x => x.addr2, new { id = "txtadd2", @placeholder = "Address2", @class = "form-control", @maxlength = "70" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group" style="display:none">
+                        <label>City </label>
+
+                        @Html.TextBoxFor(x => x.city, new { id = "txtcity", @placeholder = "City", @class = "form-control", @maxlength = "70" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group" style="display:none">
+                        <label>State </label>
+
+                        @Html.TextBoxFor(x => x.state, new { id = "txtstate", @placeholder = "State", @class = "form-control" , @maxlength = "70" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group" style="display:none">
+                        <label>Zip </label>
+
+                        @Html.TextBoxFor(x => x.zip, new { id = "txtzip", @placeholder = "Zip", @class = "form-control", @maxlength = "20" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+
+                    <div class="col-sm-6 form-group">
+                        <label>Web Url </label>
+
+                        @Html.TextBoxFor(x => x.weburl, new { id = "txtweburl", @placeholder = "Web Url", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Phone </label>
+
+                        @Html.TextBoxFor(x => x.phone, new { id = "txtphone", @placeholder = "Phone", @class = "form-control", @maxlength = "20" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+
+                    
+ 
+                    <div class="col-sm-6 form-group">
+                        <label>Customer</label>
+                        <div>
+                            @Html.CheckBoxFor(x => x.priority)
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Target</label>
+                        <div>
+                            @Html.CheckBoxFor(x => x.target)
+                        </div>
+                    </div>
+                 
+
+
+                    <input type="hidden" id="hdnlistid" value="@Model.listid" />
+                    <input type="hidden" id="hdnlistid" value="@Model.companyid" />
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 form-group">
+                        <hr>
+                        @if (Model.companyid == 0)
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Save Company</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Update Company</button>
+                        }
+
+                        <a href="/ProspectViewList/Index?listid=@Model.listid&lstname=@Model.listname" class="btn btn-success" id="lnkcreatedata">Back to list </a>
+
+                    </div>
+                    <div style="display:none">
+                        @Html.TextBoxFor(x => x.companyid, new { id = "txtcompid" })
+                        @Html.TextBoxFor(x => x.listid, new { id = "txtlistid" })
+                    </div>
+                </div>
+            </div> <!--end admin-form-->
+
+        </div>
+    }
+</div>
+ 
+

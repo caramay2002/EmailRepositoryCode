@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/layout.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/media-queries.css" rel="stylesheet" type="text/css">
+        <script src="~/Scripts/jquery.min.js"></script>
+            <script src="~/Scripts/bootstrap.js"></script>*@
+    @Styles.Render("~/Content/filecsslogin")
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/Scripts/JSFiles")
+    @*<script src="~/Scripts/owl.carousel.js"></script>
+        <script src="~/Scripts/custom.js"></script>*@
+    <style>
+        /*.container2 {
+            background: #7c9629;
+            padding-top: 10px;
+            padding-bottom: 9px;
+            
+        }
+            .container2 a {
+                padding-right: 50px;
+            }*/
+
+        .dark_section.transparent_film {
+            padding: 15px 0;
+            background: #428bca;
+        }
+        .dark_section.transparent_film a{
+            color:#fff;
+            text-decoration:none;
+        }
+        .dark_section.transparent_film a img{
+            margin-left:5px;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .admin-box {
+            min-height: 100%;
+            min-height: calc(100% - 98px);
+            margin-top:0;
+            margin-bottom:0;
+            padding:8% 0;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="top">
+        <div class="container">
+            <div class="top-link">
+                <ul class="navupper">
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li><a href="javascript:void(0)">@User.Identity.Name </a></li>
+                    }
+                    <li><a href="javascript:void(0)"><span class="fa fa-home"></span>Home</a></li>
+                    <li><a href="javascript:void(0)"><span class="fa fa-user-o"></span>Client</a></li>
+                    <li><a href="javascript:void(0)"><span class="fa fa-user"></span>Recruiter</a></li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="/AdminHome"><span class="fa fa-key"></span>Admin</a></li>
+                    }
+
+                    @if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Login/LogOut"><span class="fa fa-user"></span> LogOut</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Login"><span class="fa fa-user"></span> Login</a></li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-box">
+
+        @*<div class="admin-logo"><img src="~/images/logo.png" alt="" /></div>*@
+        <div class="form-box">
+            <div class="form-header">Sign in</div>
+
+            <div class="form-ctn">
+                @RenderBody()
+
+            </div><!-- end form-ctn-->
+
+            <div class="form-footer"></div>
+        </div> <!--end form-box-->
+
+
+        <p>© 2018 Staffing Industry Talent Scouts Inc. All Rights reserved. </p>
+
+
+    </div>
+
+    <script src="~/Custom_JS/LayoutLoggedIn_JS.js" defer></script>
+
+
+    <div class="copyright dark_section">
+    <div class="dark_section transparent_film">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-6"></div>
+            <div class="col-sm-6 col-md-6 text-right"> 
+            <a target="_blank" href="https://www.cisin.com/">
+                <span>Developed By <img alt="Developed By CIS" src="https://geraldjjoseph.com/wp-content/uploads/2019/06/32x32.png"></span> 
+            </a>
+             </div>
+         </div>
+         </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

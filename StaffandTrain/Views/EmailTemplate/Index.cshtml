@@ -1,0 +1,74 @@
+﻿@using StaffandTrain.Common;
+@{
+    Common cm = new Common();
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container main-ctn">
+    <h1 class="title" style="display: flex; justify-content: space-between">
+        Email Template List (Admin)
+        <div>
+            <a href="/EmailTemplate" class="btn btn-success" id="lnkcreate">Email Template   <i class="fa fa-file" aria-hidden="true"></i></a>
+            <a href="/EmailSendFrom/Index" class="btn btn-primary" id="lnkcreate">Email Sender   <i class="fa fa-send" aria-hidden="true"></i></a>
+         
+        </div>
+    </h1>
+
+    <div id="divmsg" class="alert alert-success" style="display:none"></div>
+    @if (@ViewBag.message != null && @ViewBag.message == "Record Deleted")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+<div class="divcreate">
+    @*<a href="#" class="btn btn-success" id="lnkcreate">Create New   <i class="fa fa-plus" aria-hidden="true"></i></a>*@
+    <a href="/EmailTemplate/SaveEmailtemplate" class="btn btn-success" id="lnkcreate">Create New   <i class="fa fa-plus" aria-hidden="true"></i></a>
+</div>
+    <div id="tblprospect">
+        <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th width="80">Grouping</th>
+                    <th>Template Name</th>
+                    <th>Subject</th>
+                    <th>Edit</th>
+                    <th width="80">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count > 0)
+                {
+                    foreach (var i in Model)
+                    {
+                        <tr>
+                            <td> @i.GroupingNumber</td>
+                            <td> @i.TemplateName</td>
+                            <td> @i.Subject</td>
+                            <td>
+                                <a class="btn Edit"  href="/EmailTemplate/SaveEmailtemplate?TemplateId=@cm.Code_Encrypt(CryptorEngine.Encrypt(@i.TemplateId.ToString()))"><i class="fa fa-pencil-square-o"></i></a>
+                                @*<a class="btn Edit" href="#"><i class="fa fa-pencil-square-o"></i></a>*@
+                               
+                            </td>
+                            <td>
+                                <a href="/EmailTemplate/DeleteEmailtemplate?TemplateId=@cm.Code_Encrypt(CryptorEngine.Encrypt(@i.TemplateId.ToString()))" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Email Template?");'><i class="fa fa-trash-o"></i></a>
+                                @*<a href="#" class="btn Delete" ><i class="fa fa-trash-o"></i></a>*@
+
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4">No Record Found</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

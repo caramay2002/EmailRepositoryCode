@@ -1,0 +1,1742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Staffandtrain_NewModelStoreContainer" CdmEntityContainer="SATConn">
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASPStateTempApplications">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.ASPStateTempApplication">
+        <MappingFragment StoreEntitySet="ASPStateTempApplications">
+          <ScalarProperty Name="AppName" ColumnName="AppName" />
+          <ScalarProperty Name="AppId" ColumnName="AppId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASPStateTempSessions">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.ASPStateTempSession">
+        <MappingFragment StoreEntitySet="ASPStateTempSessions">
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="SessionItemLong" ColumnName="SessionItemLong" />
+          <ScalarProperty Name="SessionItemShort" ColumnName="SessionItemShort" />
+          <ScalarProperty Name="Locked" ColumnName="Locked" />
+          <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+          <ScalarProperty Name="LockCookie" ColumnName="LockCookie" />
+          <ScalarProperty Name="LockDateLocal" ColumnName="LockDateLocal" />
+          <ScalarProperty Name="LockDate" ColumnName="LockDate" />
+          <ScalarProperty Name="Expires" ColumnName="Expires" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BugLists">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.BugList">
+        <MappingFragment StoreEntitySet="BugList">
+          <ScalarProperty Name="bugnotes" ColumnName="bugnotes" />
+          <ScalarProperty Name="bugdesc" ColumnName="bugdesc" />
+          <ScalarProperty Name="bugtype" ColumnName="bugtype" />
+          <ScalarProperty Name="bugurl" ColumnName="bugurl" />
+          <ScalarProperty Name="buglistid" ColumnName="buglistid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityCircles">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.CityCircle">
+        <MappingFragment StoreEntitySet="CityCircle">
+          <ScalarProperty Name="CityCircle1" ColumnName="CityCircle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="listguid" ColumnName="listguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="oldname" ColumnName="oldname" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="weburl" ColumnName="weburl" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="addr2" ColumnName="addr2" />
+          <ScalarProperty Name="addr1" ColumnName="addr1" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies_ListDeleted">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Companies_ListDeleted">
+        <MappingFragment StoreEntitySet="Companies_ListDeleted">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="weburl" ColumnName="weburl" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="addr2" ColumnName="addr2" />
+          <ScalarProperty Name="addr1" ColumnName="addr1" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Contact">
+        <MappingFragment StoreEntitySet="Contacts">
+          <ScalarProperty Name="ResumeFilePath" ColumnName="ResumeFilePath" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailTemplates">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.EmailTemplate">
+        <MappingFragment StoreEntitySet="EmailTemplate">
+          <ScalarProperty Name="GroupingNumber" ColumnName="GroupingNumber" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prospecting_Lists">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Prospecting_Lists">
+        <MappingFragment StoreEntitySet="Prospecting_Lists">
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="listguid" ColumnName="listguid" />
+          <ScalarProperty Name="restricted" ColumnName="restricted" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscribers">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Subscriber">
+        <MappingFragment StoreEntitySet="Subscribers">
+          <ScalarProperty Name="SubscribeDate" ColumnName="SubscribeDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SubscriberID" ColumnName="SubscriberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TitleStandards">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.TitleStandard">
+        <MappingFragment StoreEntitySet="TitleStandard">
+          <ScalarProperty Name="TitleStandard1" ColumnName="TitleStandard" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trackings">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Tracking">
+        <MappingFragment StoreEntitySet="Tracking">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CompanyGuid" ColumnName="CompanyGuid" />
+          <ScalarProperty Name="ListGuid" ColumnName="ListGuid" />
+          <ScalarProperty Name="StaffAndTrainUP" ColumnName="StaffAndTrainUP" />
+          <ScalarProperty Name="RenewalReminder" ColumnName="RenewalReminder" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          <ScalarProperty Name="DirectoryUP" ColumnName="DirectoryUP" />
+          <ScalarProperty Name="ClientContact" ColumnName="ClientContact" />
+          <ScalarProperty Name="DateInvoicePrice" ColumnName="DateInvoicePrice" />
+          <ScalarProperty Name="TrackingId" ColumnName="TrackingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_List_Access">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.User_List_Access">
+        <MappingFragment StoreEntitySet="User_List_Access">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Security">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.User_Security">
+        <MappingFragment StoreEntitySet="User_Security">
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="SingleCityPostings" ColumnName="SingleCityPostings" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datesignedup" ColumnName="datesignedup" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="primarycontact" ColumnName="primarycontact" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address2" ColumnName="address2" />
+          <ScalarProperty Name="address1" ColumnName="address1" />
+          <ScalarProperty Name="companyname" ColumnName="companyname" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="userlevel" ColumnName="userlevel" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="loginid" ColumnName="loginid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Security_States">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.User_Security_States">
+        <MappingFragment StoreEntitySet="User_Security_States">
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProspectingLists">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.UserProspectingList">
+        <MappingFragment StoreEntitySet="UserProspectingList">
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhiteBoardNames">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.WhiteBoardName">
+        <MappingFragment StoreEntitySet="WhiteBoardNames">
+          <ScalarProperty Name="AllowRecruiter" ColumnName="AllowRecruiter" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="WhiteBoardName1" ColumnName="WhiteBoardName" />
+          <ScalarProperty Name="WBId" ColumnName="WBId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ErrorLogs">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.ErrorLog">
+        <MappingFragment StoreEntitySet="ErrorLog">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="FunctionInformation" ColumnName="FunctionInformation" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpirationKeys">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.ExpirationKey">
+        <MappingFragment StoreEntitySet="ExpirationKeys">
+          <ScalarProperty Name="DateExpires" ColumnName="DateExpires" />
+          <ScalarProperty Name="ExpirationKeyId" ColumnName="ExpirationKeyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoRequests">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.InfoRequest">
+        <MappingFragment StoreEntitySet="InfoRequests">
+          <ScalarProperty Name="reqdate" ColumnName="reqdate" />
+          <ScalarProperty Name="reqemail" ColumnName="reqemail" />
+          <ScalarProperty Name="reqname" ColumnName="reqname" />
+          <ScalarProperty Name="reqid" ColumnName="reqid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobPostings">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.JobPosting">
+        <MappingFragment StoreEntitySet="JobPostings">
+          <ScalarProperty Name="contactname" ColumnName="contactname" />
+          <ScalarProperty Name="jobinfo" ColumnName="jobinfo" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobstate" ColumnName="jobstate" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="locations">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.location">
+        <MappingFragment StoreEntitySet="locations">
+          <ScalarProperty Name="locname" ColumnName="locname" />
+          <ScalarProperty Name="locid" ColumnName="locid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Newsletters">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Newsletter">
+        <MappingFragment StoreEntitySet="Newsletters">
+          <ScalarProperty Name="ShowLink" ColumnName="ShowLink" />
+          <ScalarProperty Name="NewsletterComments" ColumnName="NewsletterComments" />
+          <ScalarProperty Name="NewsletterLink" ColumnName="NewsletterLink" />
+          <ScalarProperty Name="NewsletterName" ColumnName="NewsletterName" />
+          <ScalarProperty Name="NewsletterID" ColumnName="NewsletterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJob">
+        <MappingFragment StoreEntitySet="OpenJobs">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="WhiteboardID" ColumnName="WhiteboardID" />
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs10">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs10">
+        <MappingFragment StoreEntitySet="OpenJobs10">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs11">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs11">
+        <MappingFragment StoreEntitySet="OpenJobs11">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs12">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs12">
+        <MappingFragment StoreEntitySet="OpenJobs12">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs13">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs13">
+        <MappingFragment StoreEntitySet="OpenJobs13">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs14">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs14">
+        <MappingFragment StoreEntitySet="OpenJobs14">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs15">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs15">
+        <MappingFragment StoreEntitySet="OpenJobs15">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs16">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs16">
+        <MappingFragment StoreEntitySet="OpenJobs16">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs17">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs17">
+        <MappingFragment StoreEntitySet="OpenJobs17">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs18">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs18">
+        <MappingFragment StoreEntitySet="OpenJobs18">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs2">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs2">
+        <MappingFragment StoreEntitySet="OpenJobs2">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs3">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs3">
+        <MappingFragment StoreEntitySet="OpenJobs3">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs4">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs4">
+        <MappingFragment StoreEntitySet="OpenJobs4">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs5">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs5">
+        <MappingFragment StoreEntitySet="OpenJobs5">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs6">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs6">
+        <MappingFragment StoreEntitySet="OpenJobs6">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs7">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs7">
+        <MappingFragment StoreEntitySet="OpenJobs7">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs8">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs8">
+        <MappingFragment StoreEntitySet="OpenJobs8">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpenJobs9">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.OpenJobs9">
+        <MappingFragment StoreEntitySet="OpenJobs9">
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="jobguid" ColumnName="jobguid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="postedby" ColumnName="postedby" />
+          <ScalarProperty Name="datestamp" ColumnName="datestamp" />
+          <ScalarProperty Name="jobcity" ColumnName="jobcity" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resumes">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Resume">
+        <MappingFragment StoreEntitySet="Resumes">
+          <ScalarProperty Name="jobloc3" ColumnName="jobloc3" />
+          <ScalarProperty Name="jobloc2" ColumnName="jobloc2" />
+          <ScalarProperty Name="jobloc1" ColumnName="jobloc1" />
+          <ScalarProperty Name="jobloc" ColumnName="jobloc" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="resdt" ColumnName="resdt" />
+          <ScalarProperty Name="resume1" ColumnName="resume" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="resid" ColumnName="resid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SiteUsers">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.SiteUser">
+        <MappingFragment StoreEntitySet="SiteUsers">
+          <ScalarProperty Name="userlevel" ColumnName="userlevel" />
+          <ScalarProperty Name="pw" ColumnName="pw" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="States">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.State">
+        <MappingFragment StoreEntitySet="States">
+          <ScalarProperty Name="abbr" ColumnName="abbr" />
+          <ScalarProperty Name="state1" ColumnName="state" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrainingDocuments">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.TrainingDocument">
+        <MappingFragment StoreEntitySet="TrainingDocuments">
+          <ScalarProperty Name="TrainingDocumentOrder" ColumnName="TrainingDocumentOrder" />
+          <ScalarProperty Name="ShowLink" ColumnName="ShowLink" />
+          <ScalarProperty Name="TrainingDocumentComments" ColumnName="TrainingDocumentComments" />
+          <ScalarProperty Name="TrainingDocumentLink" ColumnName="TrainingDocumentLink" />
+          <ScalarProperty Name="TrainingDocumentName" ColumnName="TrainingDocumentName" />
+          <ScalarProperty Name="TrainingDocumentLinkID" ColumnName="TrainingDocumentLinkID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Applications">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_Applications">
+        <MappingFragment StoreEntitySet="vw_aspnet_Applications">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_MembershipUsers">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_MembershipUsers">
+        <MappingFragment StoreEntitySet="vw_aspnet_MembershipUsers">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Profiles">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_Profiles">
+        <MappingFragment StoreEntitySet="vw_aspnet_Profiles">
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Roles">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_Roles">
+        <MappingFragment StoreEntitySet="vw_aspnet_Roles">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_Users">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_Users">
+        <MappingFragment StoreEntitySet="vw_aspnet_Users">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_UsersInRoles">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_UsersInRoles">
+        <MappingFragment StoreEntitySet="vw_aspnet_UsersInRoles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_Paths">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_WebPartState_Paths">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Paths">
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_Shared">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_WebPartState_Shared">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_Shared">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_aspnet_WebPartState_User">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.vw_aspnet_WebPartState_User">
+        <MappingFragment StoreEntitySet="vw_aspnet_WebPartState_User">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="DataSize" ColumnName="DataSize" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="Staffandtrain_NewModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_AnyDataInTables" FunctionName="Staffandtrain_NewModel.Store.aspnet_AnyDataInTables" />
+    <FunctionImportMapping FunctionImportName="aspnet_Applications_CreateApplication" FunctionName="Staffandtrain_NewModel.Store.aspnet_Applications_CreateApplication" />
+    <FunctionImportMapping FunctionImportName="aspnet_CheckSchemaVersion" FunctionName="Staffandtrain_NewModel.Store.aspnet_CheckSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ChangePasswordQuestionAndAnswer" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_ChangePasswordQuestionAndAnswer" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_CreateUser" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_CreateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByEmail" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_FindUsersByEmail" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByName" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_FindUsersByName" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetAllUsers" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetAllUsers" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetNumberOfUsersOnline" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetNumberOfUsersOnline" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPassword" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Membership_GetPassword_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPasswordWithFormat" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetPasswordWithFormat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Membership_GetPasswordWithFormat_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByEmail" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetUserByEmail" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByName" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetUserByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Membership_GetUserByName_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByUserId" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_GetUserByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Membership_GetUserByUserId_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ResetPassword" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_ResetPassword" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_SetPassword" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_SetPassword" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UnlockUser" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_UnlockUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUser" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_UpdateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUserInfo" FunctionName="Staffandtrain_NewModel.Store.aspnet_Membership_UpdateUserInfo" />
+    <FunctionImportMapping FunctionImportName="aspnet_Paths_CreatePath" FunctionName="Staffandtrain_NewModel.Store.aspnet_Paths_CreatePath" />
+    <FunctionImportMapping FunctionImportName="aspnet_Personalization_GetApplicationId" FunctionName="Staffandtrain_NewModel.Store.aspnet_Personalization_GetApplicationId" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_DeleteAllState" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAdministration_DeleteAllState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_FindState" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAdministration_FindState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_GetCountOfState" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAdministration_GetCountOfState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetSharedState" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAdministration_ResetSharedState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetUserState" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAdministration_ResetUserState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_GetPageSettings" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAllUsers_GetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_ResetPageSettings" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAllUsers_ResetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_SetPageSettings" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationAllUsers_SetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_GetPageSettings" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationPerUser_GetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_ResetPageSettings" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationPerUser_ResetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_SetPageSettings" FunctionName="Staffandtrain_NewModel.Store.aspnet_PersonalizationPerUser_SetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteInactiveProfiles" FunctionName="Staffandtrain_NewModel.Store.aspnet_Profile_DeleteInactiveProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteProfiles" FunctionName="Staffandtrain_NewModel.Store.aspnet_Profile_DeleteProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetNumberOfInactiveProfiles" FunctionName="Staffandtrain_NewModel.Store.aspnet_Profile_GetNumberOfInactiveProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProfiles" FunctionName="Staffandtrain_NewModel.Store.aspnet_Profile_GetProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProperties" FunctionName="Staffandtrain_NewModel.Store.aspnet_Profile_GetProperties">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.aspnet_Profile_GetProperties_Result">
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_SetProperties" FunctionName="Staffandtrain_NewModel.Store.aspnet_Profile_SetProperties" />
+    <FunctionImportMapping FunctionImportName="aspnet_RegisterSchemaVersion" FunctionName="Staffandtrain_NewModel.Store.aspnet_RegisterSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_CreateRole" FunctionName="Staffandtrain_NewModel.Store.aspnet_Roles_CreateRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_DeleteRole" FunctionName="Staffandtrain_NewModel.Store.aspnet_Roles_DeleteRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_GetAllRoles" FunctionName="Staffandtrain_NewModel.Store.aspnet_Roles_GetAllRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_RoleExists" FunctionName="Staffandtrain_NewModel.Store.aspnet_Roles_RoleExists" />
+    <FunctionImportMapping FunctionImportName="aspnet_Setup_RemoveAllRoleMembers" FunctionName="Staffandtrain_NewModel.Store.aspnet_Setup_RemoveAllRoleMembers" />
+    <FunctionImportMapping FunctionImportName="aspnet_Setup_RestorePermissions" FunctionName="Staffandtrain_NewModel.Store.aspnet_Setup_RestorePermissions" />
+    <FunctionImportMapping FunctionImportName="aspnet_UnRegisterSchemaVersion" FunctionName="Staffandtrain_NewModel.Store.aspnet_UnRegisterSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Users_CreateUser" FunctionName="Staffandtrain_NewModel.Store.aspnet_Users_CreateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Users_DeleteUser" FunctionName="Staffandtrain_NewModel.Store.aspnet_Users_DeleteUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_AddUsersToRoles" FunctionName="Staffandtrain_NewModel.Store.aspnet_UsersInRoles_AddUsersToRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_FindUsersInRole" FunctionName="Staffandtrain_NewModel.Store.aspnet_UsersInRoles_FindUsersInRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetRolesForUser" FunctionName="Staffandtrain_NewModel.Store.aspnet_UsersInRoles_GetRolesForUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetUsersInRoles" FunctionName="Staffandtrain_NewModel.Store.aspnet_UsersInRoles_GetUsersInRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_IsUserInRole" FunctionName="Staffandtrain_NewModel.Store.aspnet_UsersInRoles_IsUserInRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_RemoveUsersFromRoles" FunctionName="Staffandtrain_NewModel.Store.aspnet_UsersInRoles_RemoveUsersFromRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_WebEvent_LogEvent" FunctionName="Staffandtrain_NewModel.Store.aspnet_WebEvent_LogEvent" />
+    <FunctionImportMapping FunctionImportName="CreateTempTables" FunctionName="Staffandtrain_NewModel.Store.CreateTempTables" />
+    <FunctionImportMapping FunctionImportName="DeleteContactCompanybyCompanyId" FunctionName="Staffandtrain_NewModel.Store.DeleteContactCompanybyCompanyId" />
+    <FunctionImportMapping FunctionImportName="DeleteEmailtemplatebyId" FunctionName="Staffandtrain_NewModel.Store.DeleteEmailtemplatebyId" />
+    <FunctionImportMapping FunctionImportName="DeleteExpiredSessions" FunctionName="Staffandtrain_NewModel.Store.DeleteExpiredSessions" />
+    <FunctionImportMapping FunctionImportName="GetMajorVersion" FunctionName="Staffandtrain_NewModel.Store.GetMajorVersion" />
+    <FunctionImportMapping FunctionImportName="GetNewUsers" FunctionName="Staffandtrain_NewModel.Store.GetNewUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.GetNewUsers_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetProspectingListByUser" FunctionName="Staffandtrain_NewModel.Store.GetProspectingListByUser" />
+    <FunctionImportMapping FunctionImportName="GetProspectingUserById" FunctionName="Staffandtrain_NewModel.Store.GetProspectingUserById" />
+    <FunctionImportMapping FunctionImportName="SpaddContact" FunctionName="Staffandtrain_NewModel.Store.SpaddContact" />
+    <FunctionImportMapping FunctionImportName="SpaddContactClient" FunctionName="Staffandtrain_NewModel.Store.SpaddContactClient" />
+    <FunctionImportMapping FunctionImportName="SpContactFilterClient" FunctionName="Staffandtrain_NewModel.Store.SpContactFilterClient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpContactFilterClient_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Spcontexport" FunctionName="Staffandtrain_NewModel.Store.Spcontexport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spcontexport_Result">
+          <ScalarProperty Name="City_Circle" ColumnName="City Circle" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+          <ScalarProperty Name="Title_Standard" ColumnName="Title Standard" />
+          <ScalarProperty Name="City_List" ColumnName="City List" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="ContactCellPhone" ColumnName="ContactCellPhone" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="CombinedNotes" ColumnName="CombinedNotes" />
+          <ScalarProperty Name="Contact_Notes" ColumnName="Contact Notes" />
+          <ScalarProperty Name="LinkedinProfileUrl" ColumnName="LinkedinProfileUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Spcontexportclient" FunctionName="Staffandtrain_NewModel.Store.Spcontexportclient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spcontexportclient_Result">
+          <ScalarProperty Name="City_Circle" ColumnName="City Circle" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+          <ScalarProperty Name="Title_Standard" ColumnName="Title Standard" />
+          <ScalarProperty Name="City_List" ColumnName="City List" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="ContactCellPhone" ColumnName="ContactCellPhone" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="CombinedNotes" ColumnName="CombinedNotes" />
+          <ScalarProperty Name="Contact_Notes" ColumnName="Contact Notes" />
+          <ScalarProperty Name="LinkedinProfileUrl" ColumnName="LinkedinProfileUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpcreatenewJob" FunctionName="Staffandtrain_NewModel.Store.SpcreatenewJob" />
+    <FunctionImportMapping FunctionImportName="SPdeleteContact" FunctionName="Staffandtrain_NewModel.Store.SPdeleteContact" />
+    <FunctionImportMapping FunctionImportName="Spdeletedatauserprospecting" FunctionName="Staffandtrain_NewModel.Store.Spdeletedatauserprospecting" />
+    <FunctionImportMapping FunctionImportName="SpDeleteEmailTemplate" FunctionName="Staffandtrain_NewModel.Store.SpDeleteEmailTemplate" />
+    <FunctionImportMapping FunctionImportName="spdeletejob" FunctionName="Staffandtrain_NewModel.Store.spdeletejob" />
+    <FunctionImportMapping FunctionImportName="SpdeleteProspect" FunctionName="Staffandtrain_NewModel.Store.SpdeleteProspect" />
+    <FunctionImportMapping FunctionImportName="SPDeleteUser" FunctionName="Staffandtrain_NewModel.Store.SPDeleteUser" />
+    <FunctionImportMapping FunctionImportName="SPErrorLog" FunctionName="Staffandtrain_NewModel.Store.SPErrorLog" />
+    <FunctionImportMapping FunctionImportName="SPgetbiztype" FunctionName="Staffandtrain_NewModel.Store.SPgetbiztype" />
+    <FunctionImportMapping FunctionImportName="Spgetbiztypeemail" FunctionName="Staffandtrain_NewModel.Store.Spgetbiztypeemail" />
+    <FunctionImportMapping FunctionImportName="SPgetcitycircle" FunctionName="Staffandtrain_NewModel.Store.SPgetcitycircle" />
+    <FunctionImportMapping FunctionImportName="Spgetcitycircleemail" FunctionName="Staffandtrain_NewModel.Store.Spgetcitycircleemail" />
+    <FunctionImportMapping FunctionImportName="SPgetCitycirclelist" FunctionName="Staffandtrain_NewModel.Store.SPgetCitycirclelist" />
+    <FunctionImportMapping FunctionImportName="Spgetclientnote" FunctionName="Staffandtrain_NewModel.Store.Spgetclientnote">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spgetclientnote_Result">
+          <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ClientNotes" ColumnName="ClientNotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetCompanies" FunctionName="Staffandtrain_NewModel.Store.SPgetCompanies">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetCompanies_Result">
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Spgetcompanydetailsbycompanyid" FunctionName="Staffandtrain_NewModel.Store.Spgetcompanydetailsbycompanyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spgetcompanydetailsbycompanyid_Result">
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="addr1" ColumnName="addr1" />
+          <ScalarProperty Name="addr2" ColumnName="addr2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="weburl" ColumnName="weburl" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetCompdetailsbycompid" FunctionName="Staffandtrain_NewModel.Store.SPgetCompdetailsbycompid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetCompdetailsbycompid_Result">
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="addr1" ColumnName="addr1" />
+          <ScalarProperty Name="addr2" ColumnName="addr2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="weburl" ColumnName="weburl" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetconformailwithoutbiztype" FunctionName="Staffandtrain_NewModel.Store.SPgetconformailwithoutbiztype">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetconformailwithoutbiztype_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetContactDataforedit" FunctionName="Staffandtrain_NewModel.Store.SpGetContactDataforedit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetContactDataforedit_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetContactDataforeditClient" FunctionName="Staffandtrain_NewModel.Store.SpGetContactDataforeditClient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetContactDataforeditClient_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spgetcontactforclient" FunctionName="Staffandtrain_NewModel.Store.spgetcontactforclient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.spgetcontactforclient_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="clientnotes" ColumnName="clientnotes" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetcontactformailsend" FunctionName="Staffandtrain_NewModel.Store.SPgetcontactformailsend">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetcontactformailsend_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetContactlistbyCompid" FunctionName="Staffandtrain_NewModel.Store.SpGetContactlistbyCompid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetContactlistbyCompid_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Spgetcontactlistforexpert" FunctionName="Staffandtrain_NewModel.Store.Spgetcontactlistforexpert">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spgetcontactlistforexpert_Result">
+          <ScalarProperty Name="City_Circle" ColumnName="City Circle" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+          <ScalarProperty Name="Title_Standard" ColumnName="Title Standard" />
+          <ScalarProperty Name="City_List" ColumnName="City List" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="ContactCellPhone" ColumnName="ContactCellPhone" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="CombinedNotes" ColumnName="CombinedNotes" />
+          <ScalarProperty Name="Contact_Notes" ColumnName="Contact Notes" />
+          <ScalarProperty Name="LinkedinProfileUrl" ColumnName="LinkedinProfileUrl" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetdataforexcelexport" FunctionName="Staffandtrain_NewModel.Store.SpGetdataforexcelexport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetdataforexcelexport_Result">
+          <ScalarProperty Name="City_Circle" ColumnName="City Circle" />
+          <ScalarProperty Name="Biz_Type" ColumnName="Biz Type" />
+          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="WebUrl" ColumnName="WebUrl" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetemailtemplatebytemplateid" FunctionName="Staffandtrain_NewModel.Store.SPgetemailtemplatebytemplateid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetemailtemplatebytemplateid_Result">
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetEmailtemplatelist" FunctionName="Staffandtrain_NewModel.Store.SpGetEmailtemplatelist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetEmailtemplatelist_Result">
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spgetjobdetailbyjobid" FunctionName="Staffandtrain_NewModel.Store.spgetjobdetailbyjobid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.spgetjobdetailbyjobid_Result">
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="WhiteboardID" ColumnName="WhiteboardID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetJobdetailsbyWbid" FunctionName="Staffandtrain_NewModel.Store.SpGetJobdetailsbyWbid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetJobdetailsbyWbid_Result">
+          <ScalarProperty Name="jobid" ColumnName="jobid" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="jobdescr" ColumnName="jobdescr" />
+          <ScalarProperty Name="submittals" ColumnName="submittals" />
+          <ScalarProperty Name="WhiteBoardName" ColumnName="WhiteBoardName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetprospectinglistbyuserid" FunctionName="Staffandtrain_NewModel.Store.SPgetprospectinglistbyuserid" />
+    <FunctionImportMapping FunctionImportName="SpGetprospectinglistforclient" FunctionName="Staffandtrain_NewModel.Store.SpGetprospectinglistforclient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetprospectinglistforclient_Result">
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+          <ScalarProperty Name="restricted" ColumnName="restricted" />
+          <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+          <ScalarProperty Name="contactCount" ColumnName="contactCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetProspectinglists" FunctionName="Staffandtrain_NewModel.Store.SPgetProspectinglists">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetProspectinglists_Result">
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+          <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpgetProspectingselectlist" FunctionName="Staffandtrain_NewModel.Store.SpgetProspectingselectlist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpgetProspectingselectlist_Result">
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetProspectlist" FunctionName="Staffandtrain_NewModel.Store.SPGetProspectlist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPGetProspectlist_Result">
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+          <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+          <ScalarProperty Name="contactCount" ColumnName="contactCount" />
+          <ScalarProperty Name="restricted" ColumnName="restricted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetProspectlistTest" FunctionName="Staffandtrain_NewModel.Store.SPGetProspectlistTest">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPGetProspectlistTest_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+          <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+          <ScalarProperty Name="contactCount" ColumnName="contactCount" />
+          <ScalarProperty Name="restricted" ColumnName="restricted" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpgetProspectViewList" FunctionName="Staffandtrain_NewModel.Store.SpgetProspectViewList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpgetProspectViewList_Result">
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpgetProspectViewListTest" FunctionName="Staffandtrain_NewModel.Store.SpgetProspectViewListTest">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpgetProspectViewListTest_Result">
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Cnt" ColumnName="Cnt" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetprosviewlistclient" FunctionName="Staffandtrain_NewModel.Store.SpGetprosviewlistclient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetprosviewlistclient_Result">
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpgetRolelist" FunctionName="Staffandtrain_NewModel.Store.SpgetRolelist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpgetRolelist_Result">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpgetRoles" FunctionName="Staffandtrain_NewModel.Store.SpgetRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpgetRoles_Result">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="UserCount" ColumnName="UserCount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgettitle" FunctionName="Staffandtrain_NewModel.Store.SPgettitle" />
+    <FunctionImportMapping FunctionImportName="Spgetusers" FunctionName="Staffandtrain_NewModel.Store.Spgetusers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spgetusers_Result">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpGetwhiteBoard" FunctionName="Staffandtrain_NewModel.Store.SpGetwhiteBoard">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetwhiteBoard_Result">
+          <ScalarProperty Name="WBId" ColumnName="WBId" />
+          <ScalarProperty Name="WhiteBoardName" ColumnName="WhiteBoardName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpInsertclientnote" FunctionName="Staffandtrain_NewModel.Store.SpInsertclientnote" />
+    <FunctionImportMapping FunctionImportName="SPInsertCompanies" FunctionName="Staffandtrain_NewModel.Store.SPInsertCompanies" />
+    <FunctionImportMapping FunctionImportName="SPinsertCompanyClient" FunctionName="Staffandtrain_NewModel.Store.SPinsertCompanyClient" />
+    <FunctionImportMapping FunctionImportName="SpInsertEmailTemplate" FunctionName="Staffandtrain_NewModel.Store.SpInsertEmailTemplate" />
+    <FunctionImportMapping FunctionImportName="SPInsertProspectlist" FunctionName="Staffandtrain_NewModel.Store.SPInsertProspectlist" />
+    <FunctionImportMapping FunctionImportName="SpInsertUserPRos" FunctionName="Staffandtrain_NewModel.Store.SpInsertUserPRos" />
+    <FunctionImportMapping FunctionImportName="SpMoveContact" FunctionName="Staffandtrain_NewModel.Store.SpMoveContact" />
+    <FunctionImportMapping FunctionImportName="Spupdateclientnote" FunctionName="Staffandtrain_NewModel.Store.Spupdateclientnote" />
+    <FunctionImportMapping FunctionImportName="SPupdateCompanies" FunctionName="Staffandtrain_NewModel.Store.SPupdateCompanies" />
+    <FunctionImportMapping FunctionImportName="SpupdateContact" FunctionName="Staffandtrain_NewModel.Store.SpupdateContact" />
+    <FunctionImportMapping FunctionImportName="SpupdateContactClient" FunctionName="Staffandtrain_NewModel.Store.SpupdateContactClient" />
+    <FunctionImportMapping FunctionImportName="spupdatecontactresumes" FunctionName="Staffandtrain_NewModel.Store.spupdatecontactresumes" />
+    <FunctionImportMapping FunctionImportName="SpUpdateEmailTemplate" FunctionName="Staffandtrain_NewModel.Store.SpUpdateEmailTemplate" />
+    <FunctionImportMapping FunctionImportName="Spupdatejob" FunctionName="Staffandtrain_NewModel.Store.Spupdatejob" />
+    <FunctionImportMapping FunctionImportName="SPUpdateProspectList" FunctionName="Staffandtrain_NewModel.Store.SPUpdateProspectList" />
+    <FunctionImportMapping FunctionImportName="SpUpdateUserPRos" FunctionName="Staffandtrain_NewModel.Store.SpUpdateUserPRos" />
+    <FunctionImportMapping FunctionImportName="SpupdatewhiteBoard" FunctionName="Staffandtrain_NewModel.Store.SpupdatewhiteBoard" />
+    <FunctionImportMapping FunctionImportName="TempGetVersion" FunctionName="Staffandtrain_NewModel.Store.TempGetVersion" />
+    <FunctionImportMapping FunctionImportName="usp_Check_Key_Expiration" FunctionName="Staffandtrain_NewModel.Store.usp_Check_Key_Expiration" />
+    <FunctionImportMapping FunctionImportName="usp_KEYS_INSERT" FunctionName="Staffandtrain_NewModel.Store.usp_KEYS_INSERT" />
+    <FunctionImportMapping FunctionImportName="SPgetconformailwithoutbiztype_batchEmail" FunctionName="Staffandtrain_NewModel.Store.SPgetconformailwithoutbiztype_batchEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetconformailwithoutbiztype_batchEmail_Result">
+          <ScalarProperty Name="RowNum" ColumnName="RowNum" />
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetcontactformailsend_batchEmail" FunctionName="Staffandtrain_NewModel.Store.SPgetcontactformailsend_batchEmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetcontactformailsend_batchEmail_Result">
+          <ScalarProperty Name="RowNum" ColumnName="RowNum" />
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SpContactFilter" FunctionName="Staffandtrain_NewModel.Store.SpContactFilter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpContactFilter_Result1">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="ResumeFilePath" ColumnName="ResumeFilePath" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetDataForSendingEmailWithBizType" FunctionName="Staffandtrain_NewModel.Store.SPGetDataForSendingEmailWithBizType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPGetDataForSendingEmailWithBizType_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="ResumeFilePath" ColumnName="ResumeFilePath" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPGetDataForSendingEmailWithoutBizType" FunctionName="Staffandtrain_NewModel.Store.SPGetDataForSendingEmailWithoutBizType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPGetDataForSendingEmailWithoutBizType_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="ResumeFilePath" ColumnName="ResumeFilePath" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Worker">
+        <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CheckIn" ColumnName="CheckIn" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SPInsertOrUpdateWorker" FunctionName="Staffandtrain_NewModel.Store.SPInsertOrUpdateWorker" />
+    <FunctionImportMapping FunctionImportName="SPDeleteWorker" FunctionName="Staffandtrain_NewModel.Store.SPDeleteWorker" />
+    <EntitySetMapping Name="WorkersLogs">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.WorkersLog">
+        <MappingFragment StoreEntitySet="WorkersLog">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LogType" ColumnName="LogType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WorkerId" ColumnName="WorkerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SPInsertOrUpdateWorkerLog" FunctionName="Staffandtrain_NewModel.Store.SPInsertOrUpdateWorkerLog" />
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Log">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateAt" ColumnName="CreateAt" />
+          <ScalarProperty Name="RecordId" ColumnName="RecordId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SPInsertOrUpdateLog" FunctionName="Staffandtrain_NewModel.Store.SPInsertOrUpdateLog" />
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="Staffandtrain_NewModel.Config">
+        <MappingFragment StoreEntitySet="Config">
+          <ScalarProperty Name="CreateAt" ColumnName="CreateAt" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SearchCompany" FunctionName="Staffandtrain_NewModel.Store.SearchCompany">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SearchCompany_Result">
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="citycircle" ColumnName="citycircle" />
+          <ScalarProperty Name="biztype" ColumnName="biztype" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="addr1" ColumnName="addr1" />
+          <ScalarProperty Name="addr2" ColumnName="addr2" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="weburl" ColumnName="weburl" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="oldname" ColumnName="oldname" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="listguid" ColumnName="listguid" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SearchContact" FunctionName="Staffandtrain_NewModel.Store.SearchContact">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SearchContact_Result">
+          <ScalarProperty Name="contactid" ColumnName="contactid" />
+          <ScalarProperty Name="companyid" ColumnName="companyid" />
+          <ScalarProperty Name="xcontactlname" ColumnName="xcontactlname" />
+          <ScalarProperty Name="titlestandard" ColumnName="titlestandard" />
+          <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+          <ScalarProperty Name="contactcellphone" ColumnName="contactcellphone" />
+          <ScalarProperty Name="contactemail" ColumnName="contactemail" />
+          <ScalarProperty Name="linkedinprofileurl" ColumnName="linkedinprofileurl" />
+          <ScalarProperty Name="adminnotes" ColumnName="adminnotes" />
+          <ScalarProperty Name="contactnotes" ColumnName="contactnotes" />
+          <ScalarProperty Name="contactguid" ColumnName="contactguid" />
+          <ScalarProperty Name="companyguid" ColumnName="companyguid" />
+          <ScalarProperty Name="contactfullname" ColumnName="contactfullname" />
+          <ScalarProperty Name="xcontactfname" ColumnName="xcontactfname" />
+          <ScalarProperty Name="combinednotes" ColumnName="combinednotes" />
+          <ScalarProperty Name="resumes" ColumnName="resumes" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="ResumeFilePath" ColumnName="ResumeFilePath" />
+          <ScalarProperty Name="listid" ColumnName="listid" />
+          <ScalarProperty Name="listname" ColumnName="listname" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetemailtemplat_GroupinngAdded" FunctionName="Staffandtrain_NewModel.Store.SpGetEmailtemplatelist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpGetEmailtemplatelist_Result">
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="GroupingNumber" ColumnName="GroupingNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SPgetemailtemplatebytemplateid_GroupingAdded" FunctionName="Staffandtrain_NewModel.Store.SPgetemailtemplatebytemplateid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SPgetemailtemplatebytemplateid_Result">
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="GroupingNumber" ColumnName="GroupingNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

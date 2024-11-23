@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/docsupport/style.css">
+<link rel="stylesheet" href="~/docsupport/prism.css">
+
+<link href="~/chosen.css" rel="stylesheet" />
+<div class="container main-ctn">
+    <h1 class="title">Prospect Filter List (Admin)</h1>
+    <div class="admin-formNew">
+        <div class="col-sm-4 form-group">
+            <label>City Circle</label>
+            @Html.DropDownList("ddlcitycircle", (IEnumerable<SelectListItem>)ViewData["citycirclelist"], "Select City Circle", new { name = "ddlcitycircle", @class = "form-control", id = "ddlcitycircle" })
+            @*@Html.DropDownListFor(x => x.citycircle, ViewBag.citycircle as SelectList,new { name = "ddlcity", @class = "form-control", id = "ddlcity" })*@
+            <div id="" class="validateTips"></div>
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>Biztype</label>
+            @Html.DropDownList("ddlbiztype", (IEnumerable<SelectListItem>)ViewData["Biztypelist"], "Select Biztype", new { name = "ddlbiztype", @class = "form-control", id = "ddlbiztype" })
+            @*@Html.DropDownListFor(x => x.citycircle, ViewBag.citycircle as SelectList,new { name = "ddlcity", @class = "form-control", id = "ddlcity" })*@
+            <div id="" class="validateTips"></div>
+        </div>
+        <div class="col-sm-4 form-group">
+            <label>Search </label>
+            @Html.TextBox("txtname", null, new { @class = "form-control", @id = "txtname", @placeholder = "Search Names" })
+            <div id="" class="validateTips"></div>
+        </div>
+
+        <div class="col-sm-8 form-group">
+            <label>Title</label>
+            @Html.DropDownList("ddltitle", (IEnumerable<SelectListItem>)ViewData["Titlelist"], "", new { name = "ddltitle", @class = "chosen-select", @multiple = "multiple", id = "ddltitle" })
+            @*@Html.DropDownListFor(x => x.citycircle, ViewBag.citycircle as SelectList,new { name = "ddlcity", @class = "form-control", id = "ddlcity" })*@
+            <div id="" class="validateTips"></div>
+        </div>
+      
+       
+
+        <div class="col-sm-4 form-group">
+            <label></label>
+            <div class="divcreate"><a href="javascript:void(0)" class="btn btn-success" id="lnksearch">Search </a> 
+                <a href="javascript:void(0)" class="btn btn-success" id="lnkclear">Clear </a>
+              
+           </div>
+        </div>
+        
+
+       
+
+    </div>
+
+    
+    <label id="lblcount"></label>
+    <div id="tblpros">
+        
+        <textarea id="txtemaillst" class="txtarea_email" rows="15" cols="50" placeholder="Search For Email List"></textarea>
+    </div>
+    </div>
+<script src="~/Custom_JS/ProspectFilterList_Index.js" defer></script>
+
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            // getlist();
+            $("#lnksearch").click(function () {
+                getlist();
+            });
+
+            $("#lnkclear").click(function () {
+                $("#ddlcitycircle").val("");
+                $("#ddlbiztype").val("");
+                $("#ddltitle").val("Select Title").trigger("chosen:updated");
+                $("#txtname").val("");
+                $("#txtemaillst").val("")
+                $("#lblcount").text("");
+            });
+            
+
+
+        });
+        function getlist() {
+            var citycircle = $("#ddlcitycircle").val();
+            var biztype = $("#ddlbiztype").val();
+            var name = $("#txtname").val().trim();
+            var title = "";
+           if($("#ddltitle").val() != null)
+            {
+                var arr = $("#ddltitle").val();
+                title = (arr.join(", "));
+            }
+            
+            
+
+            $.ajax({
+                type: "POST",
+                url: "/ProspectFilterList/Prospectlistsearch",
+                async: false,
+                data: { CityCircle: citycircle, Biztype: biztype, TitleStandard: title, search: name },
+                success: function (msg) {
+                    var emaildata = "";
+
+                    for (var i = 0; i < msg.data.length; i++) {
+
+                        emaildata = emaildata + msg.data[i] + "\n";
+                        if (i != 0) {
+                            if (Math.ceil(i % 50) === 0) {
+
+                                emaildata = emaildata + "--------" + "\n"
+                            }
+                        }
+
+                    }
+                    $("#txtemaillst").val(emaildata);
+                    if (msg.str == "0")
+                    {
+                        $("#txtemaillst").val("No record found");
+
+                    }
+                    $("#lblcount").text("Total Count :- "+msg.str);
+
+                },
+                error: function (error) {
+                }
+            });
+        }
+
+
+
+    </script>*@
+
+
+    <script src="~/chosen.jquery.min.js"></script>
+    <script src="~/docsupport/prism.js" charset="utf-8"></script>
+    <script src="~/docsupport/init.js" charset="utf-8"></script>
+
+

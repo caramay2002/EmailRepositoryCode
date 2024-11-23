@@ -1,0 +1,123 @@
+﻿@using StaffandTrain.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+ 
+   
+    <h3>Great to have you back !</h3>
+    @using (Html.BeginForm("UserLogin", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                if (@ViewBag.Message != null && @ViewBag.Message != "Invalid User")
+                {
+            <div id="" class="alert alert-success">@ViewBag.Message</div>
+        }
+        else if (@ViewBag.Message != null && @ViewBag.Message == "Invalid User")
+        {
+            <div id="" class="alert alert-danger">@ViewBag.Message</div>
+        }
+        else if (@ViewBag.Message != null && @ViewBag.Message == "User account is not activated yet")
+        {
+            <div id="" class="alert alert-danger">@ViewBag.Message</div>
+        }
+
+        <ul>
+            <li>
+                <label>User Name</label>
+
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "txtusername", @maxlength = "50" })
+                <div id="" class="validateTips"></div>
+            </li>
+            <li>
+                <label>Password</label>
+
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", id = "txtpassword", @maxlength = "50", @type = "password", @Value = Model.Password })
+                <div id="" class="validateTips"></div>
+            </li>
+            <li class="clearfix">
+                <div class="checkbox checkbox-orange">
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @*<input id="checkbox1" type="checkbox">*@
+                    <label for="checkbox1">Remember</label>
+
+                </div>
+                <div class="forgot">
+                    <a href="/ForgotPassWord/Index">Forgot Password ?</a>
+                    <div class="forgot"> <a href="/SignUp/Index">SignUp</a> </div>
+                </div>
+            </li>
+            <li class="last">
+                <button type="submit" class="btn btn-primary" id="btnsave">SIGN IN</button>
+            </li>
+
+        </ul>
+    }
+
+
+    
+<script src="~/Custom_JS/Login_Index_JS.js" defer></script>
+    
+
+
+
+
+ 
+@*<div class="row">
+        <div class="col-md-8">
+            <section id="loginForm">
+                @if (@ViewBag.Message != null && @ViewBag.Message != "Error")
+                {
+                    <div id="" class="alert alert-success">@ViewBag.Message</div>
+                }
+                else if (@ViewBag.Message != null && @ViewBag.Message == "Error")
+                {
+                    <div id="" class="alert alert-danger">@ViewBag.Message</div>
+                }
+
+                @using (Html.BeginForm("UserLogin", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                {
+
+                    @Html.AntiForgeryToken()
+                    <h4>Use a local account to log in.</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.Label("User Name", new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Log in" class="btn btn-default" />
+                        </div>
+                    </div>
+                    <p>
+                        @Html.ActionLink("Register as a new user", "Register")
+                    </p>
+                    @* Enable this once you have account confirmation enabled for password reset functionality
+                        <p>
+                            @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                        </p>
+                }
+            </section>
+        </div>
+
+    </div>*@

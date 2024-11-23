@@ -1,0 +1,90 @@
+﻿@model StaffandTrain.Models.WorkerModel
+@{
+    ViewBag.Title = "SaveWorker";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/docsupport/style.css">
+<link rel="stylesheet" href="~/docsupport/prism.css">
+
+<link href="~/chosen.css" rel="stylesheet" />
+<div class="container main-ctn">
+    <h1 class="title">Add/Edit Worker</h1>
+
+    @if (ViewBag.Message == "Worker Saved" || ViewBag.Message == "Worker Updated")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+
+    <div style="font-weight: bold; margin:auto; width: 800px;">
+        Server Time: @ViewBag.ServerTime
+    </div>
+
+    @using (Html.BeginForm("SaveWorkerData", "Worker", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="admin-form">
+            <div class="admin-ctn">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Name</label>
+                        @Html.TextBoxFor(x => x.Name, new { id = "txtname", @placeholder = "Name", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Email</label>
+
+                        @Html.TextBoxFor(x => x.Email, new { id = "txtemail", @placeholder = "Email", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Password</label>
+
+                        @Html.TextBoxFor(x => x.Password, new { id = "txtpassword", @placeholder = "Password", @class = "form-control", @type = "password" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Check In Time</label>
+
+                        @Html.TextBoxFor(x => x.CheckIn, new { id = "txtcheckin", @placeholder = "Check In Time", @class = "form-control", @type = "time" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 form-group">
+                        <hr>
+                        <button class="btn btn-success" type="submit" id="btnsave">
+                            @(Model.Id == 0 ? "Save" : "Update") Worker
+                        </button>
+
+
+                        <a href="/Worker" class="btn btn-success" id="lnkcreatedata">Back to list </a>
+
+                    </div>
+                    <div style="display:none">
+                        @Html.TextBoxFor(x => x.Id, new { id = "txtid" })
+                        @Html.TextBoxFor(x => x.OldPassword, new { id = "txtoldpsw" })
+                        @Html.TextBoxFor(x => x.CreateDate, new { id = "txtCreateDate" })
+                    </div>
+                </div>
+            </div> <!--end admin-form-->
+
+        </div>
+    }
+</div>
+<script src="~/Custom_JS/Worker.js" defer></script>
+<script src="~/chosen.jquery.min.js"></script>
+<script src="~/docsupport/prism.js" charset="utf-8"></script>
+<script src="~/docsupport/init.js" charset="utf-8"></script>
+
+
+
+
+
+

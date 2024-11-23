@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+ <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>List ID</th>
+            <th>ListName</th>
+            <th>Total No. of Company</th>
+            <th>Total No. of Contact</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (Model.Count > 0)
+            {
+                foreach (var i in Model)
+                {
+                <tr>
+                    <td>@i.listid</td>
+                    <td>
+                        <a href="/ProspectViewListClient/Index?listid=@i.listid&lstname=@i.listname">@i.listname</a>
+                    </td>
+                    <td>@i.Cnt</td>
+                    <td>@i.contactCount</td>
+
+
+                    <td>
+                        @if (User.Identity.Name.ToUpper() == i.Userid.ToUpper())
+                        {
+                            <a class="btn Edit" onclick="showpopupedit('@i.listname','@i.listid','@i.restricted')" href="javascript:void(0)"><i class="fa fa-pencil-square-o"></i></a>
+                        }
+                    </td>
+                    <td>
+                        @if (User.Identity.Name.ToUpper() == i.Userid.ToUpper())
+                        {
+                            <a href="/ProspectListsClient/Delete_Prospective?listid=@i.listid" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Prospect?");'><i class="fa fa-trash-o"></i></a>
+                        }
+                    </td>
+
+
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">No Record Found</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,107 @@
+﻿@model StaffandTrain.Models.ManageJobs
+@using StaffandTrain.Common;
+@{
+    Common cm = new Common();
+    ViewBag.Title = "EditUpdateJobs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" defer></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js" defer></script>
+<script src="~/Custom_JS/WhiteBoard_EditUpdateJobs_v1.js" defer></script>
+<style type="text/css">
+    p, pre {
+        margin: 0 !important;
+    }
+    u {
+        text-decoration:underline !important;
+    }
+</style>
+<div class="container main-ctn">
+    <h1 class="title">Add/Edit Jobs</h1>
+
+    @if (@ViewBag.Message != null && @ViewBag.Message == "Job Created" || @ViewBag.Message == "Job Updated")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+    @using (Html.BeginForm("SaveJobs", "WhiteBoards", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="admin-form">
+            <div class="admin-ctn">
+                <div class="row">
+                    @*<div class="col-sm-12 form-group">
+                            <label>Job Title</label>
+                            @Html.TextBoxFor(x => x.jobtitle, new { id = "txttitle", @placeholder = "Job Title", @class = "form-control" })
+                            <div id="" class="validateTips"></div>
+                        </div>
+                        <div class="col-sm-12 form-group editorsample">
+                            <label>Job Description</label>
+
+                            @Html.TextAreaFor(x => x.jobdescr, new { id = "txtjobdesc", @placeholder = "Job Description", @class = "form-control form-control1", @rows="8" ,@cols="15" })
+                            <div id="" class="validateTips"></div>
+
+                        </div>*@
+
+                    <div class="col-sm-12 form-group">
+                        <label>Row Number</label>
+                        @Html.TextBoxFor(x => x.RowNumber, new { id = "txtRowNumber", @placeholder = "Row Number", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-12 form-group editorsample">
+                        <label>Notes</label>
+
+                        @Html.TextAreaFor(x => x.submittals, new { @id = "txtNotes", @placeholder = "Notes", @class = "summernote", @maxlength = "2500", name = "sampleEditor" })
+                        @*@Html.TextAreaFor(x => (x.submittals), new { @class = "summernote", @id = "message", @maxlength = "2500", name = "sampleEditor" })*@
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 form-group">
+                        <hr>
+                        @if (Model.jobid == 0)
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Save Notes</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-success" type="submit" id="btnsave">Update Notes</button>
+                        }
+
+
+                        <a href="/WhiteBoards/WhiteBoardDetails?wbid=@cm.Code_Encrypt(CryptorEngine.Encrypt(Model.WhiteboardID.ToString()))" class="btn btn-success" id="lnkcreatedata">Back to list </a>
+
+                    </div>
+                    <div style="display:none">
+                        @Html.TextBoxFor(x => x.jobid, new { id = "txtjobid" })
+                        @Html.TextBoxFor(x => x.WhiteboardID, new { id = "txtwbid" })
+                        @Html.TextBoxFor(x => x.jobiddecypt, new { id = "txtjbid" })
+
+                    </div>
+                </div>
+            </div> <!--end admin-form-->
+
+        </div>
+    }
+</div>
+
+
+@*<script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#btnsave").click(function () {
+                $(".validateTips").html("");
+                if ($("#txttitle").val().trim() == "") {
+                    $('#txttitle').nextAll(".validateTips:first").html("Enter Title");
+                    return false;
+                }
+
+
+            });
+        });
+
+    </script>*@

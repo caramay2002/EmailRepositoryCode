@@ -1,0 +1,2549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Staffandtrain_NewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SATConn" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aspnet_Applications" EntityType="Staffandtrain_NewModel.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="Staffandtrain_NewModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="Staffandtrain_NewModel.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Staffandtrain_NewModel.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Staffandtrain_NewModel.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="Staffandtrain_NewModel.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="Staffandtrain_NewModel.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Staffandtrain_NewModel.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="Staffandtrain_NewModel.aspnet_Users" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Staffandtrain_NewModel.aspnet_WebEvent_Events" />
+    <EntitySet Name="ASPStateTempApplications" EntityType="Staffandtrain_NewModel.ASPStateTempApplication" />
+    <EntitySet Name="ASPStateTempSessions" EntityType="Staffandtrain_NewModel.ASPStateTempSession" />
+    <EntitySet Name="BugLists" EntityType="Staffandtrain_NewModel.BugList" />
+    <EntitySet Name="CityCircles" EntityType="Staffandtrain_NewModel.CityCircle" />
+    <EntitySet Name="Companies" EntityType="Staffandtrain_NewModel.Company" />
+    <EntitySet Name="Companies_ListDeleted" EntityType="Staffandtrain_NewModel.Companies_ListDeleted" />
+    <EntitySet Name="Contacts" EntityType="Staffandtrain_NewModel.Contact" />
+    <EntitySet Name="EmailTemplates" EntityType="Staffandtrain_NewModel.EmailTemplate" />
+    <EntitySet Name="Prospecting_Lists" EntityType="Staffandtrain_NewModel.Prospecting_Lists" />
+    <EntitySet Name="Subscribers" EntityType="Staffandtrain_NewModel.Subscriber" />
+    <EntitySet Name="TitleStandards" EntityType="Staffandtrain_NewModel.TitleStandard" />
+    <EntitySet Name="Trackings" EntityType="Staffandtrain_NewModel.Tracking" />
+    <EntitySet Name="User_List_Access" EntityType="Staffandtrain_NewModel.User_List_Access" />
+    <EntitySet Name="User_Security" EntityType="Staffandtrain_NewModel.User_Security" />
+    <EntitySet Name="User_Security_States" EntityType="Staffandtrain_NewModel.User_Security_States" />
+    <EntitySet Name="UserProspectingLists" EntityType="Staffandtrain_NewModel.UserProspectingList" />
+    <EntitySet Name="WhiteBoardNames" EntityType="Staffandtrain_NewModel.WhiteBoardName" />
+    <EntitySet Name="ErrorLogs" EntityType="Staffandtrain_NewModel.ErrorLog" />
+    <EntitySet Name="ExpirationKeys" EntityType="Staffandtrain_NewModel.ExpirationKey" />
+    <EntitySet Name="InfoRequests" EntityType="Staffandtrain_NewModel.InfoRequest" />
+    <EntitySet Name="JobPostings" EntityType="Staffandtrain_NewModel.JobPosting" />
+    <EntitySet Name="locations" EntityType="Staffandtrain_NewModel.location" />
+    <EntitySet Name="Newsletters" EntityType="Staffandtrain_NewModel.Newsletter" />
+    <EntitySet Name="OpenJobs" EntityType="Staffandtrain_NewModel.OpenJob" />
+    <EntitySet Name="OpenJobs10" EntityType="Staffandtrain_NewModel.OpenJobs10" />
+    <EntitySet Name="OpenJobs11" EntityType="Staffandtrain_NewModel.OpenJobs11" />
+    <EntitySet Name="OpenJobs12" EntityType="Staffandtrain_NewModel.OpenJobs12" />
+    <EntitySet Name="OpenJobs13" EntityType="Staffandtrain_NewModel.OpenJobs13" />
+    <EntitySet Name="OpenJobs14" EntityType="Staffandtrain_NewModel.OpenJobs14" />
+    <EntitySet Name="OpenJobs15" EntityType="Staffandtrain_NewModel.OpenJobs15" />
+    <EntitySet Name="OpenJobs16" EntityType="Staffandtrain_NewModel.OpenJobs16" />
+    <EntitySet Name="OpenJobs17" EntityType="Staffandtrain_NewModel.OpenJobs17" />
+    <EntitySet Name="OpenJobs18" EntityType="Staffandtrain_NewModel.OpenJobs18" />
+    <EntitySet Name="OpenJobs2" EntityType="Staffandtrain_NewModel.OpenJobs2" />
+    <EntitySet Name="OpenJobs3" EntityType="Staffandtrain_NewModel.OpenJobs3" />
+    <EntitySet Name="OpenJobs4" EntityType="Staffandtrain_NewModel.OpenJobs4" />
+    <EntitySet Name="OpenJobs5" EntityType="Staffandtrain_NewModel.OpenJobs5" />
+    <EntitySet Name="OpenJobs6" EntityType="Staffandtrain_NewModel.OpenJobs6" />
+    <EntitySet Name="OpenJobs7" EntityType="Staffandtrain_NewModel.OpenJobs7" />
+    <EntitySet Name="OpenJobs8" EntityType="Staffandtrain_NewModel.OpenJobs8" />
+    <EntitySet Name="OpenJobs9" EntityType="Staffandtrain_NewModel.OpenJobs9" />
+    <EntitySet Name="Resumes" EntityType="Staffandtrain_NewModel.Resume" />
+    <EntitySet Name="SiteUsers" EntityType="Staffandtrain_NewModel.SiteUser" />
+    <EntitySet Name="States" EntityType="Staffandtrain_NewModel.State" />
+    <EntitySet Name="TrainingDocuments" EntityType="Staffandtrain_NewModel.TrainingDocument" />
+    <EntitySet Name="vw_aspnet_Applications" EntityType="Staffandtrain_NewModel.vw_aspnet_Applications" />
+    <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="Staffandtrain_NewModel.vw_aspnet_MembershipUsers" />
+    <EntitySet Name="vw_aspnet_Profiles" EntityType="Staffandtrain_NewModel.vw_aspnet_Profiles" />
+    <EntitySet Name="vw_aspnet_Roles" EntityType="Staffandtrain_NewModel.vw_aspnet_Roles" />
+    <EntitySet Name="vw_aspnet_Users" EntityType="Staffandtrain_NewModel.vw_aspnet_Users" />
+    <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="Staffandtrain_NewModel.vw_aspnet_UsersInRoles" />
+    <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="Staffandtrain_NewModel.vw_aspnet_WebPartState_Paths" />
+    <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="Staffandtrain_NewModel.vw_aspnet_WebPartState_Shared" />
+    <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="Staffandtrain_NewModel.vw_aspnet_WebPartState_User" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__2EA5EC27" Association="Staffandtrain_NewModel.FK__aspnet_Me__Appli__2EA5EC27">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__03F0984C" Association="Staffandtrain_NewModel.FK__aspnet_Pa__Appli__03F0984C">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__08B54D69" Association="Staffandtrain_NewModel.FK__aspnet_Ro__Appli__08B54D69">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__36470DEF" Association="Staffandtrain_NewModel.FK__aspnet_Us__Appli__36470DEF">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__2F9A1060" Association="Staffandtrain_NewModel.FK__aspnet_Me__UserI__2F9A1060">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__04E4BC85" Association="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__04E4BC85">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__05D8E0BE" Association="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__05D8E0BE">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__06CD04F7" Association="Staffandtrain_NewModel.FK__aspnet_Pe__UserI__06CD04F7">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__07C12930" Association="Staffandtrain_NewModel.FK__aspnet_Pr__UserI__07C12930">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProspectingList_UserProspectingList" Association="Staffandtrain_NewModel.FK_UserProspectingList_UserProspectingList">
+      <End Role="UserProspectingList" EntitySet="UserProspectingLists" />
+      <End Role="UserProspectingList1" EntitySet="UserProspectingLists" />
+    </AssociationSet>
+    <AssociationSet Name="aspnet_UsersInRoles" Association="Staffandtrain_NewModel.aspnet_UsersInRoles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <FunctionImport Name="aspnet_AnyDataInTables" ReturnType="Collection(String)">
+      <Parameter Name="TablesToCheck" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Applications_CreateApplication">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_CheckSchemaVersion">
+      <Parameter Name="Feature" Mode="In" Type="String" />
+      <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_ChangePasswordQuestionAndAnswer">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="NewPasswordQuestion" Mode="In" Type="String" />
+      <Parameter Name="NewPasswordAnswer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_CreateUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="PasswordQuestion" Mode="In" Type="String" />
+      <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+      <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_FindUsersByEmail">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="EmailToMatch" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_FindUsersByName">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetAllUsers">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetNumberOfUsersOnline">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="MinutesSinceLastInActive" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetPassword" ReturnType="Collection(Staffandtrain_NewModel.aspnet_Membership_GetPassword_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetPasswordWithFormat" ReturnType="Collection(Staffandtrain_NewModel.aspnet_Membership_GetPasswordWithFormat_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetUserByEmail" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetUserByName" ReturnType="Collection(Staffandtrain_NewModel.aspnet_Membership_GetUserByName_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetUserByUserId" ReturnType="Collection(Staffandtrain_NewModel.aspnet_Membership_GetUserByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Guid" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_ResetPassword">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="NewPassword" Mode="In" Type="String" />
+      <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_SetPassword">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="NewPassword" Mode="In" Type="String" />
+      <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_UnlockUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_UpdateUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Comment" Mode="In" Type="String" />
+      <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+      <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+      <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_UpdateUserInfo">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="IsPasswordCorrect" Mode="In" Type="Boolean" />
+      <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+      <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+      <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Paths_CreatePath">
+      <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="PathId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Personalization_GetApplicationId">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_DeleteAllState">
+      <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_FindState">
+      <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_GetCountOfState">
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+      <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_ResetSharedState">
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_ResetUserState">
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAllUsers_GetPageSettings" ReturnType="Collection(Binary)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAllUsers_ResetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAllUsers_SetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationPerUser_GetPageSettings" ReturnType="Collection(Binary)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationPerUser_ResetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationPerUser_SetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_DeleteInactiveProfiles" ReturnType="Collection(Int32)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_DeleteProfiles" ReturnType="Collection(Int32)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNames" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_GetNumberOfInactiveProfiles" ReturnType="Collection(Int32)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_GetProfiles">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_GetProperties" ReturnType="Collection(Staffandtrain_NewModel.aspnet_Profile_GetProperties_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_SetProperties">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="PropertyNames" Mode="In" Type="String" />
+      <Parameter Name="PropertyValuesString" Mode="In" Type="String" />
+      <Parameter Name="PropertyValuesBinary" Mode="In" Type="Binary" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_RegisterSchemaVersion">
+      <Parameter Name="Feature" Mode="In" Type="String" />
+      <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+      <Parameter Name="IsCurrentVersion" Mode="In" Type="Boolean" />
+      <Parameter Name="RemoveIncompatibleSchema" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_CreateRole">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_DeleteRole">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+      <Parameter Name="DeleteOnlyIfRoleIsEmpty" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_GetAllRoles" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_RoleExists">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Setup_RemoveAllRoleMembers">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Setup_RestorePermissions">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UnRegisterSchemaVersion">
+      <Parameter Name="Feature" Mode="In" Type="String" />
+      <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Users_CreateUser">
+      <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+      <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Users_DeleteUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="TablesToDeleteFrom" Mode="In" Type="Int32" />
+      <Parameter Name="NumTablesDeletedFrom" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNames" Mode="In" Type="String" />
+      <Parameter Name="RoleNames" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_FindUsersInRole" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+      <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_GetRolesForUser" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_GetUsersInRoles" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_IsUserInRole">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_RemoveUsersFromRoles" ReturnType="Collection(Staffandtrain_NewModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNames" Mode="In" Type="String" />
+      <Parameter Name="RoleNames" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_WebEvent_LogEvent">
+      <Parameter Name="EventId" Mode="In" Type="String" />
+      <Parameter Name="EventTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="EventTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EventType" Mode="In" Type="String" />
+      <Parameter Name="EventSequence" Mode="In" Type="Decimal" />
+      <Parameter Name="EventOccurrence" Mode="In" Type="Decimal" />
+      <Parameter Name="EventCode" Mode="In" Type="Int32" />
+      <Parameter Name="EventDetailCode" Mode="In" Type="Int32" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+      <Parameter Name="ApplicationPath" Mode="In" Type="String" />
+      <Parameter Name="ApplicationVirtualPath" Mode="In" Type="String" />
+      <Parameter Name="MachineName" Mode="In" Type="String" />
+      <Parameter Name="RequestUrl" Mode="In" Type="String" />
+      <Parameter Name="ExceptionType" Mode="In" Type="String" />
+      <Parameter Name="Details" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CreateTempTables" />
+    <FunctionImport Name="DeleteContactCompanybyCompanyId">
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteEmailtemplatebyId">
+      <Parameter Name="TemplateId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteExpiredSessions" />
+    <FunctionImport Name="GetHashCode">
+      <Parameter Name="input" Mode="In" Type="String" />
+      <Parameter Name="hash" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetMajorVersion">
+      <Parameter Name="p_ver" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetNewUsers" ReturnType="Collection(Staffandtrain_NewModel.GetNewUsers_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Max" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetProspectingListByUser">
+      <Parameter Name="User" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetProspectingUserById" ReturnType="Collection(String)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpaddContact">
+      <Parameter Name="contactfullname" Mode="In" Type="String" />
+      <Parameter Name="titlestandard" Mode="In" Type="String" />
+      <Parameter Name="contactphone" Mode="In" Type="String" />
+      <Parameter Name="contactcellphone" Mode="In" Type="String" />
+      <Parameter Name="contactemail" Mode="In" Type="String" />
+      <Parameter Name="linkedinprofileurl" Mode="In" Type="String" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpaddContactClient" ReturnType="Collection(Int32)">
+      <Parameter Name="contactfullname" Mode="In" Type="String" />
+      <Parameter Name="titlestandard" Mode="In" Type="String" />
+      <Parameter Name="contactphone" Mode="In" Type="String" />
+      <Parameter Name="contactcellphone" Mode="In" Type="String" />
+      <Parameter Name="contactemail" Mode="In" Type="String" />
+      <Parameter Name="linkedinprofileurl" Mode="In" Type="String" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+      <Parameter Name="adminnotes" Mode="In" Type="String" />
+      <Parameter Name="contactnotes" Mode="In" Type="String" />
+      <Parameter Name="Userid" Mode="In" Type="String" />
+      <Parameter Name="NewContactID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpContactFilterClient" ReturnType="Collection(Staffandtrain_NewModel.SpContactFilterClient_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Spcontexport" ReturnType="Collection(Staffandtrain_NewModel.Spcontexport_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="bizType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Spcontexportclient" ReturnType="Collection(Staffandtrain_NewModel.Spcontexportclient_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="bizType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpcreatenewJob">
+      <Parameter Name="jobtitle" Mode="In" Type="String" />
+      <Parameter Name="jobdescr" Mode="In" Type="String" />
+      <Parameter Name="submittals" Mode="In" Type="String" />
+      <Parameter Name="WhiteboardID" Mode="In" Type="Int32" />
+      <Parameter Name="RowNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPdeleteContact">
+      <Parameter Name="ContactId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spdeletedatauserprospecting">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpDeleteEmailTemplate">
+      <Parameter Name="TemplateId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spdeletejob">
+      <Parameter Name="jobid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpdeleteProspect">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPDeleteUser">
+      <Parameter Name="Userid" Mode="In" Type="Guid" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPErrorLog">
+      <Parameter Name="Error" Mode="In" Type="String" />
+      <Parameter Name="FunctionInformation" Mode="In" Type="String" />
+      <Parameter Name="ClientID" Mode="In" Type="String" />
+      <Parameter Name="Url" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetbiztype" ReturnType="Collection(String)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spgetbiztypeemail" ReturnType="Collection(String)" />
+    <FunctionImport Name="SPgetcitycircle" ReturnType="Collection(String)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spgetcitycircleemail" ReturnType="Collection(String)" />
+    <FunctionImport Name="SPgetCitycirclelist" ReturnType="Collection(String)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spgetclientnote" ReturnType="Collection(Staffandtrain_NewModel.Spgetclientnote_Result)">
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetCompanies" ReturnType="Collection(Staffandtrain_NewModel.SPgetCompanies_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spgetcompanydetailsbycompanyid" ReturnType="Collection(Staffandtrain_NewModel.Spgetcompanydetailsbycompanyid_Result)">
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetCompdetailsbycompid" ReturnType="Collection(Staffandtrain_NewModel.SPgetCompdetailsbycompid_Result)">
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetconformailwithoutbiztype" ReturnType="Collection(Staffandtrain_NewModel.SPgetconformailwithoutbiztype_Result)">
+      <Parameter Name="prospectList" Mode="In" Type="Int32" />
+      <Parameter Name="titleStandard" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetContactDataforedit" ReturnType="Collection(Staffandtrain_NewModel.SpGetContactDataforedit_Result)">
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetContactDataforeditClient" ReturnType="Collection(Staffandtrain_NewModel.SpGetContactDataforeditClient_Result)">
+      <Parameter Name="ContactId" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spgetcontactforclient" ReturnType="Collection(Staffandtrain_NewModel.spgetcontactforclient_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetcontactformailsend" ReturnType="Collection(Staffandtrain_NewModel.SPgetcontactformailsend_Result)">
+      <Parameter Name="prospectList" Mode="In" Type="Int32" />
+      <Parameter Name="biztype" Mode="In" Type="String" />
+      <Parameter Name="titleStandard" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetContactlistbyCompid" ReturnType="Collection(Staffandtrain_NewModel.SpGetContactlistbyCompid_Result)">
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spgetcontactlistforexpert" ReturnType="Collection(Staffandtrain_NewModel.Spgetcontactlistforexpert_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="bizType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetdataforexcelexport" ReturnType="Collection(Staffandtrain_NewModel.SpGetdataforexcelexport_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetemailtemplatebytemplateid" ReturnType="Collection(Staffandtrain_NewModel.SPgetemailtemplatebytemplateid_Result)">
+      <Parameter Name="TemplateId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetEmailtemplatelist" ReturnType="Collection(Staffandtrain_NewModel.SpGetEmailtemplatelist_Result)" />
+    <FunctionImport Name="spgetjobdetailbyjobid" ReturnType="Collection(Staffandtrain_NewModel.spgetjobdetailbyjobid_Result)">
+      <Parameter Name="jobid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetJobdetailsbyWbid" ReturnType="Collection(Staffandtrain_NewModel.SpGetJobdetailsbyWbid_Result)">
+      <Parameter Name="WhiteboardID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetprospectinglistbyuserid" ReturnType="Collection(String)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetprospectinglistforclient" ReturnType="Collection(Staffandtrain_NewModel.SpGetprospectinglistforclient_Result)">
+      <Parameter Name="User" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetProspectinglists" ReturnType="Collection(Staffandtrain_NewModel.SPgetProspectinglists_Result)" />
+    <FunctionImport Name="SpgetProspectingselectlist" ReturnType="Collection(Staffandtrain_NewModel.SpgetProspectingselectlist_Result)" />
+    <FunctionImport Name="SPGetProspectlist" ReturnType="Collection(Staffandtrain_NewModel.SPGetProspectlist_Result)" />
+    <FunctionImport Name="SPGetProspectlistTest" ReturnType="Collection(Staffandtrain_NewModel.SPGetProspectlistTest_Result)">
+      <Parameter Name="pageno" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpgetProspectViewList" ReturnType="Collection(Staffandtrain_NewModel.SpgetProspectViewList_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpgetProspectViewListTest" ReturnType="Collection(Staffandtrain_NewModel.SpgetProspectViewListTest_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="pageno" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpGetprosviewlistclient" ReturnType="Collection(Staffandtrain_NewModel.SpGetprosviewlistclient_Result)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpgetRolelist" ReturnType="Collection(Staffandtrain_NewModel.SpgetRolelist_Result)" />
+    <FunctionImport Name="SpgetRoles" ReturnType="Collection(Staffandtrain_NewModel.SpgetRoles_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPgettitle" ReturnType="Collection(String)" />
+    <FunctionImport Name="Spgetusers" ReturnType="Collection(Staffandtrain_NewModel.Spgetusers_Result)" />
+    <FunctionImport Name="SpGetwhiteBoard" ReturnType="Collection(Staffandtrain_NewModel.SpGetwhiteBoard_Result)" />
+    <FunctionImport Name="SpInsertclientnote">
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="ClientNotes" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPInsertCompanies">
+      <Parameter Name="citycircle" Mode="In" Type="String" />
+      <Parameter Name="biztype" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="addr1" Mode="In" Type="String" />
+      <Parameter Name="addr2" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="state" Mode="In" Type="String" />
+      <Parameter Name="zip" Mode="In" Type="String" />
+      <Parameter Name="weburl" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="priority" Mode="In" Type="Boolean" />
+      <Parameter Name="target" Mode="In" Type="Boolean" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="adminnotes" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPinsertCompanyClient">
+      <Parameter Name="citycircle" Mode="In" Type="String" />
+      <Parameter Name="biztype" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="addr1" Mode="In" Type="String" />
+      <Parameter Name="addr2" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="state" Mode="In" Type="String" />
+      <Parameter Name="zip" Mode="In" Type="String" />
+      <Parameter Name="weburl" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="priority" Mode="In" Type="Boolean" />
+      <Parameter Name="target" Mode="In" Type="Boolean" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="adminnotes" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="Userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpInsertEmailTemplate">
+      <Parameter Name="TemplateName" Mode="In" Type="String" />
+      <Parameter Name="Subject" Mode="In" Type="String" />
+      <Parameter Name="GroupingNumber" Mode="In" Type="Int32" />
+      <Parameter Name="EmailBody" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPInsertProspectlist">
+      <Parameter Name="listname" Mode="In" Type="String" />
+      <Parameter Name="restricted" Mode="In" Type="Byte" />
+      <Parameter Name="Userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpInsertUserPRos">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="listid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpMoveContact">
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+      <Parameter Name="companyidold" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spupdateclientnote">
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="ClientNotes" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPupdateCompanies">
+      <Parameter Name="citycircle" Mode="In" Type="String" />
+      <Parameter Name="biztype" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="addr1" Mode="In" Type="String" />
+      <Parameter Name="addr2" Mode="In" Type="String" />
+      <Parameter Name="city" Mode="In" Type="String" />
+      <Parameter Name="state" Mode="In" Type="String" />
+      <Parameter Name="zip" Mode="In" Type="String" />
+      <Parameter Name="weburl" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="priority" Mode="In" Type="Boolean" />
+      <Parameter Name="target" Mode="In" Type="Boolean" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="adminnotes" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpupdateContact">
+      <Parameter Name="contactfullname" Mode="In" Type="String" />
+      <Parameter Name="titlestandard" Mode="In" Type="String" />
+      <Parameter Name="contactphone" Mode="In" Type="String" />
+      <Parameter Name="contactcellphone" Mode="In" Type="String" />
+      <Parameter Name="contactemail" Mode="In" Type="String" />
+      <Parameter Name="linkedinprofileurl" Mode="In" Type="String" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpupdateContactClient">
+      <Parameter Name="contactfullname" Mode="In" Type="String" />
+      <Parameter Name="titlestandard" Mode="In" Type="String" />
+      <Parameter Name="contactphone" Mode="In" Type="String" />
+      <Parameter Name="contactcellphone" Mode="In" Type="String" />
+      <Parameter Name="contactemail" Mode="In" Type="String" />
+      <Parameter Name="linkedinprofileurl" Mode="In" Type="String" />
+      <Parameter Name="combinednotes" Mode="In" Type="String" />
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+      <Parameter Name="adminnotes" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spupdatecontactresumes">
+      <Parameter Name="resumes" Mode="In" Type="String" />
+      <Parameter Name="contactid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpUpdateEmailTemplate">
+      <Parameter Name="TemplateName" Mode="In" Type="String" />
+      <Parameter Name="Subject" Mode="In" Type="String" />
+      <Parameter Name="GroupingNumber" Mode="In" Type="Int32" />
+      <Parameter Name="EmailBody" Mode="In" Type="String" />
+      <Parameter Name="TemplateId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Spupdatejob">
+      <Parameter Name="jobtitle" Mode="In" Type="String" />
+      <Parameter Name="jobdescr" Mode="In" Type="String" />
+      <Parameter Name="submittals" Mode="In" Type="String" />
+      <Parameter Name="jobid" Mode="In" Type="Int32" />
+      <Parameter Name="RowNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPUpdateProspectList">
+      <Parameter Name="listname" Mode="In" Type="String" />
+      <Parameter Name="restricted" Mode="In" Type="Byte" />
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpUpdateUserPRos">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+      <Parameter Name="listid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SpupdatewhiteBoard">
+      <Parameter Name="WhiteboardName" Mode="In" Type="String" />
+      <Parameter Name="WBId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetAppID">
+      <Parameter Name="appName" Mode="In" Type="String" />
+      <Parameter Name="appId" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetStateItem" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="InOut" Type="Binary" />
+      <Parameter Name="locked" Mode="InOut" Type="Boolean" />
+      <Parameter Name="lockDate" Mode="InOut" Type="DateTime" />
+      <Parameter Name="lockCookie" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetStateItem2" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="InOut" Type="Binary" />
+      <Parameter Name="locked" Mode="InOut" Type="Boolean" />
+      <Parameter Name="lockAge" Mode="InOut" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetStateItem3" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="InOut" Type="Binary" />
+      <Parameter Name="locked" Mode="InOut" Type="Boolean" />
+      <Parameter Name="lockAge" Mode="InOut" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="InOut" Type="Int32" />
+      <Parameter Name="actionFlags" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetStateItemExclusive" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="InOut" Type="Binary" />
+      <Parameter Name="locked" Mode="InOut" Type="Boolean" />
+      <Parameter Name="lockDate" Mode="InOut" Type="DateTime" />
+      <Parameter Name="lockCookie" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetStateItemExclusive2" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="InOut" Type="Binary" />
+      <Parameter Name="locked" Mode="InOut" Type="Boolean" />
+      <Parameter Name="lockAge" Mode="InOut" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetStateItemExclusive3" ReturnType="Collection(Binary)">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="InOut" Type="Binary" />
+      <Parameter Name="locked" Mode="InOut" Type="Boolean" />
+      <Parameter Name="lockAge" Mode="InOut" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="InOut" Type="Int32" />
+      <Parameter Name="actionFlags" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempGetVersion">
+      <Parameter Name="ver" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TempInsertStateItemLong">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemLong" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempInsertStateItemShort">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempInsertUninitializedItem">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempReleaseStateItemExclusive">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="lockCookie" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempRemoveStateItem">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="lockCookie" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempResetTimeout">
+      <Parameter Name="id" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TempUpdateStateItemLong">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemLong" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempUpdateStateItemLongNullShort">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemLong" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempUpdateStateItemShort">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TempUpdateStateItemShortNullLong">
+      <Parameter Name="id" Mode="In" Type="String" />
+      <Parameter Name="itemShort" Mode="In" Type="Binary" />
+      <Parameter Name="timeout" Mode="In" Type="Int32" />
+      <Parameter Name="lockCookie" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_Check_Key_Expiration">
+      <Parameter Name="Guid" Mode="In" Type="Guid" />
+      <Parameter Name="Valid" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_KEYS_INSERT">
+      <Parameter Name="DateTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetNewUsers1" ReturnType="Collection(Staffandtrain_NewModel.GetNewUsers1_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Max" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpgetRoles1" ReturnType="Collection(Staffandtrain_NewModel.SpgetRoles1_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetconformailwithoutbiztype_batchEmail" ReturnType="Collection(Staffandtrain_NewModel.SPgetconformailwithoutbiztype_batchEmail_Result)">
+      <Parameter Name="prospectList" Mode="In" Type="Int32" />
+      <Parameter Name="titleStandard" Mode="In" Type="String" />
+      <Parameter Name="BatchStartingNumber" Mode="In" Type="Int32" />
+      <Parameter Name="BatchEndingNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetcontactformailsend_batchEmail" ReturnType="Collection(Staffandtrain_NewModel.SPgetcontactformailsend_batchEmail_Result)">
+      <Parameter Name="prospectList" Mode="In" Type="Int32" />
+      <Parameter Name="biztype" Mode="In" Type="String" />
+      <Parameter Name="titleStandard" Mode="In" Type="String" />
+      <Parameter Name="BatchStartingNumber" Mode="In" Type="Int32" />
+      <Parameter Name="BatchEndingNumber" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpContactFilter" ReturnType="Collection(Staffandtrain_NewModel.SpContactFilter_Result1)">
+      <Parameter Name="listid" Mode="In" Type="Int32" />
+      <Parameter Name="companyid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPGetDataForSendingEmailWithBizType" ReturnType="Collection(Staffandtrain_NewModel.SPGetDataForSendingEmailWithBizType_Result)">
+      <Parameter Name="ProspectListId" Mode="In" Type="Int32" />
+      <Parameter Name="titleStandard" Mode="In" Type="String" />
+      <Parameter Name="BizType" Mode="In" Type="String" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="EndIndex" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SPGetDataForSendingEmailWithoutBizType" ReturnType="Collection(Staffandtrain_NewModel.SPGetDataForSendingEmailWithoutBizType_Result)">
+      <Parameter Name="ProspectListId" Mode="In" Type="Int32" />
+      <Parameter Name="titleStandard" Mode="In" Type="String" />
+      <Parameter Name="StartIndex" Mode="In" Type="Int32" />
+      <Parameter Name="EndIndex" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Workers" EntityType="Staffandtrain_NewModel.Worker" />
+    <FunctionImport Name="SPInsertOrUpdateWorker">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="CheckIn" Mode="In" Type="Time" />
+      <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ModifiedDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="SPDeleteWorker">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="WorkersLogs" EntityType="Staffandtrain_NewModel.WorkersLog" />
+    <FunctionImport Name="SPInsertOrUpdateWorkerLog">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="WorkerId" Mode="In" Type="Int32" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="LogType" Mode="In" Type="String" />
+      <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Logs" EntityType="Staffandtrain_NewModel.Log" />
+    <FunctionImport Name="SPInsertOrUpdateLog">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="RecordId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Configs" EntityType="Staffandtrain_NewModel.Config" />
+    <FunctionImport Name="SearchCompany" ReturnType="Collection(Staffandtrain_NewModel.SearchCompany_Result)">
+      <Parameter Name="SearchQuery" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SearchContact" ReturnType="Collection(Staffandtrain_NewModel.SearchContact_Result)">
+      <Parameter Name="SearchQuery" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SPgetemailtemplat_GroupinngAdded" ReturnType="Collection(Staffandtrain_NewModel.SpGetEmailtemplatelist_Result)" />
+    <FunctionImport Name="SPgetemailtemplatebytemplateid_GroupingAdded" ReturnType="Collection(Staffandtrain_NewModel.SPgetemailtemplatebytemplateid_Result)">
+      <Parameter Name="TemplateId" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="Staffandtrain_NewModel.FK__aspnet_Me__Appli__2EA5EC27" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="Staffandtrain_NewModel.FK__aspnet_Pa__Appli__03F0984C" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="Staffandtrain_NewModel.FK__aspnet_Ro__Appli__08B54D69" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Staffandtrain_NewModel.FK__aspnet_Us__Appli__36470DEF" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Staffandtrain_NewModel.FK__aspnet_Me__Appli__2EA5EC27" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Staffandtrain_NewModel.FK__aspnet_Me__UserI__2F9A1060" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Staffandtrain_NewModel.FK__aspnet_Pa__Appli__03F0984C" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__04E4BC85" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__05D8E0BE" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__04E4BC85" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Paths" Relationship="Staffandtrain_NewModel.FK__aspnet_Pe__PathI__05D8E0BE" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Staffandtrain_NewModel.FK__aspnet_Pe__UserI__06CD04F7" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Staffandtrain_NewModel.FK__aspnet_Pr__UserI__07C12930" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Staffandtrain_NewModel.FK__aspnet_Ro__Appli__08B54D69" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Users" Relationship="Staffandtrain_NewModel.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="CompatibleSchemaVersion" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="aspnet_Applications" Relationship="Staffandtrain_NewModel.FK__aspnet_Us__Appli__36470DEF" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="Staffandtrain_NewModel.FK__aspnet_Me__UserI__2F9A1060" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Staffandtrain_NewModel.FK__aspnet_Pe__UserI__06CD04F7" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+    <NavigationProperty Name="aspnet_Profile" Relationship="Staffandtrain_NewModel.FK__aspnet_Pr__UserI__07C12930" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+    <NavigationProperty Name="aspnet_Roles" Relationship="Staffandtrain_NewModel.aspnet_UsersInRoles" FromRole="aspnet_Users" ToRole="aspnet_Roles" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MachineName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ASPStateTempApplication">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="Int32" Nullable="false" />
+    <Property Name="AppName" Type="String" Nullable="false" MaxLength="280" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ASPStateTempSession">
+    <Key>
+      <PropertyRef Name="SessionId" />
+    </Key>
+    <Property Name="SessionId" Type="String" Nullable="false" MaxLength="88" FixedLength="false" Unicode="true" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Expires" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LockDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LockDateLocal" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LockCookie" Type="Int32" Nullable="false" />
+    <Property Name="Timeout" Type="Int32" Nullable="false" />
+    <Property Name="Locked" Type="Boolean" Nullable="false" />
+    <Property Name="SessionItemShort" Type="Binary" MaxLength="7000" FixedLength="false" />
+    <Property Name="SessionItemLong" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Flags" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BugList">
+    <Key>
+      <PropertyRef Name="buglistid" />
+    </Key>
+    <Property Name="buglistid" Type="Int32" Nullable="false" />
+    <Property Name="bugurl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="bugtype" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="bugdesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="bugnotes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CityCircle">
+    <Key>
+      <PropertyRef Name="CityCircle1" />
+    </Key>
+    <Property Name="CityCircle1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="companyid" />
+    </Key>
+    <Property Name="companyid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="listid" Type="Int32" />
+    <Property Name="citycircle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="biztype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="addr1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="addr2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="weburl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="adminnotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="oldname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="companyguid" Type="Guid" />
+    <Property Name="listguid" Type="Guid" />
+    <Property Name="priority" Type="Boolean" />
+    <Property Name="target" Type="Boolean" />
+    <Property Name="combinednotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Userid" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Companies_ListDeleted">
+    <Key>
+      <PropertyRef Name="companyid" />
+    </Key>
+    <Property Name="companyid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="listid" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="addr1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="addr2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="zip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="weburl" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="contactid" />
+    </Key>
+    <Property Name="contactid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyid" Type="Int32" />
+    <Property Name="xcontactlname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="titlestandard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactcellphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="linkedinprofileurl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="adminnotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contactnotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contactguid" Type="Guid" />
+    <Property Name="companyguid" Type="Guid" />
+    <Property Name="contactfullname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="xcontactfname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="combinednotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resumes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Userid" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ResumeFilePath" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="TemplateId" />
+    </Key>
+    <Property Name="TemplateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EmailBody" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="GroupingNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Prospecting_Lists">
+    <Key>
+      <PropertyRef Name="listid" />
+    </Key>
+    <Property Name="listid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="listname" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="restricted" Type="Byte" />
+    <Property Name="listguid" Type="Guid" />
+    <Property Name="Userid" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Subscriber">
+    <Key>
+      <PropertyRef Name="SubscriberID" />
+    </Key>
+    <Property Name="SubscriberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubscribeDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TitleStandard">
+    <Key>
+      <PropertyRef Name="TitleStandard1" />
+    </Key>
+    <Property Name="TitleStandard1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tracking">
+    <Key>
+      <PropertyRef Name="TrackingId" />
+    </Key>
+    <Property Name="TrackingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateInvoicePrice" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ClientContact" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DirectoryUP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DatePaid" Type="DateTime" Precision="3" />
+    <Property Name="RenewalReminder" Type="DateTime" Precision="3" />
+    <Property Name="StaffAndTrainUP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ListGuid" Type="Guid" />
+    <Property Name="CompanyGuid" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="User_List_Access">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="listid" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User_Security">
+    <Key>
+      <PropertyRef Name="loginid" />
+    </Key>
+    <Property Name="loginid" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="userlevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="companyid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="primarycontact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="datesignedup" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SingleCityPostings" Type="Boolean" />
+    <Property Name="website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User_Security_States">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyid" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserProspectingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="listid" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserProspectingList1" Relationship="Staffandtrain_NewModel.FK_UserProspectingList_UserProspectingList" FromRole="UserProspectingList" ToRole="UserProspectingList1" />
+    <NavigationProperty Name="UserProspectingList2" Relationship="Staffandtrain_NewModel.FK_UserProspectingList_UserProspectingList" FromRole="UserProspectingList1" ToRole="UserProspectingList" />
+  </EntityType>
+  <EntityType Name="WhiteBoardName">
+    <Key>
+      <PropertyRef Name="WBId" />
+    </Key>
+    <Property Name="WBId" Type="Int32" Nullable="false" />
+    <Property Name="WhiteBoardName1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AllowRecruiter" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Error" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FunctionInformation" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ClientID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ExpirationKey">
+    <Key>
+      <PropertyRef Name="ExpirationKeyId" />
+      <PropertyRef Name="DateExpires" />
+    </Key>
+    <Property Name="ExpirationKeyId" Type="Guid" Nullable="false" />
+    <Property Name="DateExpires" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="InfoRequest">
+    <Key>
+      <PropertyRef Name="reqid" />
+    </Key>
+    <Property Name="reqid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="reqname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="reqemail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="reqdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="JobPosting">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobstate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactemail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="contactphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="companyid" Type="Int32" />
+    <Property Name="jobinfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="contactname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="locid" />
+    </Key>
+    <Property Name="locid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="locname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Newsletter">
+    <Key>
+      <PropertyRef Name="NewsletterID" />
+      <PropertyRef Name="NewsletterName" />
+      <PropertyRef Name="NewsletterLink" />
+    </Key>
+    <Property Name="NewsletterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewsletterName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NewsletterLink" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="NewsletterComments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShowLink" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJob">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="WhiteboardID" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RowNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="OpenJobs10">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs11">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs12">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs13">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs14">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs15">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs16">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs17">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs18">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs2">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs3">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs4">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs5">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs6">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs7">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs8">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OpenJobs9">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobdescr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="jobcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datestamp" Type="DateTime" Precision="3" />
+    <Property Name="postedby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="jobguid" Type="Guid" />
+    <Property Name="submittals" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Resume">
+    <Key>
+      <PropertyRef Name="resid" />
+    </Key>
+    <Property Name="resid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="resume1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="resdt" Type="DateTime" Precision="3" />
+    <Property Name="jobtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobloc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="jobloc1" Type="Int32" />
+    <Property Name="jobloc2" Type="Int32" />
+    <Property Name="jobloc3" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SiteUser">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="userlevel" Type="Int32" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="Int32" Nullable="false" />
+    <Property Name="state1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="abbr" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TrainingDocument">
+    <Key>
+      <PropertyRef Name="TrainingDocumentLinkID" />
+      <PropertyRef Name="TrainingDocumentName" />
+      <PropertyRef Name="TrainingDocumentLink" />
+    </Key>
+    <Property Name="TrainingDocumentLinkID" Type="Int32" Nullable="false" />
+    <Property Name="TrainingDocumentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TrainingDocumentLink" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TrainingDocumentComments" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShowLink" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="TrainingDocumentOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredApplicationName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_MembershipUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DataSize" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredRoleName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredPath" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_Shared">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="vw_aspnet_WebPartState_User">
+    <Key>
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="DataSize" Type="Int32" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__2EA5EC27">
+    <End Type="Staffandtrain_NewModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__03F0984C">
+    <End Type="Staffandtrain_NewModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__08B54D69">
+    <End Type="Staffandtrain_NewModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__36470DEF">
+    <End Type="Staffandtrain_NewModel.aspnet_Applications" Role="aspnet_Applications" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__2F9A1060">
+    <End Type="Staffandtrain_NewModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__04E4BC85">
+    <End Type="Staffandtrain_NewModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_PersonalizationAllUsers" Role="aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__05D8E0BE">
+    <End Type="Staffandtrain_NewModel.aspnet_Paths" Role="aspnet_Paths" Multiplicity="0..1" />
+    <End Type="Staffandtrain_NewModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__06CD04F7">
+    <End Type="Staffandtrain_NewModel.aspnet_Users" Role="aspnet_Users" Multiplicity="0..1" />
+    <End Type="Staffandtrain_NewModel.aspnet_PersonalizationPerUser" Role="aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__07C12930">
+    <End Type="Staffandtrain_NewModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.aspnet_Profile" Role="aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProspectingList_UserProspectingList">
+    <End Type="Staffandtrain_NewModel.UserProspectingList" Role="UserProspectingList" Multiplicity="1" />
+    <End Type="Staffandtrain_NewModel.UserProspectingList" Role="UserProspectingList1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProspectingList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProspectingList1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aspnet_UsersInRoles">
+    <End Type="Staffandtrain_NewModel.aspnet_Roles" Role="aspnet_Roles" Multiplicity="*" />
+    <End Type="Staffandtrain_NewModel.aspnet_Users" Role="aspnet_Users" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="aspnet_Membership_GetPassword_Result">
+    <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Column2" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetPasswordWithFormat_Result">
+    <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Column2" Nullable="true" />
+    <Property Type="String" Name="Column3" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Column4" Nullable="true" />
+    <Property Type="Int32" Name="Column5" Nullable="true" />
+    <Property Type="Boolean" Name="Column6" Nullable="true" />
+    <Property Type="DateTime" Name="Column7" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Column8" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetUserByName_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetUserByUserId_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Profile_GetProperties_Result">
+    <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" />
+    <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+    <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="GetNewUsers_Result">
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SpContactFilter_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpContactFilterClient_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Spcontexport_Result">
+    <Property Type="String" Name="City_Circle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Company_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Title_Standard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City_List" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ContactPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactCellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CombinedNotes" Nullable="true" />
+    <Property Type="String" Name="Contact_Notes" Nullable="true" />
+    <Property Type="String" Name="LinkedinProfileUrl" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Spcontexportclient_Result">
+    <Property Type="String" Name="City_Circle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Company_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Title_Standard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City_List" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ContactPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactCellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CombinedNotes" Nullable="true" />
+    <Property Type="String" Name="Contact_Notes" Nullable="true" />
+    <Property Type="String" Name="LinkedinProfileUrl" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="Spgetclientnote_Result">
+    <Property Type="Int32" Name="ContactId" Nullable="true" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="ClientNotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPgetCompanies_Result">
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Spgetcompanydetailsbycompanyid_Result">
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+    <Property Type="String" Name="citycircle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="addr1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="addr2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="state" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="weburl" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="notes" Nullable="true" />
+    <Property Type="Boolean" Name="priority" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPgetCompdetailsbycompid_Result">
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+    <Property Type="String" Name="citycircle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="addr1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="addr2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="state" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="weburl" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="phone" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="priority" Nullable="true" />
+    <Property Type="Boolean" Name="target" Nullable="true" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="notes" Nullable="true" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SPgetconformailwithoutbiztype_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SpGetContactDataforedit_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SpGetContactDataforeditClient_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spgetcontactforclient_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="String" Name="clientnotes" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPgetcontactformailsend_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SpGetContactlistbyCompid_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Spgetcontactlistforexpert_Result">
+    <Property Type="String" Name="City_Circle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Company_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Contact_Name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Title_Standard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City_List" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="ContactPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactCellPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ContactEmail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CombinedNotes" Nullable="true" />
+    <Property Type="String" Name="Contact_Notes" Nullable="true" />
+    <Property Type="String" Name="LinkedinProfileUrl" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="SpGetdataforexcelexport_Result">
+    <Property Type="String" Name="City_Circle" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Biz_Type" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Company_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="State" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="WebUrl" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SPgetemailtemplatebytemplateid_Result">
+    <Property Type="Int32" Name="TemplateId" Nullable="false" />
+    <Property Type="String" Name="TemplateName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Subject" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="EmailBody" Nullable="true" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="GroupingNumber" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpGetEmailtemplatelist_Result">
+    <Property Type="Int32" Name="TemplateId" Nullable="false" />
+    <Property Type="String" Name="TemplateName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Subject" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="EmailBody" Nullable="true" />
+    <Property Type="Int32" Name="GroupingNumber" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spgetjobdetailbyjobid_Result">
+    <Property Type="Int32" Name="jobid" Nullable="false" />
+    <Property Type="String" Name="jobtitle" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="jobdescr" Nullable="true" />
+    <Property Type="String" Name="submittals" Nullable="true" />
+    <Property Type="Int32" Name="WhiteboardID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpGetJobdetailsbyWbid_Result">
+    <Property Type="Int32" Name="jobid" Nullable="false" />
+    <Property Type="String" Name="jobtitle" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="jobdescr" Nullable="true" />
+    <Property Type="String" Name="submittals" Nullable="true" />
+    <Property Type="String" Name="WhiteBoardName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SpGetprospectinglistforclient_Result">
+    <Property Type="Int32" Name="listid" Nullable="false" />
+    <Property Type="String" Name="Userid" Nullable="false" MaxLength="150" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+    <Property Type="Byte" Name="restricted" Nullable="true" />
+    <Property Type="Int32" Name="Cnt" Nullable="true" />
+    <Property Type="Int32" Name="contactCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPgetProspectinglists_Result">
+    <Property Type="Int32" Name="listid" Nullable="false" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="Cnt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpgetProspectingselectlist_Result">
+    <Property Type="Int32" Name="listid" Nullable="false" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SPGetProspectlist_Result">
+    <Property Type="Int32" Name="listid" Nullable="false" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="Cnt" Nullable="true" />
+    <Property Type="Int32" Name="contactCount" Nullable="true" />
+    <Property Type="Byte" Name="restricted" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPGetProspectlistTest_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="listid" Nullable="false" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="Cnt" Nullable="true" />
+    <Property Type="Int32" Name="contactCount" Nullable="true" />
+    <Property Type="Byte" Name="restricted" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpgetProspectViewList_Result">
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+    <Property Type="Boolean" Name="priority" Nullable="true" />
+    <Property Type="Boolean" Name="target" Nullable="true" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="citycircle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cnt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpgetProspectViewListTest_Result">
+    <Property Type="Int64" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+    <Property Type="Boolean" Name="priority" Nullable="true" />
+    <Property Type="Boolean" Name="target" Nullable="true" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="citycircle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Cnt" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpGetprosviewlistclient_Result">
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="priority" Nullable="true" />
+    <Property Type="Boolean" Name="target" Nullable="true" />
+    <Property Type="String" Name="citycircle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SpgetRolelist_Result">
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="RoleId" Nullable="false" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="LoweredRoleName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="SpgetRoles_Result">
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" />
+    <Property Type="Int32" Name="UserCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Spgetusers_Result">
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="String" Name="LastLoginDate" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="CreateDate" Nullable="true" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="SpGetwhiteBoard_Result">
+    <Property Type="Int32" Name="WBId" Nullable="false" />
+    <Property Type="String" Name="WhiteBoardName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetNewUsers1_Result">
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SpgetRoles1_Result">
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" />
+    <Property Type="Int32" Name="UserCount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPgetconformailwithoutbiztype_batchEmail_Result">
+    <Property Type="Int64" Name="RowNum" Nullable="true" />
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SPgetcontactformailsend_batchEmail_Result">
+    <Property Type="Int64" Name="RowNum" Nullable="true" />
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SpContactFilter_Result1">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ResumeFilePath" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SPGetDataForSendingEmailWithBizType_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ResumeFilePath" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SPGetDataForSendingEmailWithoutBizType_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ResumeFilePath" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <EntityType Name="Worker">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="CheckIn" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="ModifiedDate" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CheckIn" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="WorkersLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="WorkerId" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="LogType" />
+      <PropertyRef Name="CreateDate" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkerId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LogType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="CreateAt" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RecordId" Type="Int32" />
+    <Property Name="CreateAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="CreateAt" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Key" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreateAt" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <ComplexType Name="SearchCompany_Result">
+    <Property Type="Int32" Name="companyid" Nullable="false" />
+    <Property Type="Int32" Name="listid" Nullable="true" />
+    <Property Type="String" Name="citycircle" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="biztype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="addr1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="addr2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="city" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="state" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="zip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="weburl" Nullable="true" />
+    <Property Type="String" Name="phone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="notes" Nullable="true" />
+    <Property Type="String" Name="oldname" Nullable="true" MaxLength="50" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="Guid" Name="listguid" Nullable="true" />
+    <Property Type="Boolean" Name="priority" Nullable="true" />
+    <Property Type="Boolean" Name="target" Nullable="true" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+  </ComplexType>
+  <ComplexType Name="SearchContact_Result">
+    <Property Type="Int32" Name="contactid" Nullable="false" />
+    <Property Type="Int32" Name="companyid" Nullable="true" />
+    <Property Type="String" Name="xcontactlname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="titlestandard" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactcellphone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="contactemail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linkedinprofileurl" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="adminnotes" Nullable="true" />
+    <Property Type="String" Name="contactnotes" Nullable="true" />
+    <Property Type="Guid" Name="contactguid" Nullable="true" />
+    <Property Type="Guid" Name="companyguid" Nullable="true" />
+    <Property Type="String" Name="contactfullname" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="xcontactfname" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="combinednotes" Nullable="true" />
+    <Property Type="String" Name="resumes" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="Userid" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="ResumeFilePath" Nullable="true" MaxLength="250" />
+    <Property Type="Int32" Name="listid" Nullable="false" />
+    <Property Type="String" Name="listname" Nullable="true" MaxLength="250" />
+  </ComplexType>
+</Schema>

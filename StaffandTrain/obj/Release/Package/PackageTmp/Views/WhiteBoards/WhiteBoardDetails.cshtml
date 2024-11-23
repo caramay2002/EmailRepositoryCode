@@ -1,0 +1,70 @@
+﻿@using StaffandTrain.Common;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Common cm = new Common();
+}
+<style type="text/css">
+    p, pre {
+        margin: 0 !important;
+    }
+    u {
+        text-decoration: underline !important;
+    }
+</style>
+<div class="container main-ctn">
+    <h1 class="title">@ViewBag.wbname Jobs</h1>
+
+    <div class="divcreate">
+
+        <a href="/WhiteBoards/EditUpdateJobs?wbid=@cm.Code_Encrypt(CryptorEngine.Encrypt(@ViewBag.wbid.ToString()))" class="btn btn-success" id="lnkcreate">Create New   <i class="fa fa-plus" aria-hidden="true"></i></a>
+
+
+
+        @*<a href="#" class="btn btn-success" id="lnkcreate">Create New   <i class="fa fa-plus" aria-hidden="true"></i></a>*@
+    </div>
+
+    @if (@ViewBag.Message != null && @ViewBag.Message != "Some error occured")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                @*<th>Job Title</th>*@
+                <th>#</th>
+                <th>Notes</th>
+                
+                <th>Edit/Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count > 0)
+            {
+                foreach (var i in Model)
+                {
+                    <tr>
+                        @*<td width="20%">@i.jobtitle</td>*@
+                        <td width="5%"><pre> @i.RowNumber</pre></td>
+                        <td width="85%"><pre> @Html.Raw(i.submittals)</pre></td>
+                        <td width="10%">
+                            <a class="btn Edit" href="/WhiteBoards/EditUpdateJobs?wbid=@cm.Code_Encrypt(CryptorEngine.Encrypt(ViewBag.wbid.ToString()))&jobid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.jobid.ToString()))"><i class="fa fa-pencil-square-o"></i></a>
+                            <a href="/WhiteBoards/Deletejob?wbid=@cm.Code_Encrypt(CryptorEngine.Encrypt(ViewBag.wbid.ToString()))&jobid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.jobid.ToString()))" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Job?");'><i class="fa fa-trash-o"></i></a>
+                            @*<a href="#" class="btn Delete" ><i class="fa fa-trash-o"></i></a>*@
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4">No Record Found</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

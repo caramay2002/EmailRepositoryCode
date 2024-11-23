@@ -1,0 +1,43 @@
+﻿
+@using StaffandTrain.Common;
+@{
+    Layout = null;
+    Common cm = new Common();
+}
+@*<link href="~/Content/loading.css" rel="stylesheet" />*@
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+@*<script src="~/Scripts/jquery.min.js"></script>*@
+@{
+    var grid = new WebGrid(Model, canPage: false,
+    ajaxUpdateContainerId: "gridContent");
+}
+<script src="~/Custom_JS/ProspectView_GetCompanyListNew_JS.js" defer></script>
+
+
+<div id="WebGrid">
+    @grid.GetHtml(tableStyle: "table table-striped table-bordered",
+                headerStyle: "webgrid-header",
+                alternatingRowStyle: "alt",
+                selectedRowStyle: "select",
+                columns: grid.Columns(
+
+                        grid.Column("biztype", header: "Biz Type", canSort: false),
+                        grid.Column("CompanyName", format: @<text><a id="@item.companyid" href="~/ProspectViewCompany/Index?Compid=@cm.Code_Encrypt(CryptorEngine.Encrypt(item.companyid.ToString()))" class="details">@item.name</a></text>, canSort: false),
+                                                                                grid.Column("User Actions", format: @<text><a href="~/ProspectViewList/SaveCompany?companyidedit=@item.companyid" class="details AnyAction"><i class="fa fa-pencil-square-o"></i></a>
+                                                                                    @if (User.IsInRole("Admin"))
+                                                                                                {
+                                                                                        <a href="~/ProspectViewList/DeleteCompany?companyidedit=@item.companyid&listid=@item.listid" class="btn Delete AnyAction" onclick='return confirm("Are you sure you wish to delete this Company?");'>
+                                                                                            <i class="fa fa-trash-o"></i>
+                                                                                        </a>
+                                                                                                }
+                                                                                    /**/
+
+
+                                                                                </text>, canSort: false),
+                                                                                                                              grid.Column("priority", "priority", canSort: false),
+
+                                                                                                                                          //  grid.Column(null, null, format: @<input type="text" style="display:none" name="priority" value="@item.priority" />),
+                                                                                                                                          grid.Column("target", "Target", canSort: false)
+                                                                                                                                          ))
+
+</div>

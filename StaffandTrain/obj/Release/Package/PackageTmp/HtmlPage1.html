@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>jQM Complex Demo</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div data-role="page" id="index" data-theme="a">
+        <div data-role="header">
+            <h3>
+                First Page
+            </h3>
+            <a class="ui-btn-right showNextPage">Next</a>
+        </div>
+
+        <div data-role="content">
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+
+        </div>
+    </div>
+    <div data-role="page" id="second" data-theme="a">
+        <div data-role="header">
+            <h3>
+                Second Page
+            </h3>
+            <a class="ui-btn-left showPrevPage">Back</a>
+        </div>
+
+        <div data-role="content">
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    //$(window).on("navigate", function (event, data) {
+    //    var direction = data.state.direction;
+    //    if (direction == 'back') {
+    //        alert('Going back');
+    //    }
+    //    if (direction == 'forward') {
+    //        alert('Going forward');
+    //    }
+    //});
+
+    //$(document).on('click', '.showNextPage', function () {
+    //    $.mobile.navigate("#second", {
+    //        transition: "slide"
+    //    });
+    //});
+
+    //$(document).on('click', '.showPrevPage', function () {
+    //    $.mobile.navigate("#index", {
+    //        transition: "slide"
+    //    });
+    //});
+    $(document).ready(function () {
+        
+        if (window.history && history.pushState) {
+            addEventListener('load', function () {
+                history.pushState(null, null, null); // creates new history entry with same URL
+                addEventListener('popstate', function () {
+                    var stayOnPage = confirm("Would you like to save this draft?");
+
+                    if (!stayOnPage) {
+                        history.back()
+                    } else {
+                        history.pushState(null, null, null);
+                    }
+                });
+            });
+        }
+    })
+    
+</script>

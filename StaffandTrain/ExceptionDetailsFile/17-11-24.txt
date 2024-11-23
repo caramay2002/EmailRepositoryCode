@@ -1,0 +1,34 @@
+---Exception Details for Date: 11/17/2024 6:54:30 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: dev@talkboxsolutions
+
+Log Written Date: 11/17/2024 6:54:30 PM
+
+StackTrace:    at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Full Exception: System.Exception: Invalid Email: dev@talkboxsolutions
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String senderemail, String servername, String password, String portno, Boolean enablessl, String ImageName)
+
+Error Line No : geName)
+
+Error Message: Exception
+
+Exception Type: System.Exception
+
+Error Location : Invalid Email: dev@talkboxsolutions
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+

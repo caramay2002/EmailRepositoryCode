@@ -1,0 +1,2368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Staffandtrain_NewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredPath" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="EventSequence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventOccurrence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="ASPStateTempApplications">
+    <Key>
+      <PropertyRef Name="AppId" />
+    </Key>
+    <Property Name="AppId" Type="int" Nullable="false" />
+    <Property Name="AppName" Type="char" MaxLength="280" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASPStateTempSessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+    </Key>
+    <Property Name="SessionId" Type="nvarchar" MaxLength="88" Nullable="false" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Expires" Type="datetime" Nullable="false" />
+    <Property Name="LockDate" Type="datetime" Nullable="false" />
+    <Property Name="LockDateLocal" Type="datetime" Nullable="false" />
+    <Property Name="LockCookie" Type="int" Nullable="false" />
+    <Property Name="Timeout" Type="int" Nullable="false" />
+    <Property Name="Locked" Type="bit" Nullable="false" />
+    <Property Name="SessionItemShort" Type="varbinary" MaxLength="7000" />
+    <Property Name="SessionItemLong" Type="image" />
+    <Property Name="Flags" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BugList">
+    <Key>
+      <PropertyRef Name="buglistid" />
+    </Key>
+    <Property Name="buglistid" Type="int" Nullable="false" />
+    <Property Name="bugurl" Type="nvarchar" MaxLength="100" />
+    <Property Name="bugtype" Type="nvarchar" MaxLength="15" />
+    <Property Name="bugdesc" Type="nvarchar" MaxLength="500" />
+    <Property Name="bugnotes" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CityCircle">
+    <Key>
+      <PropertyRef Name="CityCircle" />
+    </Key>
+    <Property Name="CityCircle" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="companyid" />
+    </Key>
+    <Property Name="companyid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="listid" Type="int" />
+    <Property Name="citycircle" Type="nvarchar" MaxLength="50" />
+    <Property Name="biztype" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="addr1" Type="nvarchar" MaxLength="50" />
+    <Property Name="addr2" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="weburl" Type="nvarchar(max)" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="adminnotes" Type="nvarchar(max)" />
+    <Property Name="notes" Type="nvarchar(max)" />
+    <Property Name="oldname" Type="nvarchar" MaxLength="50" />
+    <Property Name="companyguid" Type="uniqueidentifier" />
+    <Property Name="listguid" Type="uniqueidentifier" />
+    <Property Name="priority" Type="bit" />
+    <Property Name="target" Type="bit" />
+    <Property Name="combinednotes" Type="nvarchar(max)" />
+    <Property Name="Userid" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Companies_ListDeleted">
+    <Key>
+      <PropertyRef Name="companyid" />
+    </Key>
+    <Property Name="companyid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="listid" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="addr1" Type="nvarchar" MaxLength="50" />
+    <Property Name="addr2" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="zip" Type="nvarchar" MaxLength="50" />
+    <Property Name="weburl" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="notes" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.Config' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Config">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Key" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="CreateAt" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contacts">
+    <Key>
+      <PropertyRef Name="contactid" />
+    </Key>
+    <Property Name="contactid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="companyid" Type="int" />
+    <Property Name="xcontactlname" Type="nvarchar" MaxLength="50" />
+    <Property Name="titlestandard" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactcellphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactemail" Type="nvarchar" MaxLength="50" />
+    <Property Name="linkedinprofileurl" Type="nvarchar" MaxLength="500" />
+    <Property Name="adminnotes" Type="nvarchar(max)" />
+    <Property Name="contactnotes" Type="nvarchar(max)" />
+    <Property Name="contactguid" Type="uniqueidentifier" />
+    <Property Name="companyguid" Type="uniqueidentifier" />
+    <Property Name="contactfullname" Type="varchar" MaxLength="100" />
+    <Property Name="xcontactfname" Type="nvarchar" MaxLength="50" />
+    <Property Name="combinednotes" Type="nvarchar(max)" />
+    <Property Name="resumes" Type="text" />
+    <Property Name="Userid" Type="nvarchar" MaxLength="150" />
+    <Property Name="ResumeFilePath" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="EmailTemplate">
+    <Key>
+      <PropertyRef Name="TemplateId" />
+    </Key>
+    <Property Name="TemplateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateName" Type="varchar" MaxLength="500" />
+    <Property Name="Subject" Type="varchar" MaxLength="500" />
+    <Property Name="EmailBody" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="GroupingNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="ErrorLog">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Error" Type="varchar(max)" />
+    <Property Name="FunctionInformation" Type="varchar" MaxLength="200" />
+    <Property Name="ClientID" Type="varchar" MaxLength="50" />
+    <Property Name="Url" Type="varchar(max)" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.ExpirationKeys' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ExpirationKeys">
+    <Key>
+      <PropertyRef Name="ExpirationKeyId" />
+      <PropertyRef Name="DateExpires" />
+    </Key>
+    <Property Name="ExpirationKeyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DateExpires" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.InfoRequests' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InfoRequests">
+    <Key>
+      <PropertyRef Name="reqid" />
+    </Key>
+    <Property Name="reqid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reqname" Type="nvarchar" MaxLength="255" />
+    <Property Name="reqemail" Type="nvarchar" MaxLength="255" />
+    <Property Name="reqdate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.JobPostings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="JobPostings">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobstate" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactemail" Type="nvarchar" MaxLength="50" />
+    <Property Name="contactphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="companyid" Type="int" />
+    <Property Name="jobinfo" Type="nvarchar(max)" />
+    <Property Name="contactname" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.locations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="locations">
+    <Key>
+      <PropertyRef Name="locid" />
+    </Key>
+    <Property Name="locid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="locname" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Status" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="CreateAt" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="RecordId" Type="int" />
+    <Property Name="CreateAt" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.Newsletters' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Newsletters">
+    <Key>
+      <PropertyRef Name="NewsletterID" />
+      <PropertyRef Name="NewsletterName" />
+      <PropertyRef Name="NewsletterLink" />
+    </Key>
+    <Property Name="NewsletterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewsletterName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NewsletterLink" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NewsletterComments" Type="varchar" MaxLength="100" />
+    <Property Name="ShowLink" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="OpenJobs">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+    <Property Name="WhiteboardID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="RowNumber" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs10' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs10">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs11' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs11">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs12' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs12">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs13' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs13">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs14' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs14">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs15' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs15">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs16' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs16">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs17' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs17">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs18' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs18">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs2">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs3' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs3">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs4' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs4">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs5' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs5">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs6' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs6">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs7' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs7">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs8' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs8">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.OpenJobs9' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="OpenJobs9">
+    <Key>
+      <PropertyRef Name="jobid" />
+    </Key>
+    <Property Name="jobid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobdescr" Type="nvarchar(max)" />
+    <Property Name="jobcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="datestamp" Type="datetime" />
+    <Property Name="postedby" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="50" />
+    <Property Name="jobguid" Type="uniqueidentifier" />
+    <Property Name="submittals" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Prospecting_Lists">
+    <Key>
+      <PropertyRef Name="listid" />
+    </Key>
+    <Property Name="listid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="listname" Type="nvarchar" MaxLength="250" />
+    <Property Name="restricted" Type="tinyint" />
+    <Property Name="listguid" Type="uniqueidentifier" />
+    <Property Name="Userid" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.Resumes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Resumes">
+    <Key>
+      <PropertyRef Name="resid" />
+    </Key>
+    <Property Name="resid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="lname" Type="nvarchar" MaxLength="50" />
+    <Property Name="fname" Type="nvarchar" MaxLength="50" />
+    <Property Name="phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="255" />
+    <Property Name="resume" Type="nvarchar(max)" />
+    <Property Name="resdt" Type="datetime" />
+    <Property Name="jobtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobloc" Type="nvarchar" MaxLength="255" />
+    <Property Name="jobloc1" Type="int" />
+    <Property Name="jobloc2" Type="int" />
+    <Property Name="jobloc3" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.SiteUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SiteUsers">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fname" Type="nvarchar" MaxLength="50" />
+    <Property Name="lname" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="pw" Type="nvarchar" MaxLength="50" />
+    <Property Name="userlevel" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.States' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="States">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="int" Nullable="false" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="abbr" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Subscribers">
+    <Key>
+      <PropertyRef Name="SubscriberID" />
+    </Key>
+    <Property Name="SubscriberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SubscribeDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TitleStandard">
+    <Key>
+      <PropertyRef Name="TitleStandard" />
+    </Key>
+    <Property Name="TitleStandard" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tracking">
+    <Key>
+      <PropertyRef Name="TrackingId" />
+    </Key>
+    <Property Name="TrackingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateInvoicePrice" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ClientContact" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DirectoryUP" Type="varchar" MaxLength="100" />
+    <Property Name="DatePaid" Type="datetime" />
+    <Property Name="RenewalReminder" Type="datetime" />
+    <Property Name="StaffAndTrainUP" Type="varchar" MaxLength="100" />
+    <Property Name="ListGuid" Type="uniqueidentifier" />
+    <Property Name="CompanyGuid" Type="uniqueidentifier" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.TrainingDocuments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TrainingDocuments">
+    <Key>
+      <PropertyRef Name="TrainingDocumentLinkID" />
+      <PropertyRef Name="TrainingDocumentName" />
+      <PropertyRef Name="TrainingDocumentLink" />
+    </Key>
+    <Property Name="TrainingDocumentLinkID" Type="int" Nullable="false" />
+    <Property Name="TrainingDocumentName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TrainingDocumentLink" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="TrainingDocumentComments" Type="varchar" MaxLength="100" />
+    <Property Name="ShowLink" Type="char" MaxLength="1" />
+    <Property Name="TrainingDocumentOrder" Type="int" />
+  </EntityType>
+  <EntityType Name="User_List_Access">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="listid" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_Security">
+    <Key>
+      <PropertyRef Name="loginid" />
+    </Key>
+    <Property Name="loginid" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="userlevel" Type="varchar" MaxLength="50" />
+    <Property Name="companyid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="companyname" Type="varchar" MaxLength="255" />
+    <Property Name="address1" Type="varchar" MaxLength="255" />
+    <Property Name="address2" Type="varchar" MaxLength="255" />
+    <Property Name="city" Type="varchar" MaxLength="50" />
+    <Property Name="state" Type="varchar" MaxLength="2" />
+    <Property Name="zip" Type="varchar" MaxLength="5" />
+    <Property Name="primarycontact" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="phone" Type="varchar" MaxLength="10" />
+    <Property Name="fax" Type="varchar" MaxLength="10" />
+    <Property Name="notes" Type="varchar(max)" />
+    <Property Name="datesignedup" Type="datetime" />
+    <Property Name="postedby" Type="varchar" MaxLength="50" />
+    <Property Name="SingleCityPostings" Type="bit" />
+    <Property Name="website" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="User_Security_States">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="companyid" Type="int" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="UserProspectingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="150" />
+    <Property Name="listid" Type="nvarchar" MaxLength="550" />
+  </EntityType>
+  <EntityType Name="WhiteBoardNames">
+    <Key>
+      <PropertyRef Name="WBId" />
+    </Key>
+    <Property Name="WBId" Type="int" Nullable="false" />
+    <Property Name="WhiteBoardName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="AllowRecruiter" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.Workers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="CheckIn" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="ModifiedDate" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CheckIn" Type="time" Precision="7" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.WorkersLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="WorkersLog">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="WorkerId" />
+      <PropertyRef Name="Description" />
+      <PropertyRef Name="LogType" />
+      <PropertyRef Name="CreateDate" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkerId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="LogType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_Applications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_MembershipUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_MembershipUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_Profiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="DataSize" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_UsersInRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPartState_Paths' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_WebPartState_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredPath" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPartState_Shared' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_WebPartState_Shared">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DataSize" Type="int" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPartState_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_aspnet_WebPartState_User">
+    <Key>
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="DataSize" Type="int" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__2EA5EC27">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__2F9A1060">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__03F0984C">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__04E4BC85">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__05D8E0BE">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__06CD04F7">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__07C12930">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__08B54D69">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__36470DEF">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__0A9D95DB">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__0B91BA14">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserProspectingList_UserProspectingList">
+    <End Role="UserProspectingList" Type="Self.UserProspectingList" Multiplicity="1" />
+    <End Role="UserProspectingList1" Type="Self.UserProspectingList" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProspectingList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserProspectingList1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="aspnet_AnyDataInTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TablesToCheck" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Applications_CreateApplication" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_CheckSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_ChangePasswordQuestionAndAnswer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPasswordQuestion" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPasswordAnswer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordQuestion" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsApproved" Type="bit" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+    <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+    <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_Membership_FindUsersByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailToMatch" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_FindUsersByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetNumberOfUsersOnline" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MinutesSinceLastInActive" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+    <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetPasswordWithFormat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetUserByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetUserByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetUserByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+    <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+    <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+    <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_SetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_UnlockUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_UpdateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Comment" Type="ntext" Mode="In" />
+    <Parameter Name="IsApproved" Type="bit" Mode="In" />
+    <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+    <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+    <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_UpdateUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsPasswordCorrect" Type="bit" Mode="In" />
+    <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+    <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+    <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+    <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Paths_CreatePath" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="PathId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_Personalization_GetApplicationId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_DeleteAllState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_FindState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_GetCountOfState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+    <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_ResetSharedState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_ResetUserState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAllUsers_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAllUsers_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAllUsers_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageSettings" Type="image" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationPerUser_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationPerUser_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationPerUser_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageSettings" Type="image" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_DeleteInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_DeleteProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_GetNumberOfInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_GetProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_GetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_SetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PropertyNames" Type="ntext" Mode="In" />
+    <Parameter Name="PropertyValuesString" Type="ntext" Mode="In" />
+    <Parameter Name="PropertyValuesBinary" Type="image" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_RegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsCurrentVersion" Type="bit" Mode="In" />
+    <Parameter Name="RemoveIncompatibleSchema" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_CreateRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_DeleteRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="DeleteOnlyIfRoleIsEmpty" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_GetAllRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_RoleExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Setup_RemoveAllRoleMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Setup_RestorePermissions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UnRegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Users_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+    <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_Users_DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TablesToDeleteFrom" Type="int" Mode="In" />
+    <Parameter Name="NumTablesDeletedFrom" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_AddUsersToRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_FindUsersInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_GetRolesForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_GetUsersInRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_IsUserInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_RemoveUsersFromRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_WebEvent_LogEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="char" Mode="In" />
+    <Parameter Name="EventTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="EventTime" Type="datetime" Mode="In" />
+    <Parameter Name="EventType" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventSequence" Type="decimal" Mode="In" />
+    <Parameter Name="EventOccurrence" Type="decimal" Mode="In" />
+    <Parameter Name="EventCode" Type="int" Mode="In" />
+    <Parameter Name="EventDetailCode" Type="int" Mode="In" />
+    <Parameter Name="Message" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationVirtualPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="MachineName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestUrl" Type="nvarchar" Mode="In" />
+    <Parameter Name="ExceptionType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Details" Type="ntext" Mode="In" />
+  </Function>
+  <Function Name="CreateTempTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DeleteContactCompanybyCompanyId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteEmailtemplatebyId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteExpiredSessions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetMajorVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_ver" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GetNewUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Max" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetProspectingListByUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="User" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetProspectingUserById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SearchCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SearchQuery" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SearchContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SearchQuery" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SpaddContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactfullname" Type="nvarchar" Mode="In" />
+    <Parameter Name="titlestandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactcellphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactemail" Type="nvarchar" Mode="In" />
+    <Parameter Name="linkedinprofileurl" Type="nvarchar" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpaddContactClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactfullname" Type="nvarchar" Mode="In" />
+    <Parameter Name="titlestandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactcellphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactemail" Type="nvarchar" Mode="In" />
+    <Parameter Name="linkedinprofileurl" Type="nvarchar" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+    <Parameter Name="adminnotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contactnotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Userid" Type="varchar" Mode="In" />
+    <Parameter Name="NewContactID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="SpContactFilter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpContactFilterClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Spcontexport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="bizType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Spcontexportclient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="bizType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpcreatenewJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobtitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="jobdescr" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="submittals" Type="varchar(max)" Mode="In" />
+    <Parameter Name="WhiteboardID" Type="int" Mode="In" />
+    <Parameter Name="RowNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPdeleteContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spdeletedatauserprospecting" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpDeleteEmailTemplate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spdeletejob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpdeleteProspect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPDeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Userid" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SPDeleteWorker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPErrorLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Error" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FunctionInformation" Type="varchar" Mode="In" />
+    <Parameter Name="ClientID" Type="varchar" Mode="In" />
+    <Parameter Name="Url" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SPgetbiztype" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spgetbiztypeemail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPgetcitycircle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spgetcitycircleemail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPgetCitycirclelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spgetclientnote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactid" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SPgetCompanies" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spgetcompanydetailsbycompanyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPgetCompdetailsbycompid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPgetconformailwithoutbiztype" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prospectList" Type="int" Mode="In" />
+    <Parameter Name="titleStandard" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SPgetconformailwithoutbiztype_batchEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prospectList" Type="int" Mode="In" />
+    <Parameter Name="titleStandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="BatchStartingNumber" Type="int" Mode="In" />
+    <Parameter Name="BatchEndingNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetContactDataforedit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetContactDataforeditClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ContactId" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spgetcontactforclient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPgetcontactformailsend" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prospectList" Type="int" Mode="In" />
+    <Parameter Name="biztype" Type="nvarchar" Mode="In" />
+    <Parameter Name="titleStandard" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SPgetcontactformailsend_batchEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="prospectList" Type="int" Mode="In" />
+    <Parameter Name="biztype" Type="nvarchar" Mode="In" />
+    <Parameter Name="titleStandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="BatchStartingNumber" Type="int" Mode="In" />
+    <Parameter Name="BatchEndingNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetContactlistbyCompid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="companyid" Type="int" Mode="In" />
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spgetcontactlistforexpert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="bizType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetdataforexcelexport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetDataForSendingEmailWithBizType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProspectListId" Type="int" Mode="In" />
+    <Parameter Name="titleStandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="BizType" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="EndIndex" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPGetDataForSendingEmailWithoutBizType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProspectListId" Type="int" Mode="In" />
+    <Parameter Name="titleStandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartIndex" Type="int" Mode="In" />
+    <Parameter Name="EndIndex" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPgetemailtemplatebytemplateid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetEmailtemplatelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spgetjobdetailbyjobid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetJobdetailsbyWbid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WhiteboardID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPgetprospectinglistbyuserid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpGetprospectinglistforclient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="User" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SPgetProspectinglists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpgetProspectingselectlist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPGetProspectlist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SPGetProspectlistTest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pageno" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpgetProspectViewList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpgetProspectViewListTest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="pageno" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpGetprosviewlistclient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpgetRolelist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpgetRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SPgettitle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Spgetusers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpGetwhiteBoard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpInsertclientnote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactid" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ClientNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SPInsertCompanies" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="citycircle" Type="nvarchar" Mode="In" />
+    <Parameter Name="biztype" Type="nvarchar" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="addr1" Type="nvarchar" Mode="In" />
+    <Parameter Name="addr2" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="state" Type="nvarchar" Mode="In" />
+    <Parameter Name="zip" Type="nvarchar" Mode="In" />
+    <Parameter Name="weburl" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="priority" Type="bit" Mode="In" />
+    <Parameter Name="target" Type="bit" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="adminnotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPinsertCompanyClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="citycircle" Type="nvarchar" Mode="In" />
+    <Parameter Name="biztype" Type="nvarchar" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="addr1" Type="nvarchar" Mode="In" />
+    <Parameter Name="addr2" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="state" Type="nvarchar" Mode="In" />
+    <Parameter Name="zip" Type="nvarchar" Mode="In" />
+    <Parameter Name="weburl" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="priority" Type="bit" Mode="In" />
+    <Parameter Name="target" Type="bit" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="adminnotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="listid" Type="int" Mode="In" />
+    <Parameter Name="Userid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpInsertEmailTemplate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateName" Type="varchar" Mode="In" />
+    <Parameter Name="Subject" Type="varchar" Mode="In" />
+    <Parameter Name="GroupingNumber" Type="int" Mode="In" />
+    <Parameter Name="EmailBody" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SPInsertOrUpdateLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="varchar" Mode="In" />
+    <Parameter Name="Type" Type="varchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="RecordId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPInsertOrUpdateWorker" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="CheckIn" Type="time" Mode="In" />
+    <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+    <Parameter Name="ModifiedDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPInsertOrUpdateWorkerLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="WorkerId" Type="int" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="LogType" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SPInsertProspectlist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listname" Type="nvarchar" Mode="In" />
+    <Parameter Name="restricted" Type="tinyint" Mode="In" />
+    <Parameter Name="Userid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpInsertUserPRos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="listid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpMoveContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="companyid" Type="int" Mode="In" />
+    <Parameter Name="contactid" Type="int" Mode="In" />
+    <Parameter Name="companyidold" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spupdateclientnote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactid" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ClientNotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SPupdateCompanies" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="citycircle" Type="nvarchar" Mode="In" />
+    <Parameter Name="biztype" Type="nvarchar" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="addr1" Type="nvarchar" Mode="In" />
+    <Parameter Name="addr2" Type="nvarchar" Mode="In" />
+    <Parameter Name="city" Type="nvarchar" Mode="In" />
+    <Parameter Name="state" Type="nvarchar" Mode="In" />
+    <Parameter Name="zip" Type="nvarchar" Mode="In" />
+    <Parameter Name="weburl" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="priority" Type="bit" Mode="In" />
+    <Parameter Name="target" Type="bit" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="adminnotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="companyid" Type="int" Mode="In" />
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpupdateContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactfullname" Type="nvarchar" Mode="In" />
+    <Parameter Name="titlestandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactcellphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactemail" Type="nvarchar" Mode="In" />
+    <Parameter Name="linkedinprofileurl" Type="nvarchar" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contactid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpupdateContactClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="contactfullname" Type="nvarchar" Mode="In" />
+    <Parameter Name="titlestandard" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactcellphone" Type="nvarchar" Mode="In" />
+    <Parameter Name="contactemail" Type="nvarchar" Mode="In" />
+    <Parameter Name="linkedinprofileurl" Type="nvarchar" Mode="In" />
+    <Parameter Name="combinednotes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="contactid" Type="int" Mode="In" />
+    <Parameter Name="adminnotes" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="spupdatecontactresumes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="resumes" Type="text" Mode="In" />
+    <Parameter Name="contactid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateEmailTemplate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateName" Type="varchar" Mode="In" />
+    <Parameter Name="Subject" Type="varchar" Mode="In" />
+    <Parameter Name="GroupingNumber" Type="int" Mode="In" />
+    <Parameter Name="EmailBody" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TemplateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Spupdatejob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobtitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="jobdescr" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="submittals" Type="varchar(max)" Mode="In" />
+    <Parameter Name="jobid" Type="int" Mode="In" />
+    <Parameter Name="RowNumber" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SPUpdateProspectList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="listname" Type="nvarchar" Mode="In" />
+    <Parameter Name="restricted" Type="tinyint" Mode="In" />
+    <Parameter Name="listid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpUpdateUserPRos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+    <Parameter Name="listid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SpupdatewhiteBoard" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WhiteboardName" Type="varchar" Mode="In" />
+    <Parameter Name="WBId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TempGetVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ver" Type="char" Mode="InOut" />
+  </Function>
+  <Function Name="usp_Check_Key_Expiration" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Guid" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Valid" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="usp_KEYS_INSERT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DateTime" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="Staffandtrain_NewModelStoreContainer">
+    <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Paths" EntityType="Self.aspnet_Paths" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Self.aspnet_PersonalizationAllUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Self.aspnet_PersonalizationPerUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Profile" EntityType="Self.aspnet_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Roles" EntityType="Self.aspnet_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Self.aspnet_SchemaVersions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Self.aspnet_WebEvent_Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ASPStateTempApplications" EntityType="Self.ASPStateTempApplications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ASPStateTempSessions" EntityType="Self.ASPStateTempSessions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BugList" EntityType="Self.BugList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CityCircle" EntityType="Self.CityCircle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies_ListDeleted" EntityType="Self.Companies_ListDeleted" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contacts" EntityType="Self.Contacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmailTemplate" EntityType="Self.EmailTemplate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Logs" EntityType="Self.Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OpenJobs" EntityType="Self.OpenJobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prospecting_Lists" EntityType="Self.Prospecting_Lists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscribers" EntityType="Self.Subscribers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TitleStandard" EntityType="Self.TitleStandard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tracking" EntityType="Self.Tracking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_List_Access" EntityType="Self.User_List_Access" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Security" EntityType="Self.User_Security" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Security_States" EntityType="Self.User_Security_States" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProspectingList" EntityType="Self.UserProspectingList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WhiteBoardNames" EntityType="Self.WhiteBoardNames" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Config" EntityType="Self.Config" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Config].[Id] AS [Id], 
+    [Config].[Type] AS [Type], 
+    [Config].[Key] AS [Key], 
+    [Config].[Value] AS [Value], 
+    [Config].[CreateAt] AS [CreateAt]
+    FROM [dbo].[Config] AS [Config]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ExpirationKeys" EntityType="Self.ExpirationKeys" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ExpirationKeys].[ExpirationKeyId] AS [ExpirationKeyId], 
+    [ExpirationKeys].[DateExpires] AS [DateExpires]
+    FROM [dbo].[ExpirationKeys] AS [ExpirationKeys]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InfoRequests" EntityType="Self.InfoRequests" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InfoRequests].[reqid] AS [reqid], 
+    [InfoRequests].[reqname] AS [reqname], 
+    [InfoRequests].[reqemail] AS [reqemail], 
+    [InfoRequests].[reqdate] AS [reqdate]
+    FROM [dbo].[InfoRequests] AS [InfoRequests]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="JobPostings" EntityType="Self.JobPostings" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [JobPostings].[jobid] AS [jobid], 
+    [JobPostings].[jobtitle] AS [jobtitle], 
+    [JobPostings].[jobdescr] AS [jobdescr], 
+    [JobPostings].[jobstate] AS [jobstate], 
+    [JobPostings].[jobcity] AS [jobcity], 
+    [JobPostings].[contactemail] AS [contactemail], 
+    [JobPostings].[contactphone] AS [contactphone], 
+    [JobPostings].[datestamp] AS [datestamp], 
+    [JobPostings].[postedby] AS [postedby], 
+    [JobPostings].[companyid] AS [companyid], 
+    [JobPostings].[jobinfo] AS [jobinfo], 
+    [JobPostings].[contactname] AS [contactname]
+    FROM [dbo].[JobPostings] AS [JobPostings]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="locations" EntityType="Self.locations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [locations].[locid] AS [locid], 
+    [locations].[locname] AS [locname]
+    FROM [dbo].[locations] AS [locations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Newsletters" EntityType="Self.Newsletters" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Newsletters].[NewsletterID] AS [NewsletterID], 
+    [Newsletters].[NewsletterName] AS [NewsletterName], 
+    [Newsletters].[NewsletterLink] AS [NewsletterLink], 
+    [Newsletters].[NewsletterComments] AS [NewsletterComments], 
+    [Newsletters].[ShowLink] AS [ShowLink]
+    FROM [dbo].[Newsletters] AS [Newsletters]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs10" EntityType="Self.OpenJobs10" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs10].[jobid] AS [jobid], 
+    [OpenJobs10].[jobtitle] AS [jobtitle], 
+    [OpenJobs10].[jobdescr] AS [jobdescr], 
+    [OpenJobs10].[jobcity] AS [jobcity], 
+    [OpenJobs10].[datestamp] AS [datestamp], 
+    [OpenJobs10].[postedby] AS [postedby], 
+    [OpenJobs10].[status] AS [status], 
+    [OpenJobs10].[jobguid] AS [jobguid], 
+    [OpenJobs10].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs10] AS [OpenJobs10]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs11" EntityType="Self.OpenJobs11" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs11].[jobid] AS [jobid], 
+    [OpenJobs11].[jobtitle] AS [jobtitle], 
+    [OpenJobs11].[jobdescr] AS [jobdescr], 
+    [OpenJobs11].[jobcity] AS [jobcity], 
+    [OpenJobs11].[datestamp] AS [datestamp], 
+    [OpenJobs11].[postedby] AS [postedby], 
+    [OpenJobs11].[status] AS [status], 
+    [OpenJobs11].[jobguid] AS [jobguid], 
+    [OpenJobs11].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs11] AS [OpenJobs11]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs12" EntityType="Self.OpenJobs12" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs12].[jobid] AS [jobid], 
+    [OpenJobs12].[jobtitle] AS [jobtitle], 
+    [OpenJobs12].[jobdescr] AS [jobdescr], 
+    [OpenJobs12].[jobcity] AS [jobcity], 
+    [OpenJobs12].[datestamp] AS [datestamp], 
+    [OpenJobs12].[postedby] AS [postedby], 
+    [OpenJobs12].[status] AS [status], 
+    [OpenJobs12].[jobguid] AS [jobguid], 
+    [OpenJobs12].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs12] AS [OpenJobs12]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs13" EntityType="Self.OpenJobs13" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs13].[jobid] AS [jobid], 
+    [OpenJobs13].[jobtitle] AS [jobtitle], 
+    [OpenJobs13].[jobdescr] AS [jobdescr], 
+    [OpenJobs13].[jobcity] AS [jobcity], 
+    [OpenJobs13].[datestamp] AS [datestamp], 
+    [OpenJobs13].[postedby] AS [postedby], 
+    [OpenJobs13].[status] AS [status], 
+    [OpenJobs13].[jobguid] AS [jobguid], 
+    [OpenJobs13].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs13] AS [OpenJobs13]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs14" EntityType="Self.OpenJobs14" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs14].[jobid] AS [jobid], 
+    [OpenJobs14].[jobtitle] AS [jobtitle], 
+    [OpenJobs14].[jobdescr] AS [jobdescr], 
+    [OpenJobs14].[jobcity] AS [jobcity], 
+    [OpenJobs14].[datestamp] AS [datestamp], 
+    [OpenJobs14].[postedby] AS [postedby], 
+    [OpenJobs14].[status] AS [status], 
+    [OpenJobs14].[jobguid] AS [jobguid], 
+    [OpenJobs14].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs14] AS [OpenJobs14]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs15" EntityType="Self.OpenJobs15" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs15].[jobid] AS [jobid], 
+    [OpenJobs15].[jobtitle] AS [jobtitle], 
+    [OpenJobs15].[jobdescr] AS [jobdescr], 
+    [OpenJobs15].[jobcity] AS [jobcity], 
+    [OpenJobs15].[datestamp] AS [datestamp], 
+    [OpenJobs15].[postedby] AS [postedby], 
+    [OpenJobs15].[status] AS [status], 
+    [OpenJobs15].[jobguid] AS [jobguid], 
+    [OpenJobs15].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs15] AS [OpenJobs15]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs16" EntityType="Self.OpenJobs16" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs16].[jobid] AS [jobid], 
+    [OpenJobs16].[jobtitle] AS [jobtitle], 
+    [OpenJobs16].[jobdescr] AS [jobdescr], 
+    [OpenJobs16].[jobcity] AS [jobcity], 
+    [OpenJobs16].[datestamp] AS [datestamp], 
+    [OpenJobs16].[postedby] AS [postedby], 
+    [OpenJobs16].[status] AS [status], 
+    [OpenJobs16].[jobguid] AS [jobguid], 
+    [OpenJobs16].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs16] AS [OpenJobs16]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs17" EntityType="Self.OpenJobs17" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs17].[jobid] AS [jobid], 
+    [OpenJobs17].[jobtitle] AS [jobtitle], 
+    [OpenJobs17].[jobdescr] AS [jobdescr], 
+    [OpenJobs17].[jobcity] AS [jobcity], 
+    [OpenJobs17].[datestamp] AS [datestamp], 
+    [OpenJobs17].[postedby] AS [postedby], 
+    [OpenJobs17].[status] AS [status], 
+    [OpenJobs17].[jobguid] AS [jobguid], 
+    [OpenJobs17].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs17] AS [OpenJobs17]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs18" EntityType="Self.OpenJobs18" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs18].[jobid] AS [jobid], 
+    [OpenJobs18].[jobtitle] AS [jobtitle], 
+    [OpenJobs18].[jobdescr] AS [jobdescr], 
+    [OpenJobs18].[jobcity] AS [jobcity], 
+    [OpenJobs18].[datestamp] AS [datestamp], 
+    [OpenJobs18].[postedby] AS [postedby], 
+    [OpenJobs18].[status] AS [status], 
+    [OpenJobs18].[jobguid] AS [jobguid], 
+    [OpenJobs18].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs18] AS [OpenJobs18]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs2" EntityType="Self.OpenJobs2" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs2].[jobid] AS [jobid], 
+    [OpenJobs2].[jobtitle] AS [jobtitle], 
+    [OpenJobs2].[jobdescr] AS [jobdescr], 
+    [OpenJobs2].[jobcity] AS [jobcity], 
+    [OpenJobs2].[datestamp] AS [datestamp], 
+    [OpenJobs2].[postedby] AS [postedby], 
+    [OpenJobs2].[status] AS [status], 
+    [OpenJobs2].[jobguid] AS [jobguid], 
+    [OpenJobs2].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs2] AS [OpenJobs2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs3" EntityType="Self.OpenJobs3" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs3].[jobid] AS [jobid], 
+    [OpenJobs3].[jobtitle] AS [jobtitle], 
+    [OpenJobs3].[jobdescr] AS [jobdescr], 
+    [OpenJobs3].[jobcity] AS [jobcity], 
+    [OpenJobs3].[datestamp] AS [datestamp], 
+    [OpenJobs3].[postedby] AS [postedby], 
+    [OpenJobs3].[status] AS [status], 
+    [OpenJobs3].[jobguid] AS [jobguid], 
+    [OpenJobs3].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs3] AS [OpenJobs3]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs4" EntityType="Self.OpenJobs4" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs4].[jobid] AS [jobid], 
+    [OpenJobs4].[jobtitle] AS [jobtitle], 
+    [OpenJobs4].[jobdescr] AS [jobdescr], 
+    [OpenJobs4].[jobcity] AS [jobcity], 
+    [OpenJobs4].[datestamp] AS [datestamp], 
+    [OpenJobs4].[postedby] AS [postedby], 
+    [OpenJobs4].[status] AS [status], 
+    [OpenJobs4].[jobguid] AS [jobguid], 
+    [OpenJobs4].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs4] AS [OpenJobs4]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs5" EntityType="Self.OpenJobs5" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs5].[jobid] AS [jobid], 
+    [OpenJobs5].[jobtitle] AS [jobtitle], 
+    [OpenJobs5].[jobdescr] AS [jobdescr], 
+    [OpenJobs5].[jobcity] AS [jobcity], 
+    [OpenJobs5].[datestamp] AS [datestamp], 
+    [OpenJobs5].[postedby] AS [postedby], 
+    [OpenJobs5].[status] AS [status], 
+    [OpenJobs5].[jobguid] AS [jobguid], 
+    [OpenJobs5].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs5] AS [OpenJobs5]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs6" EntityType="Self.OpenJobs6" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs6].[jobid] AS [jobid], 
+    [OpenJobs6].[jobtitle] AS [jobtitle], 
+    [OpenJobs6].[jobdescr] AS [jobdescr], 
+    [OpenJobs6].[jobcity] AS [jobcity], 
+    [OpenJobs6].[datestamp] AS [datestamp], 
+    [OpenJobs6].[postedby] AS [postedby], 
+    [OpenJobs6].[status] AS [status], 
+    [OpenJobs6].[jobguid] AS [jobguid], 
+    [OpenJobs6].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs6] AS [OpenJobs6]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs7" EntityType="Self.OpenJobs7" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs7].[jobid] AS [jobid], 
+    [OpenJobs7].[jobtitle] AS [jobtitle], 
+    [OpenJobs7].[jobdescr] AS [jobdescr], 
+    [OpenJobs7].[jobcity] AS [jobcity], 
+    [OpenJobs7].[datestamp] AS [datestamp], 
+    [OpenJobs7].[postedby] AS [postedby], 
+    [OpenJobs7].[status] AS [status], 
+    [OpenJobs7].[jobguid] AS [jobguid], 
+    [OpenJobs7].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs7] AS [OpenJobs7]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs8" EntityType="Self.OpenJobs8" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs8].[jobid] AS [jobid], 
+    [OpenJobs8].[jobtitle] AS [jobtitle], 
+    [OpenJobs8].[jobdescr] AS [jobdescr], 
+    [OpenJobs8].[jobcity] AS [jobcity], 
+    [OpenJobs8].[datestamp] AS [datestamp], 
+    [OpenJobs8].[postedby] AS [postedby], 
+    [OpenJobs8].[status] AS [status], 
+    [OpenJobs8].[jobguid] AS [jobguid], 
+    [OpenJobs8].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs8] AS [OpenJobs8]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpenJobs9" EntityType="Self.OpenJobs9" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [OpenJobs9].[jobid] AS [jobid], 
+    [OpenJobs9].[jobtitle] AS [jobtitle], 
+    [OpenJobs9].[jobdescr] AS [jobdescr], 
+    [OpenJobs9].[jobcity] AS [jobcity], 
+    [OpenJobs9].[datestamp] AS [datestamp], 
+    [OpenJobs9].[postedby] AS [postedby], 
+    [OpenJobs9].[status] AS [status], 
+    [OpenJobs9].[jobguid] AS [jobguid], 
+    [OpenJobs9].[submittals] AS [submittals]
+    FROM [dbo].[OpenJobs9] AS [OpenJobs9]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Resumes" EntityType="Self.Resumes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Resumes].[resid] AS [resid], 
+    [Resumes].[lname] AS [lname], 
+    [Resumes].[fname] AS [fname], 
+    [Resumes].[phone] AS [phone], 
+    [Resumes].[email] AS [email], 
+    [Resumes].[resume] AS [resume], 
+    [Resumes].[resdt] AS [resdt], 
+    [Resumes].[jobtitle] AS [jobtitle], 
+    [Resumes].[jobloc] AS [jobloc], 
+    [Resumes].[jobloc1] AS [jobloc1], 
+    [Resumes].[jobloc2] AS [jobloc2], 
+    [Resumes].[jobloc3] AS [jobloc3]
+    FROM [dbo].[Resumes] AS [Resumes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SiteUsers" EntityType="Self.SiteUsers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SiteUsers].[userid] AS [userid], 
+    [SiteUsers].[fname] AS [fname], 
+    [SiteUsers].[lname] AS [lname], 
+    [SiteUsers].[email] AS [email], 
+    [SiteUsers].[username] AS [username], 
+    [SiteUsers].[pw] AS [pw], 
+    [SiteUsers].[userlevel] AS [userlevel]
+    FROM [dbo].[SiteUsers] AS [SiteUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="States" EntityType="Self.States" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [States].[state_id] AS [state_id], 
+    [States].[state] AS [state], 
+    [States].[abbr] AS [abbr]
+    FROM [dbo].[States] AS [States]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TrainingDocuments" EntityType="Self.TrainingDocuments" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TrainingDocuments].[TrainingDocumentLinkID] AS [TrainingDocumentLinkID], 
+    [TrainingDocuments].[TrainingDocumentName] AS [TrainingDocumentName], 
+    [TrainingDocuments].[TrainingDocumentLink] AS [TrainingDocumentLink], 
+    [TrainingDocuments].[TrainingDocumentComments] AS [TrainingDocumentComments], 
+    [TrainingDocuments].[ShowLink] AS [ShowLink], 
+    [TrainingDocuments].[TrainingDocumentOrder] AS [TrainingDocumentOrder]
+    FROM [dbo].[TrainingDocuments] AS [TrainingDocuments]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Workers" EntityType="Self.Workers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Workers].[Id] AS [Id], 
+    [Workers].[Name] AS [Name], 
+    [Workers].[Email] AS [Email], 
+    [Workers].[Password] AS [Password], 
+    [Workers].[CheckIn] AS [CheckIn], 
+    [Workers].[CreateDate] AS [CreateDate], 
+    [Workers].[ModifiedDate] AS [ModifiedDate]
+    FROM [dbo].[Workers] AS [Workers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WorkersLog" EntityType="Self.WorkersLog" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [WorkersLog].[Id] AS [Id], 
+    [WorkersLog].[WorkerId] AS [WorkerId], 
+    [WorkersLog].[Description] AS [Description], 
+    [WorkersLog].[LogType] AS [LogType], 
+    [WorkersLog].[CreateDate] AS [CreateDate]
+    FROM [dbo].[WorkersLog] AS [WorkersLog]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Applications" EntityType="Self.vw_aspnet_Applications" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_Applications].[ApplicationName] AS [ApplicationName], 
+    [vw_aspnet_Applications].[LoweredApplicationName] AS [LoweredApplicationName], 
+    [vw_aspnet_Applications].[ApplicationId] AS [ApplicationId], 
+    [vw_aspnet_Applications].[Description] AS [Description]
+    FROM [dbo].[vw_aspnet_Applications] AS [vw_aspnet_Applications]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="Self.vw_aspnet_MembershipUsers" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_MembershipUsers].[UserId] AS [UserId], 
+    [vw_aspnet_MembershipUsers].[PasswordFormat] AS [PasswordFormat], 
+    [vw_aspnet_MembershipUsers].[MobilePIN] AS [MobilePIN], 
+    [vw_aspnet_MembershipUsers].[Email] AS [Email], 
+    [vw_aspnet_MembershipUsers].[LoweredEmail] AS [LoweredEmail], 
+    [vw_aspnet_MembershipUsers].[PasswordQuestion] AS [PasswordQuestion], 
+    [vw_aspnet_MembershipUsers].[PasswordAnswer] AS [PasswordAnswer], 
+    [vw_aspnet_MembershipUsers].[IsApproved] AS [IsApproved], 
+    [vw_aspnet_MembershipUsers].[IsLockedOut] AS [IsLockedOut], 
+    [vw_aspnet_MembershipUsers].[CreateDate] AS [CreateDate], 
+    [vw_aspnet_MembershipUsers].[LastLoginDate] AS [LastLoginDate], 
+    [vw_aspnet_MembershipUsers].[LastPasswordChangedDate] AS [LastPasswordChangedDate], 
+    [vw_aspnet_MembershipUsers].[LastLockoutDate] AS [LastLockoutDate], 
+    [vw_aspnet_MembershipUsers].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount], 
+    [vw_aspnet_MembershipUsers].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart], 
+    [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount], 
+    [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart], 
+    [vw_aspnet_MembershipUsers].[Comment] AS [Comment], 
+    [vw_aspnet_MembershipUsers].[ApplicationId] AS [ApplicationId], 
+    [vw_aspnet_MembershipUsers].[UserName] AS [UserName], 
+    [vw_aspnet_MembershipUsers].[MobileAlias] AS [MobileAlias], 
+    [vw_aspnet_MembershipUsers].[IsAnonymous] AS [IsAnonymous], 
+    [vw_aspnet_MembershipUsers].[LastActivityDate] AS [LastActivityDate]
+    FROM [dbo].[vw_aspnet_MembershipUsers] AS [vw_aspnet_MembershipUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Profiles" EntityType="Self.vw_aspnet_Profiles" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_Profiles].[UserId] AS [UserId], 
+    [vw_aspnet_Profiles].[LastUpdatedDate] AS [LastUpdatedDate], 
+    [vw_aspnet_Profiles].[DataSize] AS [DataSize]
+    FROM [dbo].[vw_aspnet_Profiles] AS [vw_aspnet_Profiles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Roles" EntityType="Self.vw_aspnet_Roles" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_Roles].[ApplicationId] AS [ApplicationId], 
+    [vw_aspnet_Roles].[RoleId] AS [RoleId], 
+    [vw_aspnet_Roles].[RoleName] AS [RoleName], 
+    [vw_aspnet_Roles].[LoweredRoleName] AS [LoweredRoleName], 
+    [vw_aspnet_Roles].[Description] AS [Description]
+    FROM [dbo].[vw_aspnet_Roles] AS [vw_aspnet_Roles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Users" EntityType="Self.vw_aspnet_Users" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_Users].[ApplicationId] AS [ApplicationId], 
+    [vw_aspnet_Users].[UserId] AS [UserId], 
+    [vw_aspnet_Users].[UserName] AS [UserName], 
+    [vw_aspnet_Users].[LoweredUserName] AS [LoweredUserName], 
+    [vw_aspnet_Users].[MobileAlias] AS [MobileAlias], 
+    [vw_aspnet_Users].[IsAnonymous] AS [IsAnonymous], 
+    [vw_aspnet_Users].[LastActivityDate] AS [LastActivityDate]
+    FROM [dbo].[vw_aspnet_Users] AS [vw_aspnet_Users]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="Self.vw_aspnet_UsersInRoles" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_UsersInRoles].[UserId] AS [UserId], 
+    [vw_aspnet_UsersInRoles].[RoleId] AS [RoleId]
+    FROM [dbo].[vw_aspnet_UsersInRoles] AS [vw_aspnet_UsersInRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="Self.vw_aspnet_WebPartState_Paths" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_WebPartState_Paths].[ApplicationId] AS [ApplicationId], 
+    [vw_aspnet_WebPartState_Paths].[PathId] AS [PathId], 
+    [vw_aspnet_WebPartState_Paths].[Path] AS [Path], 
+    [vw_aspnet_WebPartState_Paths].[LoweredPath] AS [LoweredPath]
+    FROM [dbo].[vw_aspnet_WebPartState_Paths] AS [vw_aspnet_WebPartState_Paths]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="Self.vw_aspnet_WebPartState_Shared" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_WebPartState_Shared].[PathId] AS [PathId], 
+    [vw_aspnet_WebPartState_Shared].[DataSize] AS [DataSize], 
+    [vw_aspnet_WebPartState_Shared].[LastUpdatedDate] AS [LastUpdatedDate]
+    FROM [dbo].[vw_aspnet_WebPartState_Shared] AS [vw_aspnet_WebPartState_Shared]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="Self.vw_aspnet_WebPartState_User" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_aspnet_WebPartState_User].[PathId] AS [PathId], 
+    [vw_aspnet_WebPartState_User].[UserId] AS [UserId], 
+    [vw_aspnet_WebPartState_User].[DataSize] AS [DataSize], 
+    [vw_aspnet_WebPartState_User].[LastUpdatedDate] AS [LastUpdatedDate]
+    FROM [dbo].[vw_aspnet_WebPartState_User] AS [vw_aspnet_WebPartState_User]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__2EA5EC27" Association="Self.FK__aspnet_Me__Appli__2EA5EC27">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__2F9A1060" Association="Self.FK__aspnet_Me__UserI__2F9A1060">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__03F0984C" Association="Self.FK__aspnet_Pa__Appli__03F0984C">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__04E4BC85" Association="Self.FK__aspnet_Pe__PathI__04E4BC85">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__05D8E0BE" Association="Self.FK__aspnet_Pe__PathI__05D8E0BE">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__06CD04F7" Association="Self.FK__aspnet_Pe__UserI__06CD04F7">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__07C12930" Association="Self.FK__aspnet_Pr__UserI__07C12930">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__08B54D69" Association="Self.FK__aspnet_Ro__Appli__08B54D69">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__36470DEF" Association="Self.FK__aspnet_Us__Appli__36470DEF">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__0A9D95DB" Association="Self.FK__aspnet_Us__RoleI__0A9D95DB">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__0B91BA14" Association="Self.FK__aspnet_Us__UserI__0B91BA14">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserProspectingList_UserProspectingList" Association="Self.FK_UserProspectingList_UserProspectingList">
+      <End Role="UserProspectingList" EntitySet="UserProspectingList" />
+      <End Role="UserProspectingList1" EntitySet="UserProspectingList" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

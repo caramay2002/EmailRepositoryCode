@@ -1,0 +1,148 @@
+﻿@model StaffandTrain.Models.MemberSignUp
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container main-ctn">
+    <h1 class="title">Sign Up</h1>
+
+    @if (@ViewBag.Message != null && @ViewBag.Message == "Success")
+    {
+        <div id="" class="alert alert-success">
+            Your account has been created but is not yet activated. An email containing a link to confirm your signup
+            has been sent to the email address you provided.
+        </div>
+    }
+    else if (@ViewBag.Message != null)
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+    @using (Html.BeginForm("Save_User", "SignUp", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="admin-form">
+            <div class="admin-ctn">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label>Name</label>
+                        @Html.TextBoxFor(x => x.UserName, new { id = "txtname", @placeholder = "Name", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Email</label>
+                        @Html.TextBoxFor(x => x.Email, new { id = "txtemail", @placeholder = "Email", @class = "form-control" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Password</label>
+                        @Html.TextBoxFor(x => x.Password, new { id = "txtpassword", @placeholder = "Password", @class = "form-control", @type = "password" })
+                        <div id="" class="validateTips"></div>
+
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm Password" id="txtconpass">
+                        <div id="" class="validateTips"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-sm-12 form-group">
+                        <hr>
+                        <button class="btn btn-success" type="submit" id="btnsave">Save User</button>
+                    </div>
+                </div>
+            </div> <!--end admin-form-->
+
+        </div>
+    }
+</div>
+<script src="~/Custom_JS/SignUp_Index.js" defer></script>
+
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    $("#txtname").blur(function () {
+    //        checkusename();
+    //    });
+    //    $("#btnsave").click(function () {
+    //        $(".validateTips").html("");
+    //        if ($("#txtname").val().trim() == "") {
+    //            $('#txtname').nextAll(".validateTips:first").html("Enter UserName");
+    //            return false;
+    //        }
+    //        if ($("#txtemail").val().trim() == "") {
+    //            $('#txtemail').nextAll(".validateTips:first").html("Enter Email");
+    //            return false;
+    //        }
+    //        if ($("#txtemail").val().trim() != "") {
+    //            if (!validateEmail($("#txtemail").val().trim())) {
+    //                $('#txtemail').nextAll(".validateTips:first").html("Invalid Email");
+    //                return false;
+    //            }
+
+    //        } 
+    //        if ($("#txtpassword").val().trim() == "") {
+    //            $('#txtpassword').nextAll(".validateTips:first").html("Enter Password");
+    //            return false;
+    //        }
+    //        if ($("#txtpassword").val().length < 5) {
+    //            $('#txtpassword').nextAll(".validateTips:first").html("Password length should contain minimum 5 characters");
+    //            return false;
+    //        }
+
+    //        if ($("#txtconpass").val().trim() == "") {
+    //            $('#txtconpass').nextAll(".validateTips:first").html("Enter Confirm Password");
+    //            return false;
+    //        }
+
+
+    //        if ($("#txtconpass").val().trim() != "") {
+    //            if ($("#txtconpass").val().trim() != $("#txtpassword").val().trim()) {
+    //                $('#txtconpass').nextAll(".validateTips:first").html("Password and Confirm password does not match");
+    //                return false;
+    //            }
+
+    //        }
+
+    //    });
+    //});
+    //function validateEmail(Email) {
+    //    var filter = /^([\w-\.]+)@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    //    if (!filter.test(Email)) {
+    //        return false;
+    //    }
+    //    else {
+    //        return true;
+    //    }
+    //}
+
+    //function checkusename() {
+    //    var Username = $("#txtname").val().trim();
+        
+    //    if (Username != "") {
+    //        $.ajax({
+    //            url: '/SignUp/checkuser',
+    //            type: 'POST',
+    //            data: { Username: Username},
+    //            async: false,
+    //            success: function (response) {
+
+    //                if (response == 0) {
+    //                    $('#txtname').nextAll(".validateTips:first").html("");
+    //                    $('#btnsave').removeAttr("disabled", "disabled");
+    //                }
+    //                else {
+    //                    $('#txtname').nextAll(".validateTips:first").html('User already exist');
+    //                    $('#btnsave').attr("disabled", "disabled");
+
+    //                    //alert("Please verify yourself by click on link on verification mail to continue");
+    //                }
+
+
+
+    //            }
+    //        });
+    //    }
+    //}
+
+    
+</script>
+
