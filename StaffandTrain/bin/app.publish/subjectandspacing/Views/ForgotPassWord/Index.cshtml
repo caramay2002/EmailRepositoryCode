@@ -1,0 +1,55 @@
+﻿@using StaffandTrain.Models
+@model  ForgotPasswordViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+
+
+
+<h3>Reset password link will be sent to your email !</h3>
+@using (Html.BeginForm("ForgotPassword", "ForgotPassword", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    if (@ViewBag.Message != null && @ViewBag.Message != "")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message == "User not exist" || @ViewBag.Message == "Error")
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+
+
+    <ul>
+        <li>
+            <label>User Name</label>
+
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "txtusername", @maxlength = "50" })
+            <div id="" class="validateTips"></div>
+        </li>
+
+        <li class="last">
+            <button type="submit" class="btn btn-primary" id="btnsave">Reset Password</button>
+        </li>
+    </ul>
+}
+
+
+    <script src="~/Custom_JS/ForgetPassword_Index.js" defer></script>
+
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnsave").click(function () {
+            $(".validateTips").html("");
+            if ($("#txtusername").val().trim() == "") {
+                $('#txtusername').nextAll(".validateTips:first").html("Enter UserName");
+                return false;
+            }
+
+        });
+    });
+
+</script>*@
+
+</body>
+</html>

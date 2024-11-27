@@ -1,0 +1,126 @@
+﻿@model StaffandTrain.Models.listdetails
+
+@{
+    ViewBag.Title = "Assigncity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container main-ctn">
+    <h1 class="title">Prospecting List of (@ViewBag.UserName )</h1>
+    <div id="divmsg" class="alert alert-success" style="display:none"></div>
+    
+    <div id="tblprospect" class="pros_lst">
+        <table id="example" class="table table-striped table-bordered tbldetailsdata" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="chkselectall"   /></th>
+                    <th>List Name</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.objlist.Count > 0)
+                {
+                    foreach (var i in Model.objlist)
+                    {
+                        <tr>
+                            <td>
+                                @if (Model.selectedlist.Contains(@i.listid))
+                                {
+
+                                    <input type="checkbox" id="chk" class="chkin" data-listid="@i.listid" name="chkin" checked="checked" />
+                                }
+                                else
+                                {
+                                    <input type="checkbox" id="chk" class="chkin" data-listid="@i.listid" name="chkin" />
+                                }
+                            </td>
+                            <td>
+                               
+                               @i.listname
+                            </td>
+                            <td>
+
+                                @i.Cnt
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4">No Record Found</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+       
+        <input type="hidden" id="hdnuser" value="@ViewBag.UserName" />
+    </div>
+    <div style="padding-bottom:10px"></div>
+    <div id="divUpdaterole"> <a href="javascript:void(0);" name="btnupdaterole" class="btn btn-success" id="btnupdate"> Update</a> <a href="/ManageUser/Index" name="btnupdaterole1" class="btn btn-success" id="#"> Back To Listing</a> </div>
+    <div id="divUpdaterole">  </div>
+</div>
+<script src="~/Custom_JS/ManageUser_AssignCity.js" defer></script>
+
+@*<script type="text/javascript">
+    $("#chkselectall").click(function () {
+        $(".chkin").prop('checked', $(this).prop('checked'));
+    }); 
+
+
+
+    $(".chkin").click(function () {
+
+        var totalcnt = $(".chkin").length;
+        var totalselectedcnt = $('input[name="chkin"]:checked').length;
+        if (totalcnt == totalselectedcnt) {
+            $("#chkselectall").prop('checked', true);
+        }
+        else {
+            $("#chkselectall").prop('checked', false);
+        }
+       
+    });
+
+    $(document).ready(function () {
+       
+        $("#btnupdate").click(function () {
+            var ids = "";
+            var listids = "";
+            $("#example tr").each(function () {
+                ;
+
+                var row = $.trim($(this).find("td:nth-child(2)").text());
+                if (row != '') {
+                    if ($(this).find("td:nth-child(1)").children('.chkin').is(':checked')) {
+                        var expids = $(this).find("td:nth-child(1)").children('.chkin').attr('data-listid');
+                        if (ids == "") {
+                            ids = expids
+                        }
+                        else {
+                            ids = ids + "," + expids
+                        }
+                    }
+                }
+            });
+            var Username = $("#hdnuser").val();
+            $.ajax({
+                type: "POST",
+                url: "/ManageUser/UpdateProspective",
+                async: false,
+                data: { Username: Username, listids: ids },
+                success: function (msg) {
+                    if (msg != "" && msg != "Error") {
+                        console.log(msg);
+                      //  $("#Ddlcity").val("").trigger("chosen:updated");
+                        $("#divmsg").text(msg);
+                        $("#divmsg").show();
+                    }
+                },
+                error: function (error) {
+                }
+            }); 
+        }); 
+    });
+</script>*@

@@ -1,0 +1,62 @@
+﻿@using StaffandTrain.Common;
+@{
+    Layout = null;
+    Common cm = new Common();
+}
+
+<script type="text/javascript">
+    var compnyid = $("#hiddencmpnyid").html();
+    if (compnyid != "" && compnyid != null) {
+        $("#" + compnyid).focus();
+    }
+
+</script>
+
+<label id="hiddencmpnyid" style="display:none">@ViewBag.cmpnyid</label>
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            @*<th>City Circle</th>*@
+            <th>Biz Type</th>
+            <th>CompanyName</th>
+            <th>User Actions</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0)
+        {
+            foreach (var i in Model)
+            {
+                string str = "";
+                if (@i.priority == true)
+                {
+                    str = "Str_blue";
+
+                }
+                else if (@i.target == true)
+                {
+                    str = "Str_pink";
+                }
+                <tr class="@str">
+                    @*<td>@i.citycircle</td>*@
+                    <td>@i.biztype</td>
+                    <td><a href="/ProspectViewCompany/Index?Compid=@cm.Code_Encrypt(CryptorEngine.Encrypt(i.companyid.ToString()))" id="@i.companyid"> @i.name </a></td>
+                    <td>
+                        <a class="btn Edit" href="/ProspectViewList/SaveCompany?companyidedit=@i.companyid"><i class="fa fa-pencil-square-o"></i></a>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a href="/ProspectViewList/DeleteCompany?companyidedit=@i.companyid&listid=@i.listid" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Company?");'><i class="fa fa-trash-o"></i></a>
+                        }
+                    </td>
+
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4">No Users Found</td>
+            </tr>
+        }
+    </tbody>
+</table>

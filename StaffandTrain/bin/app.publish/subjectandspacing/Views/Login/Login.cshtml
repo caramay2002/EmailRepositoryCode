@@ -1,0 +1,64 @@
+﻿@using StaffandTrain.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+
+
+
+
+
+
+<h3>Great to have you back !</h3>
+@using (Html.BeginForm("UserLogin", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    if (@ViewBag.Message != null && @ViewBag.Message != "Invalid User")
+    {
+        <div id="" class="alert alert-success">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null && @ViewBag.Message == "Invalid User")
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+    else if (@ViewBag.Message != null && @ViewBag.Message == "User account is not activated yet")
+    {
+        <div id="" class="alert alert-danger">@ViewBag.Message</div>
+    }
+
+    <ul>
+        <li>
+            <label>User Name</label>
+
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "txtusername", @maxlength = "50" })
+            <div id="" class="validateTips"></div>
+        </li>
+        <li>
+            <label>Password</label>
+
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", id = "txtpassword", @maxlength = "50", @type = "password", @Value = Model.Password })
+            <div id="" class="validateTips"></div>
+        </li>
+        <li class="clearfix">
+            <div class="checkbox checkbox-orange">
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @*<input id="checkbox1" type="checkbox">*@
+                <label for="checkbox1">Remember</label>
+
+            </div>
+            <div class="forgot">
+                <a href="/ForgotPassWord/Index">Forgot Password ?</a>
+                <div class="forgot"> <a href="/SignUp/Index">SignUp</a> </div>
+            </div>
+        </li>
+        <li class="last">
+            <button type="submit" class="btn btn-primary" id="btnsave">SIGN IN</button>
+        </li>
+
+    </ul>
+}
+
+
+
+<script src="~/Custom_JS/Login_Index_JS.js" defer></script>
+

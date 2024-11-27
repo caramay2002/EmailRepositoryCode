@@ -365,6 +365,12 @@ namespace StaffandTrain.Controllers
                 //    enablessl = false;
                 //}
 
+                int spacing = 0;
+                if(int.Parse(Request.Form["ddlspacing"].ToString()) != 0)
+                {
+                    spacing = int.Parse(Request.Form["ddlspacing"].ToString());
+                }
+
                 int intmailCount = 0;
 
                 var templatedata = context.SPgetemailtemplatebytemplateid(Convert.ToInt32(TemplateId)).FirstOrDefault();
@@ -438,7 +444,7 @@ namespace StaffandTrain.Controllers
                     for (int i = 0; i < contact_details.Count; i++)
                     {
                         var item = contact_details[i];
-                        int value = sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, 1, ImageName);
+                        int value = sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, spacing, ImageName);
                         if (value == 1) intmailCount++;
                     }
                 }
@@ -448,7 +454,7 @@ namespace StaffandTrain.Controllers
                     for (int i = 0; i < contact_details.Count; i++)
                     {
                         var item = contact_details[i];
-                        int value = sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, 1, ImageName);
+                        int value =     sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, spacing, ImageName);
                         if (value == 1) intmailCount++;
                     }
                 }
@@ -477,6 +483,8 @@ namespace StaffandTrain.Controllers
                 string[] fName = string.IsNullOrEmpty(Name) ? new string[] { "" } : Name.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 string str = EmailBody;
+                string subj = Subject;
+
                 string[] strArr = null;
                 string[] stringSeparators = new string[] { "<p>" };
                 strArr = str.Split(stringSeparators, StringSplitOptions.None);
@@ -516,6 +524,8 @@ namespace StaffandTrain.Controllers
                 {
                     fullbody = str;
                 }
+
+
                 string addfnamesubject = "";
                 // Logic for font size for Name section in Email Body Starts here [SHIVAM]
                 var placeholders = new Dictionary<string, string>();
@@ -524,9 +534,30 @@ namespace StaffandTrain.Controllers
                     placeholders.Add("FirstName", fName[0]);
                     addfnamesubject = "Hi "+ fName[0].ToString()+",  "+Subject;
                 }
+                var placeholders2 = new Dictionary<string, string>();
+                if (Subject.Length > 0 && !string.IsNullOrEmpty(Subject))
+                {
+                    placeholders2.Add("name_script", fName[0]);
+                    placeholders2.Add("FirstName", fName[0]);
+                }
 
-                string replacescriptfnamesubject = addfnamesubject.Replace(" Hi {{name_script}}, ", "");
+                //if (addfnamesubject.Contains("{{name_script}}")){
+                //    addfnamesubject = addfnamesubject.Replace(" Hi {{name_script}}, ", "");
+                //}
 
+
+                subj = Regex.Replace(Subject, @"\{\{(\w+)\}\}", match =>
+                {
+                    string placeholder = match.Groups[1].Value;
+                    if (placeholders2.ContainsKey(placeholder))
+                    {
+                        return placeholders2[placeholder];
+                    }
+                    else
+                    {
+                        return match.Value; // Keep original if no match
+                    }
+                });
                 // Replace placeholders with values using regular expressions
                 str = Regex.Replace(EmailBody, @"\{\{(\w+)\}\}", match =>
                 {
@@ -540,6 +571,9 @@ namespace StaffandTrain.Controllers
                         return match.Value; // Keep original if no match
                     }
                 });
+
+                
+
 
                 // Logic for font size for Name section in Email Body Ends here [SHIVAM]
                 var css = @"
@@ -580,9 +614,6 @@ namespace StaffandTrain.Controllers
                 var validEmail = regex.IsMatch(Email);
                 if (!validEmail) throw new Exception($"Invalid Email: {Email}");
 
-   
-
-
   
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 ServicePointManager.ServerCertificateValidationCallback =
@@ -594,7 +625,7 @@ namespace StaffandTrain.Controllers
                 //message.To.Add("info.usamaali@gmail.com");
                 message.To.Add(ContactEmail);
                 //message.To.Add("dev@talkboxsolutions.com");
-                message.Subject = replacescriptfnamesubject;
+                message.Subject = subj;// addfnamesubject;
                 message.From = new System.Net.Mail.MailAddress(senderemail,companyname);
 
                 var plainText = AlternateView.CreateAlternateViewFromString("This is the plain text version of the email.", null, "text/plain");

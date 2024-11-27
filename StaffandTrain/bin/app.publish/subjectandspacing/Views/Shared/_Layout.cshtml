@@ -1,0 +1,340 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin</title>
+ 
+
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <link href="~/Content/jquery.dataTables.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+
+
+        <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/layout.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/media-queries.css" rel="stylesheet" type="text/css">*@
+
+
+    @Styles.Render("~/Content/filecss")
+    @*@Scripts.RenderFormat("~/Scripts/JSFiles")*@
+
+
+    @*@Scripts.RenderFormat("<script type='text / javascript' src='{ 0} '></script>", "~/Scripts/JSFiles")*@
+
+    
+    @Scripts.RenderFormat("<script src='{0}' defer></script>", "~/Scripts/JSFiles")
+
+
+    @*<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js" defer></script>*@
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="container">
+            <div class="top-link">
+                <ul class="navupper">
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li><a href="javascript:void(0)">@User.Identity.Name </a></li>
+                    }
+
+                    <li><a href="javascript:void(0)"><span class="fa fa-home"></span>Home</a></li>
+                    <li><a href="javascript:void(0)"><span class="fa fa-user-o"></span>Client</a></li>
+                    <li><a href="javascript:void(0)"><span class="fa fa-user"></span>Recruiter</a></li>
+
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="/AdminHome"><span class="fa fa-key"></span>Admin</a></li>
+                    }
+                    @if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Login/LogOut"><span class="fa fa-user"></span> LogOut</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Login"><span class="fa fa-user"></span> Login</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div> 
+    <header class="header">
+        <div class="container">
+            @*<div class="logo"><img src="~/images/logo.png" alt="" /></div>*@
+            <div class="menu">
+                <a class="toggleMenu" href="#"> <span></span></a>
+                <ul class="navi">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="/AdminHome">Dashboard</a></li>
+                        <li><a href="/ManageUser/Index">Users</a></li>
+                        <li><a href="/ManageRoles/Index">Roles</a></li>
+                        <li><a href="/ProspectListsAdmin/Index">Prospecting</a></li>
+                        <li><a href="/GlobalSearch/Index">Search</a></li>
+                        <li><a href="/WhiteBoards/Index">Admin Whiteboards</a></li>
+                        <li><a href="/WhiteBoards/RecruiterWB">Whiteboards</a></li>
+                        @*<li><a href="/Worker">Workers</a></li>*@
+                        <li><a href="/EmailTemplate/Index">Emailer</a></li>
+                        @*<li><a href="/EmailSendFrom/Index">Send Email</a></li>*@
+                    }
+                    @if (User.IsInRole("Recruiter"))
+                    {
+                        <li><a href="/RecruiterHome">Dashboard</a></li>
+                        <li><a href="/GlobalSearch/Index">Search</a></li>
+                        <li><a href="/ProspectListsAdmin/Index">Prospecting</a></li>
+                        <li><a href="/WhiteBoards/RecruiterWB">Whiteboards</a></li>
+                    }
+                    @if (User.IsInRole("Client"))
+                    {
+                        <li><a href="/ClientHome">Dashboard</a></li>
+                        <li><a href="/ProspectListsClient/Index">Prospecting</a></li>
+                    }
+                </ul>
+            </div>
+        </div> 
+    </header> 
+    <div class="banner">
+        <img src="~/images/banner.jpg" alt="" />
+        <div class="banner-caption">
+            <div class="Table">
+                <div class="Table-cell">
+                    <div class="container">
+
+                    </div>
+                </div> 
+                <!--end Table-cell-->
+            </div>
+            <!--end Table-->
+        </div>
+    </div> 
+
+    <div class="container main-ctn">
+        @RenderBody()
+        <!--end admin-form-->
+    </div> <!--end container-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="copy">©copyright @DateTime.Now.Year <a href="http://staffandtrain.com/" target="_blank">StaffandTrain.com</a></div>
+            <div class="f-link">
+
+                <ul>
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Client</a></li>
+                    <li><a href="javascript:void(0)">Recruiter</a></li>
+
+                    @if (@StaffandTrain.Models.Global.Role == "Admin")
+                    {
+                        <li><a href="/AdminHome">Admin</a></li>
+
+                    }
+                    @if (System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Login/LogOut"><span class="fa fa-user"></span> LogOut</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="/Login"><span class="fa fa-user"></span> Login</a></li>
+                    }
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+    @*<script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>*@
+    @*<script src="~/Scripts/owl.carousel.js"></script>
+    <script src="~/Scripts/custom.js" defer></script>*@
+    <script src="~/Custom_JS/Layout_JS.js" defer></script>
+    @*<script type="text/javascript">
+
+        $(document).ready(function () {
+            if (location.pathname.split("/")[1] != "") {
+
+                $('.navi a[href^="' + location.pathname + '"]').parent().addClass('active');
+                $('.navupper a[href^="' + location.pathname + '"]').parent().addClass('active');
+
+
+            }
+            else {
+                $('.navi a[href^="/UserHome/Index"]').parent().addClass('active');
+
+            }
+
+        });
+    </script>*@
+    @*@Styles.RenderFormat("<script type=\"text/javascript\">load_css_async('{0}')</script>", "~/Content/filecss")*@
+
+
+</body>
+</html>
+
+
+
+
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+
+        <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        <link href="~/App_Themes/Gray/Theme.css" rel="stylesheet" />
+        <style type="text/css">
+            .style1 {
+                font-size: 13px;
+                font-weight: bold;
+            }
+        </style>
+
+        <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/owl.carousel.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/layout.css" rel="stylesheet" type="text/css">
+        <link href="~/Content/media-queries.css" rel="stylesheet" type="text/css">
+
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+    </head>
+    <body>
+
+        <div class="top">
+            <div class="container">
+                <div class="top-link">
+                    <ul>
+                        <li><a href="javascript:void(0)">User Name </a></li>
+                        <li><a href="javascript:void(0)"><span class="fa fa-home"></span>Home</a></li>
+                        <li><a href="javascript:void(0)"><span class="fa fa-user-o"></span>Client</a></li>
+                        <li><a href="javascript:void(0)"><span class="fa fa-user"></span>Recruiter</a></li>
+                        <li><a href="javascript:void(0)"><span class="fa fa-key"></span>Admin</a></li>
+                        <li><a href="javascript:void(0)"><span class="fa fa-user"></span> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <header class="header">
+            <div class="container">
+                <div class="logo"><img src="~/images/logo.png" alt="" /></div>
+
+
+
+
+                <div class="menu">
+                    <a class="toggleMenu" href="#"> <span></span></a>
+                    <ul class="navi">
+                        <li><a href="javascript:void(0)">Dashboard</a></li>
+                        <li><a href="javascript:void(0)">Users</a></li>
+                        <li><a href="javascript:void(0)">Roles</a></li>
+                        <li><a href="javascript:void(0)">Prospecting</a></li>
+                        <li><a href="javascript:void(0)">Whiteboards</a></li>
+                        <li><a href="javascript:void(0)">Email Template</a></li>
+                        <li><a href="javascript:void(0)">Sent Email</a></li>
+                    </ul>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </header>
+
+
+
+
+
+
+        <div class="banner">
+
+            <img src="~/images/banner.jpg" alt="" />
+            <div class="banner-caption">
+                <div class="Table">
+                    <div class="Table-cell">
+                        <div class="container">
+                            <h1>Staffing Industry Talent Scouts Inc</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan enim vel blandit tempus.</p>
+                        </div>
+                    </div>
+                    <!--end Table-cell-->
+                </div>
+                <!--end Table-->
+
+            </div>
+        </div>
+
+        <div class="container main-ctn">
+            @RenderBody()
+
+
+
+
+
+
+        </div> <!--end container-->
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="copy"> © Copyright 2010 StaffandTrain.com </div>
+
+                <div class="f-link">
+
+                    <ul>
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0)">Client</a></li>
+                        <li><a href="javascript:void(0)">Recruiter</a></li>
+                        <li><a href="javascript:void(0)">Admin</a></li>
+                        <li><a href="javascript:void(0)">Logout </a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <script src="~/Scripts/owl.carousel.js"></script>
+        <script src="~/Scripts/custom.js"></script>
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@

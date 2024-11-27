@@ -1,0 +1,584 @@
+﻿@using StaffandTrain.Common;
+@model StaffandTrain.Models.CompContact
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Common cm = new Common();
+}
+@if (User.IsInRole("Admin"))
+{
+    <h1 class="title">Prospect View Company (Admin)</h1>
+}
+else
+{
+    <h1 class="title">Prospect View Company (Recruiter)</h1>
+}
+@*<script src="~/Scripts/jquery.min.js"></script>*@
+<link href="~/Content/loading.css" rel="stylesheet" />
+<div class="loading">Loading&#8230;</div>
+<label id="IsAuthenticated" style="display:none">@Request.IsAuthenticated</label>
+<label id="ConEmail" style="display:none">@ViewBag.ConEmail</label>
+
+<div class="admin-form">
+    <div>
+        Return Path: <a href="/ProspectViewList/Index?listid=@Model.listid&cmpnyid=@Model.companyid" id="returnpath">PROSPECT VIEW LIST</a>
+    </div><br />
+    <div class="admin-ctn">
+        <div class="row">
+            <div class="col-sm-4 form-group">
+                <label>Search</label>
+                @Html.TextBox("txtname", null, new { @class = "form-control", @id = "txtname", @placeholder = "Search Names" })
+                <div id="" class="validateTips"></div>
+            </div>
+
+            <div class="col-sm-4 form-group">
+                <label>Search Notes </label>
+                @Html.TextBox("txtsearchnotes", null, new { @class = "form-control", @id = "txtsearchnotes", @placeholder = "Search Notes" })
+                <div id="" class="validateTips"></div>
+            </div>
+
+
+            <div class="col-sm-4 form-group">
+                <label></label>
+                <div class="divcreate">
+                    <a href="javascript:void(0)" class="btn btn-success" id="lnksearch">Search</a>
+                    <a href="javascript:void(0)" class="btn btn-success" id="lnkclear">Clear </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="admin-form">
+    <div class="admin-ctn">
+        <div class="row">
+
+            Company Details
+
+            <table id="example1" class="table table-striped table-bordered" cellspacing="0" width="100%">
+
+                <tbody>
+                    <tr>
+                        <td class="tbl_heading">City Circle </td>
+                        <td>
+                            @Model.citycircle
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl_heading">Biz Type</td>
+                        <td>
+                            @Model.biztype
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl_heading">Company Name</td>
+                        <td id="tdcompname">
+                            @Model.name
+                        </td>
+                    </tr>
+                    @*<tr>
+                            <td class="tbl_heading">Address1</td>
+                            <td>
+                                @Model.addr1
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tbl_heading">Address2</td>
+                            <td>
+                                @Model.addr2
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tbl_heading">City</td>
+                            <td>
+                                @Model.city
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tbl_heading">State</td>
+                            <td>
+                                @Model.state
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tbl_heading">Zip</td>
+                            <td>
+                                @Model.zip
+                            </td>
+                        </tr>*@
+                    <tr>
+                        <td class="tbl_heading">Web Url</td>
+                        <td>
+                            <a href="@Model.weburl" target="_blank">@Model.weburl</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl_heading">Phone</td>
+                        <td>
+                            @Model.phone
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tbl_heading">priority</td>
+                        <td>
+                            @Model.priority
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <input type="hidden" id="hdnlistid" value="@Model.listid" />
+            <input type="hidden" id="hdncompid" value="@Model.companyid" />
+            <div class="clearfix"></div>
+
+            <div style="display:none">
+                @Html.TextBoxFor(x => x.companyid, new { id = "txtcompid" })
+                @Html.TextBoxFor(x => x.listid, new { id = "txtlistid" })
+            </div>
+        </div>
+    </div> <!--end admin-form-->
+
+</div>
+<div class="divcreate">
+    <a href="/ProspectViewCompany/AddUpdateContact?CompanyId=@cm.Code_Encrypt(CryptorEngine.Encrypt(Model.companyid.ToString()))&compname=@Model.name" class="btn btn-success" id="lnkcreate">Create New  Contact  <i class="fa fa-plus" aria-hidden="true"></i></a>
+    <a href="/ProspectViewList/SaveCompany?companyidedit=@Model.companyid" class="btn btn-success" id="lnk">Edit Company  </a>
+</div>
+
+<div id="tblcon">
+
+</div>
+
+
+<div class="modal  manage-sts-popup" id="FileManageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="btnPopupClose" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @if (User.IsInRole("Admin"))
+                {
+                    <h4 class="modal-title" id="myModalLabel">Contact Resumes (Admin)</h4>
+                }
+                else
+                {
+                    <h4 class="modal-title" id="myModalLabel">Contact Resumes (Recruiter)</h4>
+                }
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-body">
+
+                <div class="col-sm-12 form-group" id="oldrolename" style="display:none"><label>Old Role Name</label><div id="divrole"></div></div>
+                <div class="col-sm-12 form-group">
+                    <label>Resumes</label>
+
+                    <textarea placeholder="Resumes" rows="15" cols="70" id="txtresumes"> </textarea>
+                    <div id="" class="validateTips"></div>
+                    <input type="text" class="form-control" id="txtcontactid" style="display:none" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-footer">
+                <div class="col-sm-12 form-group">
+                    <label style="margin-right: 450px;">Resume File</label>
+                    <input type="file" name="postedFile" id="FileUpload1" />
+                    <div id="" class="validateTips"></div>
+                    <span id="lblError" style="color: red; padding-right: 155px;"></span>
+                    <br />
+                </div>
+                <div id="divUpdaterole">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a href="javascript:void(0);" name="btnupdate" class="btn btn-success"> Update</a>
+                    }
+                    else
+                    { <a href="javascript:void(0);" class="btn btn-success"> Update</a>}
+
+                </div>
+
+                <div id="divmsg"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal manage-sts-popup" id="FileManageModalmover" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" id="btnPopupClose" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                @if (User.IsInRole("Admin"))
+                {
+                    <h4 class="modal-title" id="myModalLabel">Contact Mover (Admin)</h4>
+                }
+                else
+                {
+                    <h4 class="modal-title" id="myModalLabel">Contact Mover (Recruiter)</h4>
+                }
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-body">
+
+                <div class="col-sm-12 form-group" id="oldrolename"><label>Move Contact From Company :</label><div id="divmover"></div></div>
+                <div class="col-sm-12 form-group">
+                    <label>Move Contact To Company :</label>
+
+                    @Html.DropDownList("Ddlcomp", (IEnumerable<SelectListItem>)ViewData["Complst"], "Select Company", new { name = "Ddlcity", @class = "form-control", id = "Ddlcomp" })
+                    <div id="" class="validateTips"></div>
+                    <input type="text" class="form-control" id="txtcontactidmove" style="display:none" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="modal-footer">
+                <div id="divUpdaterole">
+                    <a href="javascript:void(0);" name="btnmove" class="btn btn-success"> Move Contact</a>
+                </div>
+                <div id="divmsg"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@*
+    //------------ Previous link -------------------//
+    <script src="~/Custom_JS/ProspectViewCompany_Index_JS.js" defer></script>
+*@
+<script src="~/Custom_JS/ProspectViewCompany_Index.js" defer></script>
+
+
+
+
+
+@*<script type="text/javascript">
+        $(document).ready(function () {
+
+            getlist();
+
+            $(".Edit").bind("click", Edit);
+
+            $("#lnkclear").click(function () {
+                $("#txtname").val("");
+                $("#txtsearchnotes").val("");
+            });
+
+            $("#lnksearch").click(function () {
+                getlist();
+            });
+            $(".conresume").click(function () {
+
+                if ('@Request.IsAuthenticated' === 'True') {
+                    $(".validateTips").html("");
+                    var contactid = $(this).attr("data-resume");
+                    $.ajax({
+                        type: "POST",
+                        url: "/ProspectViewCompany/GetConResume",
+                        async: false,
+                        data: { contactid: contactid },
+                        success: function (msg) {
+                            $('#FileManageModal').modal('show');
+                            $("#txtcontactid").val(contactid);
+                            $("#txtresumes").val(msg);
+
+                        },
+                        error: function (error) {
+
+                        }
+                    });
+                }
+                else {
+                    window.location.href = "\Login\Index";
+                }
+            });
+            $(".conmove").click(function () {
+                $(".validateTips").html("");
+                $('#FileManageModalmover').modal('show');
+                $("#Ddlcomp").val("");
+                $("#divmover").text($("#tdcompname").text().trim());
+                $("#txtcontactidmove").val($(this).attr("data-resume"))
+            });
+            $(document).on("click", "a[name='btnmove']", function (e) {
+                $(".validateTips").html("");
+                if ($("#Ddlcomp").val() == "") {
+                    $('#Ddlcomp').nextAll(".validateTips:first").html("Select Company");
+                    return false;
+                }
+                if ('@Request.IsAuthenticated' === 'True') {
+                    var contactid = $("#txtcontactidmove").val();
+                    var companyid = $("#Ddlcomp").val();
+                    var companyidold = $("#hdncompid").val();
+                    $.ajax({
+                        type: "POST",
+                        url: "/ProspectViewCompany/MoveContact",
+                        async: false,
+                        data: { contactid: contactid, companyid: companyid, companyidold: companyidold },
+                        success: function (msg) {
+
+                            $('#FileManageModalmover').modal('hide');
+                            $("#Ddlcomp").val("");
+                            if (msg != "") {
+                                window.location.href = msg;
+                            }
+
+
+                        },
+                        error: function (error) {
+                        }
+                    });
+                }
+                else {
+                    window.location.href = "\Login\Index";
+                }
+            });
+
+
+
+            $(document).on("click", "a[name='btnupdate']", function (e) {
+                $(".validateTips").html("");
+                if ($("#txtresumes").val() == "") {
+                    $('#txtresumes').nextAll(".validateTips:first").html("Enter Resumes");
+                    return false;
+                }
+                var contactid = $("#txtcontactid").val();
+                var resumes = $("#txtresumes").val();
+                if ('@Request.IsAuthenticated' === 'True') {
+                    $.ajax({
+                        type: "POST",
+                        url: "/ProspectViewCompany/UpdateConResume",
+                        async: false,
+                        data: { contactid: contactid, resumes: resumes },
+                        success: function (msg) {
+
+                            $('#FileManageModal').modal('hide');
+                            $("#txtcontactid").val("");
+                            $("#txtresumes").val("");
+
+                        },
+                        error: function (error) {
+                        }
+                    });
+                }
+                else {
+                    window.location.href = "\Login\Index";
+                }
+            });
+            $(document).on("click", "a[name='btnupdatcon']", function (e) {
+                //$(".validateTips").html("");
+                //if ($("#txtresumes").val() == "") {
+                //    $('#txtresumes').nextAll(".validateTips:first").html("Enter Resumes");
+                //    return false;
+                //}
+                if ('@Request.IsAuthenticated' === 'True') {
+                    var contactid = $(this).attr("data-contactid");
+                    $(".validateTips").html("");
+                    if ($("#txtEmail").val().trim() != "") {
+                        if (!validateEmail($("#txtEmail").val().trim())) {
+                            $('#txtEmail').nextAll(".validateTips:first").html("Invalid Email");
+                            return false;
+                        }
+
+                    }
+                    if ($("#txtLinkedIn").val().trim() != "") {
+                        var url = new RegExp('^(http|https|www)://.*$');
+                        if (!url.test($("#txtLinkedIn").val())) {
+                            $('#txtLinkedIn').nextAll(".validateTips:first").html("Enter Valid Url");
+                            return false;
+                        }
+
+
+                    }
+                    var ContactDetails = {
+                        'contactid': contactid,
+                        'contactfullname': $("#txtName").val(),
+                        'titlestandard': $("#ddltitle").val(),
+                        'contactphone': $("#txtWphone").val(),
+                        'contactcellphone': $("#txtCPhone").val(),
+                        'contactemail': $("#txtEmail").val(),
+                        'linkedinprofileurl': $("#txtLinkedIn").val(),
+                        'combinednotes': $("#txtcombinednotes").val()
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/ProspectViewCompany/UpdateContact",
+                        async: false,
+                        data: ContactDetails,
+                        success: function (msg) {
+
+                            if (msg == "Success") {
+                                location.reload();
+                            }
+
+                        },
+                        error: function (error) {
+                        }
+                    });
+                }
+                else {
+                    window.location.href = "\Login\Index";
+                }
+
+            });
+
+
+
+            $(document).on("click", "a[name='btncancelupdate']", function (e) {
+
+
+                $('#example tr:not(:first)').each(function () {
+
+                    var htmldata = "";
+                    var td1 = $(this).children("td:nth-child(1)");
+                    var td2 = $(this).children("td:nth-child(2)");
+                    //var tdEmail = par.children("td:nth-child(3)");
+                    //var tdButtons = par.children("td:nth-child(4)");
+                    var Data = "test";
+                    var htmldata = "";
+                    if (td1.children('input').length > 0) {
+                        htmldata = htmldata + "<label id='lblid'>" + td1.children('#lblid').text() + "</label><br />";
+                        htmldata = htmldata + "Name: " + td1.children('#txtName').val() + "<br />";
+                        htmldata = htmldata + "Title: " + td1.children('#ddltitle').val() + "<br />";
+                        htmldata = htmldata + "WPhone: " + td1.children('#txtWphone').val() + "<br />";
+                        htmldata = htmldata + "CPhone: " + td1.children('#txtCPhone').val() + "<br />";
+                        htmldata = htmldata + "Email: <a href='mailto:"+td1.children('#txtEmail').val() + "'>"+td1.children('#txtEmail').val()+"</a><br />";
+                        htmldata = htmldata + "LinkedIn: <a target='_blank' href="+td1.children('#txtLinkedIn').val() +">" + td1.children('#txtLinkedIn').val() + "</a><br />";
+                        td1.html(htmldata);
+                        td2.html("<pre>"+td2.children('#txtcombinednotes').val()+ "</pre>");
+
+                    }
+
+
+                });
+
+            });
+
+
+
+
+        });
+        function getlist() {
+
+            if ('@Request.IsAuthenticated' === 'True') {
+                var name = $("#txtname").val().trim();
+                var Notes = $("#txtsearchnotes").val().trim();
+                var listid = $("#hdnlistid").val();
+                var companyid = $("#hdncompid").val();
+                var emailaddes = '@ViewBag.ConEmail';
+                $.ajax({
+                    type: "POST",
+                    url: "/ProspectViewCompany/Getlist",
+                    async: false,
+                    data: { name: name, Notes: Notes, listid: listid, companyid: companyid, emailaddes: emailaddes },
+                    success: function (msg) {
+
+                        $("#tblcon").html(msg);
+                        $(".loading").hide();
+                    },
+                    error: function (error) {
+                    }
+                });
+            }
+            else {
+                window.location.href = "\Login\Index";
+            }
+        }
+
+
+        function Edit() {
+            ;
+            var par = $(this).parent().parent(); //tr
+
+            $('#example tr:not(:first)').each(function () {
+
+                var htmldata = "";
+                var td1 = $(this).children("td:nth-child(1)");
+                var td2 = $(this).children("td:nth-child(2)");
+                //var tdEmail = par.children("td:nth-child(3)");
+                //var tdButtons = par.children("td:nth-child(4)");
+                var Data = "test";
+                var htmldata = "";
+                if (td1.children('input').length > 0) {
+
+                    htmldata = htmldata + "<label id='lblid'>" + td1.children('#lblid').text() + "</label><br />";
+                    htmldata = htmldata + "Name: " + td1.children('#txtName').val() + "<br />";
+                    htmldata = htmldata + "Title: " + td1.children('#ddltitle').val() + "<br />";
+                    htmldata = htmldata + "WPhone: " + td1.children('#txtWphone').val() + "<br />";
+                    htmldata = htmldata + "CPhone: " + td1.children('#txtCPhone').val() + "<br />";
+                    htmldata = htmldata + "Email: <a href='mailto:" + td1.children('#txtEmail').val() + "'>" + td1.children('#txtEmail').val() + "</a><br />";
+                    htmldata = htmldata + "LinkedIn: <a target='_blank'  href=" + td1.children('#txtLinkedIn').val() +  ">" + td1.children('#txtLinkedIn').val() + "</a><br />";
+                    td1.html(htmldata);
+                    td2.html(td2.children('#txtcombinednotes').val());
+
+                }
+
+
+            });
+
+
+            var contactid = $(this).attr("data-contactid");
+            var tdName = par.children("td:nth-child(1)");
+            var tdPhone = par.children("td:nth-child(2)");
+            if ('@Request.IsAuthenticated' === 'True') {
+                $.ajax({
+                    type: "POST",
+                    url: "/ProspectViewCompany/GetContactDetails",
+                    async: false,
+                    data: { contactid: contactid },
+                    success: function (msg) {
+                        ;
+                        var drptile = "<select id='ddltitle'><option value=''>Select</option>";
+                        $(msg.Titlelist).each(function (index) {
+                            if (msg.data.titlestandard == msg.Titlelist[index].Value) {
+                                drptile = drptile + "<option value='" + msg.Titlelist[index].Value + "' selected>" + msg.Titlelist[index].Text + " </option>";
+                            }
+                            else {
+                                drptile = drptile + "<option value='" + msg.Titlelist[index].Value + "'>" + msg.Titlelist[index].Text + " </option>";
+                            }
+                        });
+                        drptile = drptile + "</select>"
+                        var Html = "";
+                        Html = Html + " <label id='lblid'>ID :" + msg.data.contactid + "</label><br /> ";
+                        Html = Html + "<label class='lbl_edit'>Name :</label><input type='text' id='txtName'  class='edit_input'   value='" + msg.data.contactfullname + "'/>  <br />";
+                        Html = Html + "<label class='lbl_edit'>Title :</label>" + drptile + "<br />";
+                        Html = Html + "<label class='lbl_edit'>WPhone :</label><input type='text' id='txtWphone'  class='edit_input' value='" + msg.data.contactphone + "'/><br />";
+                        Html = Html + "<label class='lbl_edit'>CPhone :</label><input type='text' id='txtCPhone'  class='edit_input' value='" + msg.data.contactcellphone + "'/><br />";
+                        Html = Html + "<label class='lbl_edit'>Email :</label><input type='text' id='txtEmail'  class='edit_input' value='" + msg.data.contactemail + "'/><div id='' class='validateTips'></div><br />";
+                        Html = Html + "<label class='lbl_edit'>LinkedIn :</label><input type='text' id='txtLinkedIn'  class='edit_input' value='" + msg.data.linkedinprofileurl + "'/><div id='' class='validateTips'></div>";
+                        tdName.html(Html);
+                        //tdPhone.html("<textarea rows='8' cols='50'  id='txtcombinednotes'>" + msg.data.combinednotes + "</textarea><br /> <a href='javascript:void(0);' id ='btnupdatcon' data-contactid=" + msg.data.contactid + " name ='btnupdatcon'  class='btn btn-success'> Update</a> <a href='javascript:void(0);' id ='btncancel' data-contactid=" + msg.data.contactid + " name ='btncancelupdate'  class='btn btn-success'> Cancel</a>");
+                        tdPhone.html("<textarea rows='8' cols='50'  id='txtcombinednotes' style='padding: 10px; word-break: break-word;'>" + msg.data.combinednotes + "</textarea><br /> <a href='javascript:void(0);' id ='btnupdatcon' data-contactid=" + msg.data.contactid + " name ='btnupdatcon'  class='btn btn-success'> Update</a> <a href='javascript:void(0);' id ='btncancel' data-contactid=" + msg.data.contactid + " name ='btncancelupdate'  class='btn btn-success'> Cancel</a>");
+                    },
+                    error: function (error) {
+                    }
+                });
+
+            }
+            else {
+                window.location.href = "\Login\Index";
+            }
+
+
+
+            //$("#txtId").focus();
+        };
+
+
+        //function validateEmail(Email) {
+        //    var filter = /^([\w-\.]+)@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        //    if (!filter.test(Email)) {
+        //        return false;
+        //    }
+        //    else {
+        //        return true;
+        //    }
+        //}
+
+
+
+
+    </script>*@
