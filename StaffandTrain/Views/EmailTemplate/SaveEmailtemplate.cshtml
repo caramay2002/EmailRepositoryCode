@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "SaveEmailtemplate";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 @*<script src="~/ckeditor/ckeditor.js"></script>*@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" defer></script>
@@ -32,6 +33,8 @@
     .note-editable u, .note-editable ul {
         text-decoration: underline !important;
     }
+
+    
 </style>
 <div class="container main-ctn">
     <h1 class="title">Add/Edit Email Template</h1>
@@ -64,12 +67,54 @@
                         @Html.TextBoxFor(x => x.GroupingNumber, new { id = "txtGroupingNumber", @placeholder = "Grouping Number", @class = "form-control", })
                         <div id="" class="validateTips"></div>
                     </div>
-                    <div class="col-sm-12 form-group form-group1 ">
+
+                    @if (Model.TemplateId != 0)
+                    {
+                        <div class="col-sm-12 form-group">
+                            <label>Select Editor Type</label>
+                            <div>
+                                @Html.RadioButtonFor(model => model.IsTextorHtml, "htmlEditor", new { id = "htmlEditorOption", @checked = "checked", @disabled = "disabled" })
+                                <label for="htmlEditorOption">HTML Editor</label>
+                                @Html.RadioButtonFor(model => model.IsTextorHtml, "textArea", new { id = "textAreaOption", @disabled = "disabled" })
+                                <label for="textAreaOption">Rich Text Editor</label>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-sm-12 form-group">
+                            <label>Select Editor Type</label>
+                            <div>
+                                @Html.RadioButtonFor(model => model.IsTextorHtml, "htmlEditor", new { id = "htmlEditorOption", @checked = "checked" })
+                                <label for="htmlEditorOption">HTML Editor</label>
+                                @Html.RadioButtonFor(model => model.IsTextorHtml, "textArea", new { id = "textAreaOption"})
+                                <label for="textAreaOption">Rich Text Editor</label>
+                            </div>
+                        </div>
+                    }
+                    }
+
+                    @if (Model.IsTextorHtml == "textArea")
+                    {
+
                         <label>Template Body</label>
-                        @Html.TextAreaFor(x => x.EmailBody, new { @class = "ckeditor", @id = "CKEditorContent" })
-                        @*Html.TextAreaFor(x => (x.EmailBody), new { @class = "summernote", @id = "message", @maxlength = "2500", name = "sampleEditor" })*@
-                        <div id="" class="validateTips"></div>
-                    </div>
+                        @Html.TextAreaFor(x => x.EmailBodyTextArea, new { @class = "ckeditor", @id = "CKEditorRichText" })
+
+                    }
+                    else
+                    {
+                        <!-- HTML Editor Section -->
+                        <div class="col-sm-12 form-group form-group1" id="htmlEditorContainer">
+                            <label>Template Body</label>
+                            @Html.TextAreaFor(x => x.EmailBody, new { @class = "ckeditor", @id = "CKEditorContent" })
+                        </div>
+
+                        <!-- Rich Text Editor Section -->
+                        <div id="textAreaContainer" class="hidden">
+                            <label>Template Body</label>
+                            @Html.TextAreaFor(x => x.EmailBodyTextArea, new { @class = "ckeditor", @id = "CKEditorRichText" })
+                        </div>
+                    }
                     <div class="clearfix"></div>
                     <div class="col-sm-12 form-group">
                         <hr>
@@ -85,6 +130,7 @@
                     </div>
                     <div style="display:none">
                         @Html.TextBoxFor(x => x.TemplateId, new { id = "txttemplateid" })
+                        @Html.TextBoxFor(x => x.IsTextorHtml, new { id = "txthtmltextarea" })
                         @Html.TextBoxFor(x => x.TemplateIdDecrypt, new { id = "txttemplateiddecrypt" })
                     </div>
                 </div>
@@ -93,19 +139,80 @@
         </div>
     }
 </div>
-<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<script src="~/ckeditor/ckeditor.js"></script>
 <script>
-    CKEDITOR.replace('CKEditorContent', {
-        toolbar: [
-            {
-                name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Image', 'Link', 'Table', 'HorizontalRule',
-                    'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter',
-                    'JustifyRight', 'JustifyBlock', 'Maximize', 'Format', 'Font', 'FontSize']
-            }
-        ],
 
 
-    });
+    // Get references to the radio buttons and editor containers
+    const textAreaOption = document.getElementById('textAreaOption');
+    const htmlEditorOption = document.getElementById('htmlEditorOption');
+    const textAreaContainer = document.getElementById('textAreaContainer');
+    const htmlEditorContainer = document.getElementById('htmlEditorContainer');
+
+    // Add event listeners to the radio buttons
+    textAreaOption.addEventListener('change', handleEditorChange);
+    htmlEditorOption.addEventListener('change', handleEditorChange);
+
+    // Function to toggle visibility of editor based on selection
+    function handleEditorChange() {
+        if (textAreaOption.checked) {
+            textAreaContainer.classList.remove('hidden');
+            htmlEditorContainer.classList.add('hidden');
+        } else if (htmlEditorOption.checked) {
+            htmlEditorContainer.classList.remove('hidden');
+            textAreaContainer.classList.add('hidden');
+        }
+    }
+
+    //CKEDITOR.replace('CKEditorContent', {
+    //    toolbar: [
+    //        {
+    //            name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Image', 'Link', 'Table', 'HorizontalRule',
+    //                'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter',
+    //                'JustifyRight', 'JustifyBlock', 'Maximize', 'Format', 'Font', 'FontSize', 'TextColor', 'BGColor']
+    //        }
+    //    ],
+
+
+    //});
+
+    //// Load CKEditor for Rich Text Editor (no HTML tags)
+    //CKEDITOR.replace('CKEditorRichText', {
+    //    removePlugins: 'elementspath,sourcearea',
+    //    toolbar: [
+    //        { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat'] },
+    //        { name: 'paragraph', items: ['NumberedList', 'BulletedList', 'Blockquote'] },
+    //        { name: 'styles', items: ['Font', 'FontSize', 'TextColor', 'BGColor'] }
+    //    ],
+    //    disallowedContent: 'img;script;style;iframe;object;embed', // Block unwanted HTML tags
+    //    height: 300
+    //});
+    // Check if CKEditor Content exists and initialize
+    if (document.getElementById('CKEditorContent')) {
+        CKEDITOR.replace('CKEditorContent', {
+            toolbar: [
+                { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Link', 'NumberedList', 'BulletedList'] },
+                { name: 'paragraph', items: ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+                { name: 'styles', items: ['Format', 'Font', 'FontSize'] },
+                { name: 'colors', items: ['TextColor', 'BGColor'] }
+            ],
+            allowedContent: true // Allow all HTML content
+        });
+    }
+
+    // Check if CKEditor Rich Text exists and initialize
+    if (document.getElementById('CKEditorRichText')) {
+        CKEDITOR.replace('CKEditorRichText', {
+            removePlugins: 'elementspath,sourcearea',
+            toolbar: [
+                { name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat','Link'] },
+                { name: 'paragraph', items: ['NumberedList', 'BulletedList', 'Blockquote'] },
+                { name: 'styles', items: ['Font', 'FontSize', 'TextColor', 'BGColor'] }
+            ],
+            disallowedContent: 'img;script;style;iframe;object;embed', // Block unwanted HTML tags
+            height: 300
+        });
+    }
 </script>
 <style>
     a.cke_button[href="javascript:void('Image')"] {

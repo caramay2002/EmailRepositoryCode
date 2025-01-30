@@ -1034,17 +1034,17 @@
     <FunctionImportMapping FunctionImportName="Spcontexport" FunctionName="Staffandtrain_NewModel.Store.Spcontexport">
       <ResultMapping>
         <ComplexTypeMapping TypeName="Staffandtrain_NewModel.Spcontexport_Result">
-          <ScalarProperty Name="City_Circle" ColumnName="City Circle" />
-          <ScalarProperty Name="Company_Name" ColumnName="Company Name" />
-          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
-          <ScalarProperty Name="Title_Standard" ColumnName="Title Standard" />
-          <ScalarProperty Name="City_List" ColumnName="City List" />
-          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
-          <ScalarProperty Name="ContactCellPhone" ColumnName="ContactCellPhone" />
+          <!--<ScalarProperty Name="City_Circle" ColumnName="City Circle" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company Name" />-->
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact_Name" />
+          <!--<ScalarProperty Name="Title_Standard" ColumnName="Title Standard" />
+                <ScalarProperty Name="City_List" ColumnName="City List" />
+                <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />-->
+          <!--<ScalarProperty Name="ContactCellPhone" ColumnName="ContactCellPhone" />-->
           <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
-          <ScalarProperty Name="CombinedNotes" ColumnName="CombinedNotes" />
-          <ScalarProperty Name="Contact_Notes" ColumnName="Contact Notes" />
-          <ScalarProperty Name="LinkedinProfileUrl" ColumnName="LinkedinProfileUrl" />
+          <!--<ScalarProperty Name="CombinedNotes" ColumnName="CombinedNotes" />
+                <ScalarProperty Name="Contact_Notes" ColumnName="Contact Notes" />-->
+          <!--<ScalarProperty Name="LinkedinProfileUrl" ColumnName="LinkedinProfileUrl" />-->
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -1300,6 +1300,8 @@
           <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
           <ScalarProperty Name="Subject" ColumnName="Subject" />
           <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="EmailBodyTextArea" ColumnName="EmailBodyTextArea" />
+          <ScalarProperty Name="IsTextorHtml" ColumnName="IsTextorHtml" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
         </ComplexTypeMapping>
       </ResultMapping>
@@ -1363,6 +1365,7 @@
         <ComplexTypeMapping TypeName="Staffandtrain_NewModel.SpgetProspectingselectlist_Result">
           <ScalarProperty Name="listid" ColumnName="listid" />
           <ScalarProperty Name="listname" ColumnName="listname" />
+          <ScalarProperty Name="group_number" ColumnName="group_number" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -1374,6 +1377,7 @@
           <ScalarProperty Name="Cnt" ColumnName="Cnt" />
           <ScalarProperty Name="contactCount" ColumnName="contactCount" />
           <ScalarProperty Name="restricted" ColumnName="restricted" />
+          <ScalarProperty Name="group_number" ColumnName="group_number" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -1733,6 +1737,8 @@
           <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
           <ScalarProperty Name="Subject" ColumnName="Subject" />
           <ScalarProperty Name="EmailBody" ColumnName="EmailBody" />
+          <ScalarProperty Name="EmailBodyTextArea" ColumnName="EmailBodyTextArea" />
+          <ScalarProperty Name="IsTextorHtml" ColumnName="IsTextorHtml" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="GroupingNumber" ColumnName="GroupingNumber" />
         </ComplexTypeMapping>

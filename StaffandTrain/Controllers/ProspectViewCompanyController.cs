@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace StaffandTrain.Controllers
 {
-    [NoCache]
+    //[NoCache]
     [Authorize(Roles = "Admin,Recruiter")]
     public class ProspectViewCompanyController : Controller
     {

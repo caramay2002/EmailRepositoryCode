@@ -1,0 +1,74 @@
+---Exception Details for Date: 12/15/2024 11:47:37 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: Erin.Brooks@affinipay.com
+
+Log Written Date: 12/15/2024 11:47:37 PM
+
+StackTrace:    at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String EmailBodyTextArea, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, String ImageName) in C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 500
+
+Full Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String EmailBodyTextArea, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, String ImageName) in C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 500
+
+Error Line No : ine 500
+
+Error Message: NullReferenceException
+
+Exception Type: System.NullReferenceException
+
+Error Location : Object reference not set to an instance of an object.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 12/15/2024 11:56:07 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: Erin.Brooks@affinipay.com
+
+Log Written Date: 12/15/2024 11:56:07 PM
+
+StackTrace:    at System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   at System.Text.RegularExpressions.Regex.Replace(String input, String pattern, MatchEvaluator evaluator)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String EmailBodyTextArea, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, String ImageName)
+
+Full Exception: System.ArgumentNullException: Value cannot be null.
+Parameter name: input
+   at System.Text.RegularExpressions.Regex.Replace(String input, MatchEvaluator evaluator)
+   at System.Text.RegularExpressions.Regex.Replace(String input, String pattern, MatchEvaluator evaluator)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String EmailBodyTextArea, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, String ImageName)
+
+Error Line No : geName)
+
+Error Message: ArgumentNullException
+
+Exception Type: System.ArgumentNullException
+
+Error Location : Value cannot be null.
+Parameter name: input
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+

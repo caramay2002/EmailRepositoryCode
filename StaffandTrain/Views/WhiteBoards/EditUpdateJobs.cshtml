@@ -17,6 +17,46 @@
     u {
         text-decoration:underline !important;
     }
+    .note-popover .popover-content .note-color .dropdown-toggle,
+    .card-header.note-toolbar .note-color .dropdown-toggle {
+        width: auto; /* Adjust width to fit text */
+        height: 30px;
+        padding-left: 5px;
+        position: relative; /* Needed for tooltip positioning */
+        display: inline-block; /* Ensure it behaves as a button */
+        text-align: center; /* Center text within the button */
+    }
+
+        .note-popover .popover-content .note-color .dropdown-toggle::before,
+        .card-header.note-toolbar .note-color .dropdown-toggle::before {
+            content: "colors"; /* Text inside the button */
+            display: inline-block;
+            margin-right: 5px; /* Adjust spacing as needed */
+        }
+
+        .note-popover .popover-content .note-color .dropdown-toggle::after,
+        .card-header.note-toolbar .note-color .dropdown-toggle::after {
+            content: "Select color"; /* Tooltip text */
+            position: absolute;
+            top: -30px; /* Position the tooltip above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333; /* Tooltip background */
+            color: #fff; /* Tooltip text color */
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            display: none; /* Hide tooltip by default */
+            z-index: 1000;
+        }
+
+        .note-popover .popover-content .note-color .dropdown-toggle:hover::after,
+        .card-header.note-toolbar .note-color .dropdown-toggle:hover::after {
+            display: block; /* Show tooltip on hover */
+        }
+
+
 </style>
 <div class="container main-ctn">
     <h1 class="title">Add/Edit Jobs</h1>

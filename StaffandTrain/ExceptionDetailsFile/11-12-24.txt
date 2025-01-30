@@ -1,0 +1,39 @@
+---Exception Details for Date: 12/11/2024 12:24:42 AM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: Erin.Brooks@affinipay.com
+
+Log Written Date: 12/11/2024 12:24:42 AM
+
+StackTrace:    at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, String ImageName) in C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 656
+
+Full Exception: System.Net.Mail.SmtpFailedRecipientsException: Unable to send to all recipients. ---> System.Net.Mail.SmtpFailedRecipientException: Mailbox unavailable. The server response was: Verification failed for <asad@dominicanrecruiters.com>
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, String ImageName) in C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 656
+
+Error Line No : ine 656
+
+Error Message: SmtpFailedRecipientsException
+
+Exception Type: System.Net.Mail.SmtpFailedRecipientsException
+
+Error Location : Unable to send to all recipients.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+

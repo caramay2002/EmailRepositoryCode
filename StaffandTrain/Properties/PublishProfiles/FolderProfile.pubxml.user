@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>E:\Asad Projects\16112024\StaffandTrain-main\StaffandTrain\bin\app.publish\emails</_PublishTargetUrl>
-    <History>True|2024-11-20T18:42:07.6517690Z;True|2024-11-20T23:34:01.6070568+05:00;</History>
+    <_PublishTargetUrl>E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\app.publish\emails</_PublishTargetUrl>
+    <History>True|2024-12-01T16:23:27.5392930Z;True|2024-12-01T03:43:38.4209258+05:00;True|2024-11-30T21:46:12.7020541+05:00;True|2024-11-20T23:42:07.6517690+05:00;True|2024-11-20T23:34:01.6070568+05:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -184,10 +184,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/19/2015 01:19:46</publishTime>
     </File>
     <File Include="bin/StaffandTrain.dll">
-      <publishTime>11/21/2024 23:15:04</publishTime>
+      <publishTime>12/01/2024 21:23:05</publishTime>
     </File>
     <File Include="bin/StaffandTrain.pdb">
-      <publishTime>11/21/2024 23:15:04</publishTime>
+      <publishTime>12/01/2024 21:23:05</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 09:04:30</publishTime>
@@ -241,7 +241,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/21/2024 15:14:47</publishTime>
     </File>
     <File Include="ckeditor/build-config.js">
-      <publishTime>03/21/2024 15:14:47</publishTime>
+      <publishTime>11/28/2024 00:30:27</publishTime>
     </File>
     <File Include="ckeditor/CHANGES.md">
       <publishTime>03/21/2024 15:14:47</publishTime>
@@ -250,7 +250,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/21/2024 15:14:47</publishTime>
     </File>
     <File Include="ckeditor/config.js">
-      <publishTime>03/21/2024 15:14:47</publishTime>
+      <publishTime>11/28/2024 22:26:53</publishTime>
     </File>
     <File Include="ckeditor/contents.css">
       <publishTime>03/21/2024 15:14:47</publishTime>
@@ -1579,13 +1579,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/21/2024 15:14:47</publishTime>
     </File>
     <File Include="Custom_JS/SendEmail_Index.js">
-      <publishTime>03/21/2024 15:14:47</publishTime>
+      <publishTime>11/27/2024 23:13:34</publishTime>
     </File>
     <File Include="Custom_JS/SignUp_Index.js">
       <publishTime>03/21/2024 15:14:47</publishTime>
     </File>
     <File Include="Custom_JS/WhiteBoard_EditUpdateJobs_v1.js">
-      <publishTime>03/21/2024 15:14:47</publishTime>
+      <publishTime>12/01/2024 03:37:29</publishTime>
     </File>
     <File Include="Custom_JS/WhiteBoard_Index.js">
       <publishTime>03/21/2024 15:14:47</publishTime>
@@ -1825,7 +1825,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/21/2024 22:30:36</publishTime>
     </File>
     <File Include="Views/EmailSendFrom/Index.cshtml">
-      <publishTime>11/21/2024 22:07:02</publishTime>
+      <publishTime>11/28/2024 22:45:46</publishTime>
     </File>
     <File Include="Views/EmailTemplate/Index.cshtml">
       <publishTime>11/18/2024 21:45:14</publishTime>
@@ -1981,7 +1981,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/21/2024 15:14:47</publishTime>
     </File>
     <File Include="Views/WhiteBoards/EditUpdateJobs.cshtml">
-      <publishTime>03/21/2024 15:14:47</publishTime>
+      <publishTime>12/01/2024 21:21:38</publishTime>
     </File>
     <File Include="Views/WhiteBoards/Index.cshtml">
       <publishTime>03/21/2024 15:14:47</publishTime>
@@ -2005,7 +2005,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/21/2024 15:14:47</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/20/2024 23:33:50</publishTime>
+      <publishTime>12/01/2024 03:43:31</publishTime>
     </File>
   </ItemGroup>
 </Project>

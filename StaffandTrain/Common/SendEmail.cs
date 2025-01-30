@@ -15,6 +15,11 @@ using System.Net.Security;
 using StaffandTrain.DataModel;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using System.Data.Entity;
+using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using System.Text;
+using System.Threading;
+using System.Web.Services.Description;
 
 /// <summary>
 /// Summary description for SendEmail
@@ -96,6 +101,7 @@ namespace StaffandTrain.Common
 
         public void SendSMTPEmail(string recipientEmail, string subject, string body)
         {
+            //recipientEmail = "dev@talkboxsolutions.com";
             // Email parameters
             if (!bool.Parse(ConfigurationManager.AppSettings["ActiveEmailSender"])) return;
 
@@ -110,27 +116,50 @@ namespace StaffandTrain.Common
 
             try
             {
-                using (MailMessage mailMessage = new MailMessage())
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                ServicePointManager.ServerCertificateValidationCallback =
+                    (sender, certificate, chain, sslPolicyErrors) => true;
+
+                MailMessage message = new MailMessage();
+
+                //message.To.Add("info.usamaali@gmail.com");
+                message.To.Add(recipientEmail);
+                //message.To.Add("dev@talkboxsolutions.com");
+                message.Subject = subject;// addfnamesubject;
+                message.From = new System.Net.Mail.MailAddress(senderEmail, senderDisplayName);
+
+                var plainText = AlternateView.CreateAlternateViewFromString("This is the plain text version of the email.", null, "text/plain");
+                var htmlBody = AlternateView.CreateAlternateViewFromString(body, null, "text/html");
+
+                message.AlternateViews.Add(plainText);
+                message.AlternateViews.Add(htmlBody);
+
+                message.IsBodyHtml = true;
+
+                message.Headers.Add("Message-ID", $"<{Guid.NewGuid()}@nearshore-usa.com>");
+                message.Headers.Add("X-Mailer", "Near Shore SMTP v1.0");
+                using (SmtpClient SmtpMail = new SmtpClient())
                 {
-                    mailMessage.From = new MailAddress(senderEmail, senderDisplayName);
-                    mailMessage.To.Add(recipientEmail);
-                    mailMessage.Subject = subject;
-                    mailMessage.Body = body;
+                    SmtpMail.Timeout = 30000; // Increase the timeout to 30 seconds
+                    SmtpMail.UseDefaultCredentials = false;
+                    SmtpMail.Host = smtpHost;
+                    SmtpMail.Port = Convert.ToInt32(smtpPort);//Port for sending the mail  
+                    SmtpMail.Credentials = new System.Net.NetworkCredential(senderEmail, senderPassword);
+                    SmtpMail.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    SmtpMail.EnableSsl = true;// Convert.ToBoolean(enableSsl);
+                    SmtpMail.ServicePoint.MaxIdleTime = 10000;
+                    SmtpMail.ServicePoint.SetTcpKeepAlive(true, 12000, 12000);
+                    message.BodyEncoding = Encoding.Default;
 
-                    using (SmtpClient smtpClient = new SmtpClient(smtpHost, smtpPort))
-                    {
-                        smtpClient.EnableSsl = true;
-                        smtpClient.Credentials = new NetworkCredential(senderEmail, senderPassword);
-                        smtpClient.Send(mailMessage);
-                    }
+                    SmtpMail.Send(message); //Smtpclient to send the mail message  
 
-                    Console.WriteLine("Email sent successfully.");
-                   // context.SPInsertOrUpdateLog(0, "Success", "SendEmail", "Email Sent to: " + recipientEmail, null);
                 }
+
+
             }
             catch (Exception ex)
             {
-              //  context.SPInsertOrUpdateLog(0, "Error", "SendEmail",  string.Format("Message: {0} \nStack Trace: {1}\nInner Exception: {2}", ex.Message, ex.StackTrace, ex.InnerException), null);
+               context.SPInsertOrUpdateLog(0, "Error", "SendEmail",  string.Format("Message: {0} \nStack Trace: {1}\nInner Exception: {2}", ex.Message, ex.StackTrace, ex.InnerException), null);
                 Console.WriteLine("Error sending email: " + ex.Message);
             }
        
@@ -138,12 +167,12 @@ namespace StaffandTrain.Common
     
         public void ScheduleWorkerEmail()
         {
-           // context.SPInsertOrUpdateLog(0, "Success", "Email Scheduler", "Scheduler. run at: " + DateTime.Now, null);
+            //context.SPInsertOrUpdateLog(0, "Success", "Email Scheduler", "Scheduler. run at: " + DateTime.Now, null);
             // Email those workers which 15 minutes are remaining to login
             int beforeMin = int.Parse(ConfigurationManager.AppSettings["EmailWorkerBeforeCheckIn"]);
             DateTime currentTime = DateTime.Now;
-            DateTime endTime = currentTime.AddMinutes(beforeMin); 
-
+            DateTime endTime = currentTime.AddMinutes(beforeMin);
+            
             var workers = context.Workers
                 .Where(e => e.CheckIn.Hours == endTime.Hour && e.CheckIn.Minutes == endTime.Minute)
                 .ToList();
@@ -158,7 +187,7 @@ namespace StaffandTrain.Common
                         var subject = "Good Morning App - Check In Reminder";
                         var body = "Hello " + worker.Name + ", \n\n" + beforeMin + " minutes left, please check in before your designated time: " + getCheckInTime(worker.CheckIn) + "\n\nNearshore Staffing ";
                         SendSMTPEmail(worker.Email, subject, body);
-                      //  context.SPInsertOrUpdateLog(0, "Success", "Email Scheduler", "Worker inform to login scheduler. run at: " + DateTime.Now, null);
+                        context.SPInsertOrUpdateLog(0, "Success", "Email Scheduler", "Worker inform to login scheduler. run at: " + DateTime.Now, null);
                     }
                 }
             }
@@ -186,7 +215,7 @@ namespace StaffandTrain.Common
                     var workerLog = context.WorkersLogs.FirstOrDefault(e => e.WorkerId == worker.Id && DbFunctions.TruncateTime(e.CreateDate) == currentDate.Date);
                     if (workerLog == null)
                     {
-                      //  context.SPInsertOrUpdateLog(0, "Success", "Email Scheduler", "Worker inform to expired login. scheduler run at: " + DateTime.Now, null);
+                       context.SPInsertOrUpdateLog(0, "Success", "Email Scheduler", "Worker inform to expired login. scheduler run at: " + DateTime.Now, null);
 
                         var subject = "Good Morning App - Late Reminder";
                         var body = "Hello " + worker.Name + ", \n\nYour designated check in time: " + getCheckInTime(worker.CheckIn) + " has passed and you were unable to check in" + "\n\nNearshore Staffing ";

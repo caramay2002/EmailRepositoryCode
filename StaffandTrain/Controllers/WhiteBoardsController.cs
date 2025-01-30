@@ -11,8 +11,8 @@ using System.Data.SqlClient;
 
 namespace StaffandTrain.Controllers
 {
-    [NoCache]
-    [Authorize(Roles = "Admin,Recruiter")]
+    //[NoCache]
+    //[Authorize(Roles = "Admin,Recruiter")]
     public class WhiteBoardsController : Controller
     {
         Common.Common cm = new Common.Common();

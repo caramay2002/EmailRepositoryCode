@@ -178,3 +178,453 @@ C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\obj\Release\Staffa
 C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.csproj.CopyComplete
 C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.dll
 C:\Users\aiman\source\repos\EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.pdb
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\ApplicationInsights.config
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\csc.exe
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\vbc.exe
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\StaffandTrain.dll.config
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\StaffandTrain.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\StaffandTrain.pdb
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Antlr3.Runtime.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\ClosedXML.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\EntityFramework.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\EntityFramework.SqlServer.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\FastMember.Signed.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.Web.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Newtonsoft.Json.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Owin.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Helpers.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Mvc.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Optimization.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Razor.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.WebPages.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\WebGrease.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\ClosedXML.pdb
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\ClosedXML.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.Web.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Helpers.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Mvc.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Optimization.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.Razor.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.WebPages.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Antlr3.Runtime.pdb
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Newtonsoft.Json.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\EntityFramework.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\EntityFramework.SqlServer.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\obj\Release\StaffandTrain.csproj.AssemblyReference.cache
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\obj\Release\StaffandTrain.csproj.CoreCompileInputs.cache
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\obj\Release\StaffandTrain.csproj.CopyComplete
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\obj\Release\StaffandTrain.dll
+D:\Noman\EmailRepositoryCode_30112024\StaffandTrain\obj\Release\StaffandTrain.pdb
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\ApplicationInsights.config
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\csc.exe
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\vbc.exe
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\StaffandTrain.dll.config
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\StaffandTrain.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\StaffandTrain.pdb
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Antlr3.Runtime.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\ClosedXML.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\EntityFramework.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\EntityFramework.SqlServer.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\FastMember.Signed.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.Web.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Newtonsoft.Json.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Owin.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Helpers.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Mvc.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Optimization.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Razor.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.WebPages.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\WebGrease.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\ClosedXML.pdb
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\ClosedXML.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.Web.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Helpers.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Mvc.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Optimization.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.Razor.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.WebPages.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Antlr3.Runtime.pdb
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Newtonsoft.Json.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\EntityFramework.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\EntityFramework.SqlServer.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\obj\Release\StaffandTrain.csproj.AssemblyReference.cache
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\obj\Release\StaffandTrain.csproj.CoreCompileInputs.cache
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\obj\Release\StaffandTrain.csproj.CopyComplete
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\obj\Release\StaffandTrain.dll
+E:\PROJECTS\EmailRepositoryCode_3011UPdatedFinal\StaffandTrain\obj\Release\StaffandTrain.pdb
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ApplicationInsights.config
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\csc.exe
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\vbc.exe
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.dll.config
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.pdb
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Antlr3.Runtime.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ClosedXML.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.SqlServer.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\FastMember.Signed.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Web.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Newtonsoft.Json.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Owin.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Helpers.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Mvc.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Optimization.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Razor.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\WebGrease.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ClosedXML.pdb
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ClosedXML.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Web.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Helpers.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Mvc.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Optimization.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Razor.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Antlr3.Runtime.pdb
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Newtonsoft.Json.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.SqlServer.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.csproj.AssemblyReference.cache
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.csproj.CoreCompileInputs.cache
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\Staffand.F07B33A1.Up2Date
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.dll
+E:\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.pdb
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ApplicationInsights.config
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\csc.exe
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\vbc.exe
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.dll.config
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\StaffandTrain.pdb
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Antlr3.Runtime.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ClosedXML.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.SqlServer.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\FastMember.Signed.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Web.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Newtonsoft.Json.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Owin.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Helpers.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Mvc.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Optimization.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Razor.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\WebGrease.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ClosedXML.pdb
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\ClosedXML.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.Web.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Helpers.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Mvc.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Optimization.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.Razor.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Antlr3.Runtime.pdb
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Newtonsoft.Json.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\EntityFramework.SqlServer.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.csproj.AssemblyReference.cache
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.csproj.CoreCompileInputs.cache
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.csproj.CopyComplete
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.dll
+E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\obj\Release\StaffandTrain.pdb
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\ApplicationInsights.config
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\csc.exe
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\vbc.exe
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\VBCSCompiler.exe
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\StaffandTrain.dll.config
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\StaffandTrain.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\StaffandTrain.pdb
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Antlr3.Runtime.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\ClosedXML.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\DocumentFormat.OpenXml.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\EntityFramework.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\EntityFramework.SqlServer.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\FastMember.Signed.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.Web.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.ApplicationInsights.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Newtonsoft.Json.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Owin.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Helpers.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Mvc.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Optimization.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Razor.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.WebPages.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.WebPages.Razor.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\WebGrease.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\ClosedXML.pdb
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\ClosedXML.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\DocumentFormat.OpenXml.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.Web.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.ApplicationInsights.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Helpers.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Mvc.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Optimization.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.Razor.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.WebPages.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\System.Web.WebPages.Razor.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Antlr3.Runtime.pdb
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Newtonsoft.Json.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\EntityFramework.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\EntityFramework.SqlServer.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\obj\Release\StaffandTrain.csproj.AssemblyReference.cache
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\obj\Release\StaffandTrain.csproj.CoreCompileInputs.cache
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\obj\Release\StaffandTrain.csproj.CopyComplete
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\obj\Release\StaffandTrain.dll
+C:\Users\NomanAli\Pictures\Noman\Emails Code 12222024\Emails Code 12222024\only_EmailRepositoryCode_22122024\StaffandTrain\obj\Release\StaffandTrain.pdb

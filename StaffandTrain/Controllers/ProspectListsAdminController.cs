@@ -2,6 +2,8 @@
 using StaffandTrain.DataModel;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
@@ -9,8 +11,8 @@ using System.Web.Mvc;
 
 namespace StaffandTrain.Controllers
 {
-    [NoCache]
-    [Authorize(Roles = "Admin,Recruiter")]
+  //  [NoCache]
+   // [Authorize(Roles = "Admin,Recruiter")]
     public class ProspectListsAdminController : Controller
     {
         Common.Common cm = new Common.Common();
@@ -25,7 +27,7 @@ namespace StaffandTrain.Controllers
                 {
                     ViewBag.message = TempData["Message"];
                 }
-                ProspectList = context.SPGetProspectlist().ToList();
+                ProspectList = context.SPGetProspectlist().OrderBy(x=>x.group_number).ToList();
 
             }
             catch (Exception ex)
@@ -39,7 +41,7 @@ namespace StaffandTrain.Controllers
             return View(ProspectList);
         }
 
-        public JsonResult Save_List(string ListName, string restricted)
+        public JsonResult Save_List(string ListName, string restricted,decimal group_number)
         {
             string str = "";
             if (Request.IsAuthenticated)
@@ -58,9 +60,12 @@ namespace StaffandTrain.Controllers
                     var countlst = context.Prospecting_Lists.Where(x => x.listname == ListName).Count();
                     if (countlst == 0)
                     {
-                        context.SPInsertProspectlist(ListName, res, null);
-                        context.SaveChanges();
+                        InsertProspectingList(ListName, res, group_number, null);
+                        //context.SPInsertProspectlist(ListName, res ,null);
+                        //context.SaveChanges();
+
                         str = "Success";
+                        updatedlist();
                     }
                     else
                     {
@@ -82,23 +87,50 @@ namespace StaffandTrain.Controllers
             }
             return Json(str, JsonRequestBehavior.AllowGet);
         }
+        public void InsertProspectingList(string listname, byte restricted, decimal groupNumber, string userId)
+        {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SATConn1"].ConnectionString))
+            {
+                string query = @"INSERT INTO [Prospecting_Lists] 
+                             ([listname], [restricted], [group_number], [Userid]) 
+                             VALUES (@listname, @restricted, @group_number, @Userid)";
 
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if(userId == null)
+                    {
+                        userId = "0";
+                    }
+                    command.Parameters.AddWithValue("@listname", listname);
+                    command.Parameters.AddWithValue("@restricted", restricted);
+                    command.Parameters.AddWithValue("@group_number", groupNumber);
+                    command.Parameters.AddWithValue("@Userid", userId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+        }
         public ActionResult updatedlist()
         {
-            var ProspectList = new List<SPGetProspectlist_Result>();
-            try
-            {
-                ProspectList = context.SPGetProspectlist().ToList();//.OrderByDescending(x => x.listid).ToList();
+            //var ProspectList = new List<SPGetProspectlist_Result>();
+            //try
+            //{
+            //    ProspectList = context.SPGetProspectlist().OrderBy(x=>x.group_number).ToList();//.OrderByDescending(x => x.listid).ToList();
 
-            }
-            catch (Exception ex)
-            {
-                cm.ErrorExceptionLogingByService(ex.ToString(), "ProspectListsAdmin" + ":" + new StackTrace().GetFrame(0).GetMethod().Name, "updatedlist", "NA", "NA", "NA", "WEB");
-            }
-            return View(ProspectList);
+            //}
+            //catch (Exception ex)
+            //{
+            //    cm.ErrorExceptionLogingByService(ex.ToString(), "ProspectListsAdmin" + ":" + new StackTrace().GetFrame(0).GetMethod().Name, "updatedlist", "NA", "NA", "NA", "WEB");
+            //}
+
+
+
+            return RedirectToAction(nameof(Index));
         }
 
-        public JsonResult Update_List(string ListName, string restricted, int Listid)
+        public JsonResult Update_List(string ListName, string restricted, decimal groupNumber, int Listid)
         {
             string str = "";
             if (Request.IsAuthenticated)
@@ -117,9 +149,11 @@ namespace StaffandTrain.Controllers
                     var countlst = context.Prospecting_Lists.Where(x => x.listname == ListName && Listid != Listid).Count();
                     if (countlst == 0)
                     {
-                        context.SPUpdateProspectList(ListName, res, Listid);
-                        context.SaveChanges();
+                        //context.SPUpdateProspectList(ListName, res, Listid);
+                        //context.SaveChanges();
+                        UpdateProspectingList(Listid, ListName, res, groupNumber, null);
                         str = "Success";
+
                     }
                     else
                     {
@@ -139,7 +173,35 @@ namespace StaffandTrain.Controllers
             }
             return Json(str, JsonRequestBehavior.AllowGet);
         }
+        public void UpdateProspectingList(int listId, string listname, byte restricted, decimal groupNumber, string userId)
+        {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["SATConn1"].ConnectionString))
+            {
+                string query = @"UPDATE [Prospecting_Lists]
+                         SET [listname] = @listname, 
+                             [restricted] = @restricted,
+                             [group_number] = @group_number, 
+                             [Userid] = @Userid
+                         WHERE [listid] = @listid";
 
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    if (userId == null)
+                    {
+                        userId = "0";
+                    }
+                    command.Parameters.AddWithValue("@listid", listId);
+                    command.Parameters.AddWithValue("@listname", listname);
+                    command.Parameters.AddWithValue("@restricted", restricted);
+                    command.Parameters.AddWithValue("@group_number", groupNumber);
+                    command.Parameters.AddWithValue("@Userid", userId);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+        }
         public ActionResult Delete_Prospective(string listid)
         {
             string msg = "";

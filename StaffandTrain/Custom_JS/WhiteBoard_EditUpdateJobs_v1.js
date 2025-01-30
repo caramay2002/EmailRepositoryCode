@@ -25,20 +25,19 @@ $(function () {
 		height: 400,                 // set editor height
 		minHeight: 350,             // set minimum height of editor
 		maxHeight: null,             // set maximum  height of editor
-		toolbar: [
-			['style', ['bold', 'italic', 'underline', 'clear']],
-			['fontsize', ['fontsize']],
-			//['fontname', ['fontname']],
-			//['color', ['color']],
-			['height', ['height']],
-			['table', ['table']],
-			['insert', ['link', 'picture', 'hr']],
-			['fontname', ['fontname']],
-			['para', ['ul', 'ol', 'paragraph']],
-			['view', ['fullscreen', 'codeview']],
-			['help', ['help']],
-			['misc', ['print']]
-		],
+        toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']], // style options
+            ['fontsize', ['fontsize']], // font size options
+            ['fontname', ['fontname']], // font name options
+            ['color', ['color']],       // font color option
+            ['height', ['height']],     // line height options
+            ['table', ['table']],       // table options
+            ['insert', ['link', 'picture', 'hr']], // insert options
+            ['para', ['ul', 'ol', 'paragraph']], // paragraph options
+            ['view', ['fullscreen', 'codeview']], // view options
+            ['help', ['help']],         // help option
+            ['misc', ['print']]         // print option
+        ],
 		onblur: function (e) {
 			$('#txtNotes').html($('.summernote').code());
 		},

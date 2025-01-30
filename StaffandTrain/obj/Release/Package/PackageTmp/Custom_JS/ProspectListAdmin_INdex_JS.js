@@ -19,20 +19,23 @@ $(document).ready(function () {
             return false;
         }
         var ListName = $("#txtlistname").val();
+        var group_number = $("#txtgroupnumber").val();
+
         var restricted = $('input[name=Restricted]:checked').val();
 
         $.ajax({
             type: "POST",
             url: "/ProspectListsAdmin/Save_List",
-            data: { ListName: ListName, restricted: restricted },
+            data: { ListName: ListName, restricted: restricted,group_number:group_number },
             dataType: 'json',
             success: function (msg) {
 
                 if (msg == "Success") {
-                    getupdatedlist();
+                //    getupdatedlist();
                     $('#FileManageModal').modal('hide');
                     $('#divmsg').text('Record Inserted');
                     $('#divmsg').show();
+                    location.reload();
                 }
                 else if (msg == 'Session Expired') {
                     window.location.href = "/Login/Index";
@@ -66,21 +69,23 @@ $(document).ready(function () {
         }
 
         var ListName = $("#txtlistname").val();
+        var groupNumber = $("#txtgroupnumber").val();
         var restricted = $('input[name=Restricted]:checked').val()
         var Listid = $("#hdnlistid").val();
         $.ajax({
             type: "POST",
             url: "/ProspectListsAdmin/Update_List",
-            data: { ListName: ListName, restricted: restricted, Listid: Listid },
+            data: { ListName: ListName, restricted: restricted, Listid: Listid, groupNumber:groupNumber },
             dataType: 'json',
 
 
             success: function (msg) {
                 if (msg == "Success") {
-                    getupdatedlist();
+                   // getupdatedlist();
                     $('#FileManageModal').modal('hide');
                     $('#divmsg').text('Record Updated');
                     $('#divmsg').show();
+                    location.reload();
                 }
                 else if (msg == 'Session Expired') {
                     window.location.href = "/Login/Index";
@@ -121,15 +126,19 @@ function showpopup() {
     $("#divrole").text("");
     $("#myModalLabel").text("Create Prospect");
     $("#txtlistname").val("");
+    $("#txtgroupnumber").val("");
+
     $("input[name='Restricted'][value='Yes']").prop('checked', true);
     $('#FileManageModal').modal('show');
 }
 
-function showpopupedit(lsitname, listid, restricted) {
+function showpopupedit(lsitname, listid, restricted, group_number) {
     $(".alert").hide();
     $(".validateTips").text("");
     $("#myModalLabel").text("Update Prospect");
     $("#txtlistname").val(lsitname);
+    $("#txtgroupnumber").val(group_number);
+
     $("#divcreaterole").hide();
     $("#divUpdaterole").show();
     $("#hdnlistid").val(listid);
@@ -261,7 +270,7 @@ function moveListDataToAnotherList() {
             debugger;
             if (result === true) {
                 $("#MoveListDataModal").modal('hide');
-                getupdatedlist();
+               // getupdatedlist();
                 $('#divmsg').text('Companies moved successfully.');
                 $('#divmsg').show();
                 $('#div_error_msg').hide();
@@ -269,7 +278,7 @@ function moveListDataToAnotherList() {
             }
             else {
                 $("#MoveListDataModal").modal('hide');
-                getupdatedlist();
+               // getupdatedlist();
                 $('#div_error_msg').text('Something went wrong. Please try again.');
                 $('#div_error_msg').show();
                 $('#divmsg').hide();

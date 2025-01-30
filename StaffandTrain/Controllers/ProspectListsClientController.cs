@@ -37,7 +37,7 @@ namespace StaffandTrain.Controllers
             return View(listdata);
         }
 
-        public JsonResult Save_List(string ListName, string restricted)
+        public JsonResult Save_List(string ListName, string restricted,decimal group_number)
         {
             string str = "";
             try

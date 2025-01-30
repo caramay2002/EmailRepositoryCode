@@ -58,28 +58,14 @@
     .accordion-item.show .arrow {
         transform: rotate(180deg);
     }
+
+    .ckeditor_textarea {
+        width: 90%;
+        margin-left: 20px;
+    }
 </style>
 
-<script>
-  @*Added by ST*@
-    //$(function () {
 
-    //    $('.summernote').summernote({
-    //        height: 400,                 // set editor height
-    //        minHeight: 350,             // set minimum height of editor
-    //        maxHeight: null,             // set maximum  height of editor
-    //        onblur: function (e) {
-    //            $('#message').html($('.summernote').code());
-    //        },
-    //        callbacks: {
-    //            onImageUpload: function (image) {
-    //                uploadImage(image[0]);
-    //            }
-    //        }
-
-    //    });
-    //});
-</script>
 
 @using (Html.BeginForm("Sendemail", "EmailSendFrom", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -151,15 +137,17 @@
 
                 <div class="col-sm-12 form-group editorsample">
                     <label>Template Body</label>
-                    @Html.TextAreaFor(x => x.EmailBody, new { @class = "ckeditor", @id = "CKEditorContent" })
-                    @*@Html.TextArea("sampleEditor", new { @class = "ckeditor", @id = "sampleEditor" })@
-                        @Html.TextAreaFor(x => x.EmailBody, new { @class = "summernote", @id = "message", @maxlength = "2500", name = "sampleEditor" }) @*Added by ST*@
-                    @*@Html.TextArea("sampleEditor", new { @class = "summernote", @id = "message", @maxlength = "2500", name = "sampleEditor" }) @*Added by ST*@
+
+                    <div>
+                        @Html.TextAreaFor(x => x.EmailBody, new { @rows = "10", @class = "ckeditor", @id = "CKEditorRichText" })
+                    </div>
+
                     <div id="" class="validateTips"></div>
                 </div>
+
                 <div class="clearfix"></div>
 
-                <div class="accordion">
+                <div class="accordion" id="accordian_id">
                     <div class="accordion-item">
                         <div class="accordion-header">
                             Email Preview
@@ -221,6 +209,16 @@
                     </select>
                     <div id="" class="validateTips"></div>
                 </div>
+
+                <div class="col-sm-6 form-group">
+                    <label>Select Email Format Type</label>
+                    <select id="ddlEmailType" name="ddlEmailType" class="form-control">
+                        <option value="0" selected disabled>Select Format Html/RTF</option>
+                        <option value="1">HTML</option>
+                        <option value="2">RTF</option>
+                    </select>
+                    <div id="" class="validateTips"></div>
+                </div>
                 <div class="col-sm-12 form-group">
                     <label></label>
                     <div class="divcreate">
@@ -233,68 +231,94 @@
         </div>
     </div>
 }
-<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<script src="~/ckeditor/ckeditor.js"></script>
 <script>
-    var editor = CKEDITOR.replace('CKEditorContent', {
-        toolbar: [
-            {
-                name: 'basicstyles', items: ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Image', 'Link', 'Table', 'HorizontalRule',
-                    'NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter',
-                    'JustifyRight', 'JustifyBlock', 'Maximize', 'Format', 'Font', 'FontSize']
-            }
-        ],
-    });
-    var css = `
+    // Ensure the CKEditor element exists
+    const editorElement = document.getElementById('CKEditorRichText');
+
+    if (CKEDITOR.instances['CKEditorRichText']) {
+        CKEDITOR.instances['CKEditorRichText'].destroy(true);
+    }
+    if (editorElement) {
+        // Initialize CKEditor
+
+        var editor = CKEDITOR.replace('CKEditorRichText', {
+            toolbar: [
+                {
+                    name: 'basicstyles',
+                    items: [
+                        'Bold', 'Italic', 'Underline', 'RemoveFormat', 'Image', 'Link',
+                        'Table', 'HorizontalRule', 'NumberedList', 'BulletedList', '-',
+                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock',
+                        'Maximize', 'Format', 'Font', 'FontSize', 'TextColor', 'BGColor',
+                        'Highlight'
+
+                    ]
+                }
+            ],
+        });
+    }
+
+        // CSS Styles for Preview
+        var css = `
     <style>
-        .email-preview {font-family:'Roboto', sans-serif !important; color: #2f2f2f !imporatnt;}
-        .email-preview h1{font-size:24px;font-weight:normal;line-height:1.1;margin-bottom:10px !important; color: #070707 !important}
-        .email-preview h2{font-size:22px;font-weight:normal;line-height:1.1;margin-bottom:10px !important; color: #070707 !important}
-        .email-preview h3{font-size:20px;font-weight:normal;line-height:1.1;margin-bottom:10px !important; color: #070707 !important}
-        .email-preview h4{font-size:18px;font-weight:normal;line-height:1.1;margin-bottom:10px !important; color: #070707 !important}
+        .email-preview {font-family:'Roboto', sans-serif !important; color: #2f2f2f !important;}
+        .email-preview h1 {font-size:24px; font-weight:normal; line-height:1.1; margin-bottom:10px !important; color: #070707 !important;}
+        .email-preview h2 {font-size:22px; font-weight:normal; line-height:1.1; margin-bottom:10px !important; color: #070707 !important;}
+        .email-preview h3 {font-size:20px; font-weight:normal; line-height:1.1; margin-bottom:10px !important; color: #070707 !important;}
+        .email-preview h4 {font-size:18px; font-weight:normal; line-height:1.1; margin-bottom:10px !important; color: #070707 !important;}
         .email-preview h5,
-        .email-preview p{font-size:16px;margin-bottom:10px !important;font-weight: 400;}
-        .email-preview h6{font-size:14px;margin-bottom:10px !important}
+        .email-preview p {font-size:16px; margin-bottom:10px !important; font-weight: 400;}
+        .email-preview h6 {font-size:14px; margin-bottom:10px !important;}
         .email-preview ol,
-        .email-preview ul{font-size:16px;margin:10px 0;padding-left:20px !important}
+        .email-preview ul {font-size:16px; margin:10px 0; padding-left:20px !important;}
         .email-preview b,
-        .email-preview strong{font-weight:700 !important}
+        .email-preview strong {font-weight:700 !important;}
         .email-preview address,
         .email-preview em,
-        .email-preview i{font-style:italic !important}
-        .email-preview u{text-decoration:underline !important}
-        .email-preview div{margin:10px 0;padding:10px;border:1px solid #ccc !important}
+        .email-preview i {font-style:italic !important;}
+        .email-preview u {text-decoration:underline !important;}
+        .email-preview div {margin:10px 0; padding:10px; border:1px solid #ccc !important;}
     </style>`;
 
-    editor.on('instanceReady', function () {
-        var toolbarButtons = document.querySelectorAll('.cke_toolbar a');
-        toolbarButtons.forEach(function (button) {
-            button.addEventListener('click', function () {
+        // Update Preview on Toolbar Button Actions
+        editor.on('instanceReady', function () {
+            // Use CKEditor's internal event afterCommandExec
+            editor.on('afterCommandExec', function () {
                 document.getElementById("ckeditorPreview").innerHTML = css + `<div class="email-preview">${editor.getData()}</div>`;
             });
         });
-    });
-    editor.on('change', function (event) {
-        console.log(editor.getData())
-        document.getElementById("ckeditorPreview").innerHTML = css + `<div class="email-preview">${editor.getData()}</div>`;
-    });
 
+        // Debounced Change Event for Live Updates
+        let debounceTimeout;
+        editor.on('change', function () {
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                document.getElementById("ckeditorPreview").innerHTML = css + `<div class="email-preview">${editor.getData()}</div>`;
+            }, 300); // Adjust the debounce time if necessary
+        });
+   
+
+    // Accordion Functionality
     const accordionItems = document.querySelectorAll('.accordion-item');
 
     accordionItems.forEach(item => {
         const header = item.querySelector('.accordion-header');
-
-        header.addEventListener('click', () => {
-            accordionItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('show');
-                }
+        if (header) { // Ensure header exists
+            header.addEventListener('click', () => {
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('show');
+                    }
+                });
+                item.classList.toggle('show');
             });
-
-            item.classList.toggle('show');
-        });
+        }
     });
 
+    
 </script>
+
 <style>
     a.cke_button[href="javascript:void('Image')"] {
         display: none;

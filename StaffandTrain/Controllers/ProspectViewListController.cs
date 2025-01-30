@@ -14,23 +14,24 @@ using System.Web.Mvc;
 
 namespace StaffandTrain.Controllers
 {
-    [NoCache]
-    //[Authorize(Roles = "Admin,Recruiter")]
+    //[NoCache]
+    [Authorize(Roles = "Admin,Recruiter")]
     public class ProspectViewListController : Controller
     {
         // GET: ProspectViewList
         SATConn context = new SATConn();
         Common.Common cm = new Common.Common();
-        public ActionResult Index(int listid, string lstname, string cmpnyid = "")
+        public ActionResult Index(int? listid, string lstname, string cmpnyid = "")
         {
-            if (listid != 0)
+
+            if (listid != 0 && listid != null)
             {
                 if (TempData["Message"] != null)
                 {
                     ViewBag.message = TempData["Message"];
                 }
-                ViewBag.listid = listid;
-                var listname = context.Prospecting_Lists.Where(x => x.listid == listid).FirstOrDefault().listname;
+                ViewBag.listid = listid.Value;
+                var listname = context.Prospecting_Lists.Where(x => x.listid == listid.Value).FirstOrDefault().listname;
                 ViewBag.listname = listname;
                 var citycirclelist = context.SPgetCitycirclelist(listid).Select(xx => new SelectListItem { Value = xx.ToString(), Text = xx.ToString() }).ToList();
                 var Biztypelist = context.SPgetbiztype(listid).Select(xx => new SelectListItem { Value = xx.ToString(), Text = xx.ToString() }).ToList();
@@ -349,14 +350,9 @@ namespace StaffandTrain.Controllers
                     Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
                     Random rdn = new Random();
                     string FileName = "";
-                    if (datalist.FirstOrDefault().City_Circle != null && datalist.FirstOrDefault().City_Circle != "")
-                    {
-                        FileName = "ContactList_" + datalist.FirstOrDefault().City_Circle + ".xlsx";
-                    }
-                    else
-                    {
-                        FileName = "ContactList_.xlsx";
-                    }
+                    int totalCount = datalist.Count;
+                    FileName = "ContactList ("+biztype+" - Total Contacts ("+totalCount+")) "+ DateTime.Now.ToString() + ".xlsx";
+                    
                     //Response.AddHeader("content-disposition", "attachment;filename= MemberDetails.xlsx");
                     Response.AddHeader("content-disposition", "attachment;filename= " + FileName);
 

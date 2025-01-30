@@ -1,0 +1,177 @@
+---Exception Details for Date: 12/22/2024 3:51:55 AM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: Erin.Brooks@affinipay.com
+
+Log Written Date: 12/22/2024 3:51:55 AM
+
+StackTrace:    at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName) in E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 700
+
+Full Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName) in E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 700
+
+Error Line No : ine 700
+
+Error Message: SmtpException
+
+Exception Type: System.Net.Mail.SmtpException
+
+Error Location : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. For more information, go to
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 12/22/2024 4:28:45 AM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: megan.thornton@closedloop.ai
+
+Log Written Date: 12/22/2024 4:28:44 AM
+
+StackTrace:    at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName)
+
+Full Exception: System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.FixedSizeReader.ReadPacket(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Security._SslStream.StartFrameHeader(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.StartReading(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessRead(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.TlsStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.DelegatedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.BufferedReadStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.ReadLinesCommand.Send(SmtpConnection conn)
+   at System.Net.Mail.EHelloCommand.Send(SmtpConnection conn, String domain)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName)
+
+Error Line No : geName)
+
+Error Message: SmtpException
+
+Exception Type: System.Net.Mail.SmtpException
+
+Error Location : Failure sending mail.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 12/22/2024 4:08:22 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: Erin.Brooks@affinipay.com
+
+Log Written Date: 12/22/2024 4:08:22 PM
+
+StackTrace:    at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName) in E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 725
+
+Full Exception: System.Net.Mail.SmtpException: Failure sending mail. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 114.129.131.167:587
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   at System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName) in E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 725
+
+Error Line No : ine 725
+
+Error Message: SmtpException
+
+Exception Type: System.Net.Mail.SmtpException
+
+Error Location : Failure sending mail.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+
+---Exception Details for Date: 12/22/2024 4:31:45 PM---
+---------------------------------------START---------------------------------------
+
+
+
+Email Address: bmanley@imaginestaffing.net
+
+Log Written Date: 12/22/2024 4:31:45 PM
+
+StackTrace:    at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName) in E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 730
+
+Full Exception: System.Net.Mail.SmtpException: The operation has timed out.
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at StaffandTrain.Controllers.EmailSendFromController.sendemailcontact(String Name, String ContactEmail, String Subject, String EmailBody, String companyname, String senderemail, String servername, String password, String portno, Boolean enablessl, Int32 spacing, Boolean isRichorHtml, String ImageName) in E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\Controllers\EmailSendFromController.cs:line 730
+
+Error Line No : ine 730
+
+Error Message: SmtpException
+
+Exception Type: System.Net.Mail.SmtpException
+
+Error Location : The operation has timed out.
+
+Error Page Url: http://localhost:59708/EmailSendFrom/Sendemail
+
+User Host IP: 
+
+
+
+
+
+----------------------------------------END----------------------------------------
+
+
+

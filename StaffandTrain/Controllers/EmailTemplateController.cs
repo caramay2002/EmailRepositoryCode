@@ -51,15 +51,29 @@ namespace StaffandTrain.Controllers
                     int TemplateIddecrypt = Convert.ToInt32(CryptorEngine.Decrypt(cm.Code_Decrypt(Convert.ToString(TemplateId))));
                     var emailtempdata = context.SPgetemailtemplatebytemplateid(TemplateIddecrypt).FirstOrDefault();
 
-                    if (emailtempdata != null)
+                    if (emailtempdata.IsTextorHtml != "textArea" && emailtempdata.EmailBodyTextArea == null)
                     {
                         objemail.TemplateId = emailtempdata.TemplateId;
                         objemail.TemplateIdDecrypt = emailtempdata.TemplateId;
                         objemail.TemplateName = emailtempdata.TemplateName;
                         //objemail.EmailBody = cm.StripHTML(emailtempdata.EmailBody.Replace("&nbsp;", "").Replace("nbsp;", ""));
                         objemail.EmailBody = (emailtempdata.EmailBody.Replace("&nbsp;", " ").Replace("nbsp;", " "));
+                        objemail.IsTextorHtml = emailtempdata.IsTextorHtml;
                         objemail.Subject = emailtempdata.Subject;
                         objemail.GroupingNumber = emailtempdata.GroupingNumber;
+                    }
+                    else
+                    {
+
+                        objemail.TemplateId = emailtempdata.TemplateId;
+                        objemail.TemplateIdDecrypt = emailtempdata.TemplateId;
+                        objemail.TemplateName = emailtempdata.TemplateName;
+                        //objemail.EmailBody = cm.StripHTML(emailtempdata.EmailBody.Replace("&nbsp;", "").Replace("nbsp;", ""));
+                        objemail.EmailBodyTextArea = emailtempdata.EmailBodyTextArea;
+                        objemail.IsTextorHtml = emailtempdata.IsTextorHtml;
+                        objemail.Subject = emailtempdata.Subject;
+                        objemail.GroupingNumber = emailtempdata.GroupingNumber;
+
                     }
                 }
             }
@@ -97,13 +111,14 @@ namespace StaffandTrain.Controllers
             {
                 if (objemail.TemplateIdDecrypt == 0)
                 {
-                    context.SpInsertEmailTemplate(objemail.TemplateName, objemail.Subject, objemail.GroupingNumber, objemail.EmailBody);
+                   
+                    context.SpInsertEmailTemplate(objemail.TemplateName, objemail.Subject, objemail.GroupingNumber, objemail.EmailBody,objemail.EmailBodyTextArea,objemail.IsTextorHtml);
                     context.SaveChanges();
                     TempData["Message"] = "Record Saved";
                 }
                 else
                 {
-                    context.SpUpdateEmailTemplate(objemail.TemplateName, objemail.Subject, objemail.GroupingNumber, objemail.EmailBody, objemail.TemplateIdDecrypt);
+                    context.SpUpdateEmailTemplate(objemail.TemplateName, objemail.Subject, objemail.GroupingNumber, objemail.EmailBody,objemail.EmailBodyTextArea,objemail.IsTextorHtml, objemail.TemplateIdDecrypt);
                     context.SaveChanges();
                     TempData["Message"] = "Record Updated";
                 }

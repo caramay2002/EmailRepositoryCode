@@ -59,7 +59,7 @@
         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>List ID</th>
+                    <th>Group #</th>
                     <th>ListName</th>
                     <th>Total No. of Company</th>
                     <th>Total No. of Contact</th>
@@ -76,7 +76,7 @@
                     foreach (var i in Model)
                     {
                         <tr>
-                            <td>@i.listid</td>
+                            <td>@i.group_number</td>
                             <td>
                                 <a href="/ProspectViewList/Index?listid=@i.listid&lstname=@i.listname" id="@i.listid">@i.listname</a>
                             </td>
@@ -85,7 +85,7 @@
                             @if (User.IsInRole("Admin"))
                             {
                                 <td>
-                                    <a class="btn Edit" onclick="showpopupedit('@i.listname','@i.listid','@i.restricted')" href="javascript:void(0)"><i class="fa fa-pencil-square-o"></i></a>
+                                    <a class="btn Edit" onclick="showpopupedit('@i.listname','@i.listid','@i.restricted','@i.group_number')" href="javascript:void(0)"><i class="fa fa-pencil-square-o"></i></a>
                                     <a href="/ProspectListsAdmin/Delete_Prospective?listid=@i.listid" class="btn Delete" onclick='return confirm("Are you sure you wish to delete this Prospect?");'><i class="fa fa-trash-o"></i></a>
                                     @*<a class="btn MoveList" onclick="showpopup_Move('@i.listid', '@i.listname')" href="javascript:void(0)" title="Move list's companies and their contacts with notes to another list"><i class="fa fa-exchange"></i></a>*@
                                 </td>
@@ -129,6 +129,11 @@
                 <div class="col-sm-12 form-group">
                     <label>Prospect Name</label>
                     <input type="text" id="txtlistname" class="form-control" placeholder="Prospect Name">
+
+                    <label>Group Number</label>
+                    <input type="text" id="txtgroupnumber" class="form-control">
+
+
                     <div id="" class="validateTips"></div>
 
                     <input type="hidden" id="hdnlistid" />

@@ -259,6 +259,8 @@ warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.Config' does not 
     <Property Name="TemplateName" Type="varchar" MaxLength="500" />
     <Property Name="Subject" Type="varchar" MaxLength="500" />
     <Property Name="EmailBody" Type="nvarchar(max)" />
+    <Property Name="EmailBodyTextArea" Type="varchar" MaxLength="Max" />
+    <Property Name="IsTextorHtml" Type="varchar" MaxLength="100" />
     <Property Name="CreateDate" Type="datetime" />
     <Property Name="GroupingNumber" Type="int" />
   </EntityType>
@@ -1730,6 +1732,8 @@ warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPart
     <Parameter Name="Subject" Type="varchar" Mode="In" />
     <Parameter Name="GroupingNumber" Type="int" Mode="In" />
     <Parameter Name="EmailBody" Type="varchar(max)" Mode="In" />
+    <Parameter Name="EmailBodyTextArea" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IsTextorHtml" Type="varchar" MaxLength="100" Mode="In" />
   </Function>
   <Function Name="SPInsertOrUpdateLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="int" Mode="In" />
@@ -1757,6 +1761,7 @@ warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPart
   <Function Name="SPInsertProspectlist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="listname" Type="nvarchar" Mode="In" />
     <Parameter Name="restricted" Type="tinyint" Mode="In" />
+    <!--<Parameter Name="group_number" Type="Decimal" Mode="In" Precision="10" Scale="2"/>-->
     <Parameter Name="Userid" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="SpInsertUserPRos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1822,6 +1827,8 @@ warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPart
     <Parameter Name="Subject" Type="varchar" Mode="In" />
     <Parameter Name="GroupingNumber" Type="int" Mode="In" />
     <Parameter Name="EmailBody" Type="varchar(max)" Mode="In" />
+    <Parameter Name="EmailBodyTextArea" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IsTextorHtml" Type="varchar" MaxLength="100" Mode="In" />
     <Parameter Name="TemplateId" Type="int" Mode="In" />
   </Function>
   <Function Name="Spupdatejob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1887,434 +1894,510 @@ warning 6002: The table/view 'SQL2017_1013691_customerlist.dbo.vw_aspnet_WebPart
     <EntitySet Name="UserProspectingList" EntityType="Self.UserProspectingList" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WhiteBoardNames" EntityType="Self.WhiteBoardNames" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Config" EntityType="Self.Config" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Config].[Id] AS [Id], 
-    [Config].[Type] AS [Type], 
-    [Config].[Key] AS [Key], 
-    [Config].[Value] AS [Value], 
-    [Config].[CreateAt] AS [CreateAt]
-    FROM [dbo].[Config] AS [Config]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[Config].[Id] AS [Id],
+							[Config].[Type] AS [Type],
+							[Config].[Key] AS [Key],
+							[Config].[Value] AS [Value],
+							[Config].[CreateAt] AS [CreateAt]
+							FROM [dbo].[Config] AS [Config]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="ExpirationKeys" EntityType="Self.ExpirationKeys" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [ExpirationKeys].[ExpirationKeyId] AS [ExpirationKeyId], 
-    [ExpirationKeys].[DateExpires] AS [DateExpires]
-    FROM [dbo].[ExpirationKeys] AS [ExpirationKeys]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[ExpirationKeys].[ExpirationKeyId] AS [ExpirationKeyId],
+							[ExpirationKeys].[DateExpires] AS [DateExpires]
+							FROM [dbo].[ExpirationKeys] AS [ExpirationKeys]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="InfoRequests" EntityType="Self.InfoRequests" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [InfoRequests].[reqid] AS [reqid], 
-    [InfoRequests].[reqname] AS [reqname], 
-    [InfoRequests].[reqemail] AS [reqemail], 
-    [InfoRequests].[reqdate] AS [reqdate]
-    FROM [dbo].[InfoRequests] AS [InfoRequests]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[InfoRequests].[reqid] AS [reqid],
+							[InfoRequests].[reqname] AS [reqname],
+							[InfoRequests].[reqemail] AS [reqemail],
+							[InfoRequests].[reqdate] AS [reqdate]
+							FROM [dbo].[InfoRequests] AS [InfoRequests]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="JobPostings" EntityType="Self.JobPostings" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [JobPostings].[jobid] AS [jobid], 
-    [JobPostings].[jobtitle] AS [jobtitle], 
-    [JobPostings].[jobdescr] AS [jobdescr], 
-    [JobPostings].[jobstate] AS [jobstate], 
-    [JobPostings].[jobcity] AS [jobcity], 
-    [JobPostings].[contactemail] AS [contactemail], 
-    [JobPostings].[contactphone] AS [contactphone], 
-    [JobPostings].[datestamp] AS [datestamp], 
-    [JobPostings].[postedby] AS [postedby], 
-    [JobPostings].[companyid] AS [companyid], 
-    [JobPostings].[jobinfo] AS [jobinfo], 
-    [JobPostings].[contactname] AS [contactname]
-    FROM [dbo].[JobPostings] AS [JobPostings]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[JobPostings].[jobid] AS [jobid],
+							[JobPostings].[jobtitle] AS [jobtitle],
+							[JobPostings].[jobdescr] AS [jobdescr],
+							[JobPostings].[jobstate] AS [jobstate],
+							[JobPostings].[jobcity] AS [jobcity],
+							[JobPostings].[contactemail] AS [contactemail],
+							[JobPostings].[contactphone] AS [contactphone],
+							[JobPostings].[datestamp] AS [datestamp],
+							[JobPostings].[postedby] AS [postedby],
+							[JobPostings].[companyid] AS [companyid],
+							[JobPostings].[jobinfo] AS [jobinfo],
+							[JobPostings].[contactname] AS [contactname]
+							FROM [dbo].[JobPostings] AS [JobPostings]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="locations" EntityType="Self.locations" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [locations].[locid] AS [locid], 
-    [locations].[locname] AS [locname]
-    FROM [dbo].[locations] AS [locations]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[locations].[locid] AS [locid],
+							[locations].[locname] AS [locname]
+							FROM [dbo].[locations] AS [locations]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Newsletters" EntityType="Self.Newsletters" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Newsletters].[NewsletterID] AS [NewsletterID], 
-    [Newsletters].[NewsletterName] AS [NewsletterName], 
-    [Newsletters].[NewsletterLink] AS [NewsletterLink], 
-    [Newsletters].[NewsletterComments] AS [NewsletterComments], 
-    [Newsletters].[ShowLink] AS [ShowLink]
-    FROM [dbo].[Newsletters] AS [Newsletters]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[Newsletters].[NewsletterID] AS [NewsletterID],
+							[Newsletters].[NewsletterName] AS [NewsletterName],
+							[Newsletters].[NewsletterLink] AS [NewsletterLink],
+							[Newsletters].[NewsletterComments] AS [NewsletterComments],
+							[Newsletters].[ShowLink] AS [ShowLink]
+							FROM [dbo].[Newsletters] AS [Newsletters]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs10" EntityType="Self.OpenJobs10" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs10].[jobid] AS [jobid], 
-    [OpenJobs10].[jobtitle] AS [jobtitle], 
-    [OpenJobs10].[jobdescr] AS [jobdescr], 
-    [OpenJobs10].[jobcity] AS [jobcity], 
-    [OpenJobs10].[datestamp] AS [datestamp], 
-    [OpenJobs10].[postedby] AS [postedby], 
-    [OpenJobs10].[status] AS [status], 
-    [OpenJobs10].[jobguid] AS [jobguid], 
-    [OpenJobs10].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs10] AS [OpenJobs10]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs10].[jobid] AS [jobid],
+							[OpenJobs10].[jobtitle] AS [jobtitle],
+							[OpenJobs10].[jobdescr] AS [jobdescr],
+							[OpenJobs10].[jobcity] AS [jobcity],
+							[OpenJobs10].[datestamp] AS [datestamp],
+							[OpenJobs10].[postedby] AS [postedby],
+							[OpenJobs10].[status] AS [status],
+							[OpenJobs10].[jobguid] AS [jobguid],
+							[OpenJobs10].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs10] AS [OpenJobs10]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs11" EntityType="Self.OpenJobs11" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs11].[jobid] AS [jobid], 
-    [OpenJobs11].[jobtitle] AS [jobtitle], 
-    [OpenJobs11].[jobdescr] AS [jobdescr], 
-    [OpenJobs11].[jobcity] AS [jobcity], 
-    [OpenJobs11].[datestamp] AS [datestamp], 
-    [OpenJobs11].[postedby] AS [postedby], 
-    [OpenJobs11].[status] AS [status], 
-    [OpenJobs11].[jobguid] AS [jobguid], 
-    [OpenJobs11].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs11] AS [OpenJobs11]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs11].[jobid] AS [jobid],
+							[OpenJobs11].[jobtitle] AS [jobtitle],
+							[OpenJobs11].[jobdescr] AS [jobdescr],
+							[OpenJobs11].[jobcity] AS [jobcity],
+							[OpenJobs11].[datestamp] AS [datestamp],
+							[OpenJobs11].[postedby] AS [postedby],
+							[OpenJobs11].[status] AS [status],
+							[OpenJobs11].[jobguid] AS [jobguid],
+							[OpenJobs11].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs11] AS [OpenJobs11]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs12" EntityType="Self.OpenJobs12" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs12].[jobid] AS [jobid], 
-    [OpenJobs12].[jobtitle] AS [jobtitle], 
-    [OpenJobs12].[jobdescr] AS [jobdescr], 
-    [OpenJobs12].[jobcity] AS [jobcity], 
-    [OpenJobs12].[datestamp] AS [datestamp], 
-    [OpenJobs12].[postedby] AS [postedby], 
-    [OpenJobs12].[status] AS [status], 
-    [OpenJobs12].[jobguid] AS [jobguid], 
-    [OpenJobs12].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs12] AS [OpenJobs12]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs12].[jobid] AS [jobid],
+							[OpenJobs12].[jobtitle] AS [jobtitle],
+							[OpenJobs12].[jobdescr] AS [jobdescr],
+							[OpenJobs12].[jobcity] AS [jobcity],
+							[OpenJobs12].[datestamp] AS [datestamp],
+							[OpenJobs12].[postedby] AS [postedby],
+							[OpenJobs12].[status] AS [status],
+							[OpenJobs12].[jobguid] AS [jobguid],
+							[OpenJobs12].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs12] AS [OpenJobs12]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs13" EntityType="Self.OpenJobs13" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs13].[jobid] AS [jobid], 
-    [OpenJobs13].[jobtitle] AS [jobtitle], 
-    [OpenJobs13].[jobdescr] AS [jobdescr], 
-    [OpenJobs13].[jobcity] AS [jobcity], 
-    [OpenJobs13].[datestamp] AS [datestamp], 
-    [OpenJobs13].[postedby] AS [postedby], 
-    [OpenJobs13].[status] AS [status], 
-    [OpenJobs13].[jobguid] AS [jobguid], 
-    [OpenJobs13].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs13] AS [OpenJobs13]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs13].[jobid] AS [jobid],
+							[OpenJobs13].[jobtitle] AS [jobtitle],
+							[OpenJobs13].[jobdescr] AS [jobdescr],
+							[OpenJobs13].[jobcity] AS [jobcity],
+							[OpenJobs13].[datestamp] AS [datestamp],
+							[OpenJobs13].[postedby] AS [postedby],
+							[OpenJobs13].[status] AS [status],
+							[OpenJobs13].[jobguid] AS [jobguid],
+							[OpenJobs13].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs13] AS [OpenJobs13]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs14" EntityType="Self.OpenJobs14" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs14].[jobid] AS [jobid], 
-    [OpenJobs14].[jobtitle] AS [jobtitle], 
-    [OpenJobs14].[jobdescr] AS [jobdescr], 
-    [OpenJobs14].[jobcity] AS [jobcity], 
-    [OpenJobs14].[datestamp] AS [datestamp], 
-    [OpenJobs14].[postedby] AS [postedby], 
-    [OpenJobs14].[status] AS [status], 
-    [OpenJobs14].[jobguid] AS [jobguid], 
-    [OpenJobs14].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs14] AS [OpenJobs14]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs14].[jobid] AS [jobid],
+							[OpenJobs14].[jobtitle] AS [jobtitle],
+							[OpenJobs14].[jobdescr] AS [jobdescr],
+							[OpenJobs14].[jobcity] AS [jobcity],
+							[OpenJobs14].[datestamp] AS [datestamp],
+							[OpenJobs14].[postedby] AS [postedby],
+							[OpenJobs14].[status] AS [status],
+							[OpenJobs14].[jobguid] AS [jobguid],
+							[OpenJobs14].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs14] AS [OpenJobs14]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs15" EntityType="Self.OpenJobs15" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs15].[jobid] AS [jobid], 
-    [OpenJobs15].[jobtitle] AS [jobtitle], 
-    [OpenJobs15].[jobdescr] AS [jobdescr], 
-    [OpenJobs15].[jobcity] AS [jobcity], 
-    [OpenJobs15].[datestamp] AS [datestamp], 
-    [OpenJobs15].[postedby] AS [postedby], 
-    [OpenJobs15].[status] AS [status], 
-    [OpenJobs15].[jobguid] AS [jobguid], 
-    [OpenJobs15].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs15] AS [OpenJobs15]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs15].[jobid] AS [jobid],
+							[OpenJobs15].[jobtitle] AS [jobtitle],
+							[OpenJobs15].[jobdescr] AS [jobdescr],
+							[OpenJobs15].[jobcity] AS [jobcity],
+							[OpenJobs15].[datestamp] AS [datestamp],
+							[OpenJobs15].[postedby] AS [postedby],
+							[OpenJobs15].[status] AS [status],
+							[OpenJobs15].[jobguid] AS [jobguid],
+							[OpenJobs15].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs15] AS [OpenJobs15]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs16" EntityType="Self.OpenJobs16" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs16].[jobid] AS [jobid], 
-    [OpenJobs16].[jobtitle] AS [jobtitle], 
-    [OpenJobs16].[jobdescr] AS [jobdescr], 
-    [OpenJobs16].[jobcity] AS [jobcity], 
-    [OpenJobs16].[datestamp] AS [datestamp], 
-    [OpenJobs16].[postedby] AS [postedby], 
-    [OpenJobs16].[status] AS [status], 
-    [OpenJobs16].[jobguid] AS [jobguid], 
-    [OpenJobs16].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs16] AS [OpenJobs16]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs16].[jobid] AS [jobid],
+							[OpenJobs16].[jobtitle] AS [jobtitle],
+							[OpenJobs16].[jobdescr] AS [jobdescr],
+							[OpenJobs16].[jobcity] AS [jobcity],
+							[OpenJobs16].[datestamp] AS [datestamp],
+							[OpenJobs16].[postedby] AS [postedby],
+							[OpenJobs16].[status] AS [status],
+							[OpenJobs16].[jobguid] AS [jobguid],
+							[OpenJobs16].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs16] AS [OpenJobs16]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs17" EntityType="Self.OpenJobs17" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs17].[jobid] AS [jobid], 
-    [OpenJobs17].[jobtitle] AS [jobtitle], 
-    [OpenJobs17].[jobdescr] AS [jobdescr], 
-    [OpenJobs17].[jobcity] AS [jobcity], 
-    [OpenJobs17].[datestamp] AS [datestamp], 
-    [OpenJobs17].[postedby] AS [postedby], 
-    [OpenJobs17].[status] AS [status], 
-    [OpenJobs17].[jobguid] AS [jobguid], 
-    [OpenJobs17].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs17] AS [OpenJobs17]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs17].[jobid] AS [jobid],
+							[OpenJobs17].[jobtitle] AS [jobtitle],
+							[OpenJobs17].[jobdescr] AS [jobdescr],
+							[OpenJobs17].[jobcity] AS [jobcity],
+							[OpenJobs17].[datestamp] AS [datestamp],
+							[OpenJobs17].[postedby] AS [postedby],
+							[OpenJobs17].[status] AS [status],
+							[OpenJobs17].[jobguid] AS [jobguid],
+							[OpenJobs17].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs17] AS [OpenJobs17]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs18" EntityType="Self.OpenJobs18" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs18].[jobid] AS [jobid], 
-    [OpenJobs18].[jobtitle] AS [jobtitle], 
-    [OpenJobs18].[jobdescr] AS [jobdescr], 
-    [OpenJobs18].[jobcity] AS [jobcity], 
-    [OpenJobs18].[datestamp] AS [datestamp], 
-    [OpenJobs18].[postedby] AS [postedby], 
-    [OpenJobs18].[status] AS [status], 
-    [OpenJobs18].[jobguid] AS [jobguid], 
-    [OpenJobs18].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs18] AS [OpenJobs18]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs18].[jobid] AS [jobid],
+							[OpenJobs18].[jobtitle] AS [jobtitle],
+							[OpenJobs18].[jobdescr] AS [jobdescr],
+							[OpenJobs18].[jobcity] AS [jobcity],
+							[OpenJobs18].[datestamp] AS [datestamp],
+							[OpenJobs18].[postedby] AS [postedby],
+							[OpenJobs18].[status] AS [status],
+							[OpenJobs18].[jobguid] AS [jobguid],
+							[OpenJobs18].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs18] AS [OpenJobs18]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs2" EntityType="Self.OpenJobs2" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs2].[jobid] AS [jobid], 
-    [OpenJobs2].[jobtitle] AS [jobtitle], 
-    [OpenJobs2].[jobdescr] AS [jobdescr], 
-    [OpenJobs2].[jobcity] AS [jobcity], 
-    [OpenJobs2].[datestamp] AS [datestamp], 
-    [OpenJobs2].[postedby] AS [postedby], 
-    [OpenJobs2].[status] AS [status], 
-    [OpenJobs2].[jobguid] AS [jobguid], 
-    [OpenJobs2].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs2] AS [OpenJobs2]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs2].[jobid] AS [jobid],
+							[OpenJobs2].[jobtitle] AS [jobtitle],
+							[OpenJobs2].[jobdescr] AS [jobdescr],
+							[OpenJobs2].[jobcity] AS [jobcity],
+							[OpenJobs2].[datestamp] AS [datestamp],
+							[OpenJobs2].[postedby] AS [postedby],
+							[OpenJobs2].[status] AS [status],
+							[OpenJobs2].[jobguid] AS [jobguid],
+							[OpenJobs2].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs2] AS [OpenJobs2]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs3" EntityType="Self.OpenJobs3" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs3].[jobid] AS [jobid], 
-    [OpenJobs3].[jobtitle] AS [jobtitle], 
-    [OpenJobs3].[jobdescr] AS [jobdescr], 
-    [OpenJobs3].[jobcity] AS [jobcity], 
-    [OpenJobs3].[datestamp] AS [datestamp], 
-    [OpenJobs3].[postedby] AS [postedby], 
-    [OpenJobs3].[status] AS [status], 
-    [OpenJobs3].[jobguid] AS [jobguid], 
-    [OpenJobs3].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs3] AS [OpenJobs3]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs3].[jobid] AS [jobid],
+							[OpenJobs3].[jobtitle] AS [jobtitle],
+							[OpenJobs3].[jobdescr] AS [jobdescr],
+							[OpenJobs3].[jobcity] AS [jobcity],
+							[OpenJobs3].[datestamp] AS [datestamp],
+							[OpenJobs3].[postedby] AS [postedby],
+							[OpenJobs3].[status] AS [status],
+							[OpenJobs3].[jobguid] AS [jobguid],
+							[OpenJobs3].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs3] AS [OpenJobs3]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs4" EntityType="Self.OpenJobs4" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs4].[jobid] AS [jobid], 
-    [OpenJobs4].[jobtitle] AS [jobtitle], 
-    [OpenJobs4].[jobdescr] AS [jobdescr], 
-    [OpenJobs4].[jobcity] AS [jobcity], 
-    [OpenJobs4].[datestamp] AS [datestamp], 
-    [OpenJobs4].[postedby] AS [postedby], 
-    [OpenJobs4].[status] AS [status], 
-    [OpenJobs4].[jobguid] AS [jobguid], 
-    [OpenJobs4].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs4] AS [OpenJobs4]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs4].[jobid] AS [jobid],
+							[OpenJobs4].[jobtitle] AS [jobtitle],
+							[OpenJobs4].[jobdescr] AS [jobdescr],
+							[OpenJobs4].[jobcity] AS [jobcity],
+							[OpenJobs4].[datestamp] AS [datestamp],
+							[OpenJobs4].[postedby] AS [postedby],
+							[OpenJobs4].[status] AS [status],
+							[OpenJobs4].[jobguid] AS [jobguid],
+							[OpenJobs4].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs4] AS [OpenJobs4]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs5" EntityType="Self.OpenJobs5" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs5].[jobid] AS [jobid], 
-    [OpenJobs5].[jobtitle] AS [jobtitle], 
-    [OpenJobs5].[jobdescr] AS [jobdescr], 
-    [OpenJobs5].[jobcity] AS [jobcity], 
-    [OpenJobs5].[datestamp] AS [datestamp], 
-    [OpenJobs5].[postedby] AS [postedby], 
-    [OpenJobs5].[status] AS [status], 
-    [OpenJobs5].[jobguid] AS [jobguid], 
-    [OpenJobs5].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs5] AS [OpenJobs5]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs5].[jobid] AS [jobid],
+							[OpenJobs5].[jobtitle] AS [jobtitle],
+							[OpenJobs5].[jobdescr] AS [jobdescr],
+							[OpenJobs5].[jobcity] AS [jobcity],
+							[OpenJobs5].[datestamp] AS [datestamp],
+							[OpenJobs5].[postedby] AS [postedby],
+							[OpenJobs5].[status] AS [status],
+							[OpenJobs5].[jobguid] AS [jobguid],
+							[OpenJobs5].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs5] AS [OpenJobs5]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs6" EntityType="Self.OpenJobs6" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs6].[jobid] AS [jobid], 
-    [OpenJobs6].[jobtitle] AS [jobtitle], 
-    [OpenJobs6].[jobdescr] AS [jobdescr], 
-    [OpenJobs6].[jobcity] AS [jobcity], 
-    [OpenJobs6].[datestamp] AS [datestamp], 
-    [OpenJobs6].[postedby] AS [postedby], 
-    [OpenJobs6].[status] AS [status], 
-    [OpenJobs6].[jobguid] AS [jobguid], 
-    [OpenJobs6].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs6] AS [OpenJobs6]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs6].[jobid] AS [jobid],
+							[OpenJobs6].[jobtitle] AS [jobtitle],
+							[OpenJobs6].[jobdescr] AS [jobdescr],
+							[OpenJobs6].[jobcity] AS [jobcity],
+							[OpenJobs6].[datestamp] AS [datestamp],
+							[OpenJobs6].[postedby] AS [postedby],
+							[OpenJobs6].[status] AS [status],
+							[OpenJobs6].[jobguid] AS [jobguid],
+							[OpenJobs6].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs6] AS [OpenJobs6]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs7" EntityType="Self.OpenJobs7" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs7].[jobid] AS [jobid], 
-    [OpenJobs7].[jobtitle] AS [jobtitle], 
-    [OpenJobs7].[jobdescr] AS [jobdescr], 
-    [OpenJobs7].[jobcity] AS [jobcity], 
-    [OpenJobs7].[datestamp] AS [datestamp], 
-    [OpenJobs7].[postedby] AS [postedby], 
-    [OpenJobs7].[status] AS [status], 
-    [OpenJobs7].[jobguid] AS [jobguid], 
-    [OpenJobs7].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs7] AS [OpenJobs7]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs7].[jobid] AS [jobid],
+							[OpenJobs7].[jobtitle] AS [jobtitle],
+							[OpenJobs7].[jobdescr] AS [jobdescr],
+							[OpenJobs7].[jobcity] AS [jobcity],
+							[OpenJobs7].[datestamp] AS [datestamp],
+							[OpenJobs7].[postedby] AS [postedby],
+							[OpenJobs7].[status] AS [status],
+							[OpenJobs7].[jobguid] AS [jobguid],
+							[OpenJobs7].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs7] AS [OpenJobs7]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs8" EntityType="Self.OpenJobs8" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs8].[jobid] AS [jobid], 
-    [OpenJobs8].[jobtitle] AS [jobtitle], 
-    [OpenJobs8].[jobdescr] AS [jobdescr], 
-    [OpenJobs8].[jobcity] AS [jobcity], 
-    [OpenJobs8].[datestamp] AS [datestamp], 
-    [OpenJobs8].[postedby] AS [postedby], 
-    [OpenJobs8].[status] AS [status], 
-    [OpenJobs8].[jobguid] AS [jobguid], 
-    [OpenJobs8].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs8] AS [OpenJobs8]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs8].[jobid] AS [jobid],
+							[OpenJobs8].[jobtitle] AS [jobtitle],
+							[OpenJobs8].[jobdescr] AS [jobdescr],
+							[OpenJobs8].[jobcity] AS [jobcity],
+							[OpenJobs8].[datestamp] AS [datestamp],
+							[OpenJobs8].[postedby] AS [postedby],
+							[OpenJobs8].[status] AS [status],
+							[OpenJobs8].[jobguid] AS [jobguid],
+							[OpenJobs8].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs8] AS [OpenJobs8]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="OpenJobs9" EntityType="Self.OpenJobs9" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [OpenJobs9].[jobid] AS [jobid], 
-    [OpenJobs9].[jobtitle] AS [jobtitle], 
-    [OpenJobs9].[jobdescr] AS [jobdescr], 
-    [OpenJobs9].[jobcity] AS [jobcity], 
-    [OpenJobs9].[datestamp] AS [datestamp], 
-    [OpenJobs9].[postedby] AS [postedby], 
-    [OpenJobs9].[status] AS [status], 
-    [OpenJobs9].[jobguid] AS [jobguid], 
-    [OpenJobs9].[submittals] AS [submittals]
-    FROM [dbo].[OpenJobs9] AS [OpenJobs9]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[OpenJobs9].[jobid] AS [jobid],
+							[OpenJobs9].[jobtitle] AS [jobtitle],
+							[OpenJobs9].[jobdescr] AS [jobdescr],
+							[OpenJobs9].[jobcity] AS [jobcity],
+							[OpenJobs9].[datestamp] AS [datestamp],
+							[OpenJobs9].[postedby] AS [postedby],
+							[OpenJobs9].[status] AS [status],
+							[OpenJobs9].[jobguid] AS [jobguid],
+							[OpenJobs9].[submittals] AS [submittals]
+							FROM [dbo].[OpenJobs9] AS [OpenJobs9]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Resumes" EntityType="Self.Resumes" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Resumes].[resid] AS [resid], 
-    [Resumes].[lname] AS [lname], 
-    [Resumes].[fname] AS [fname], 
-    [Resumes].[phone] AS [phone], 
-    [Resumes].[email] AS [email], 
-    [Resumes].[resume] AS [resume], 
-    [Resumes].[resdt] AS [resdt], 
-    [Resumes].[jobtitle] AS [jobtitle], 
-    [Resumes].[jobloc] AS [jobloc], 
-    [Resumes].[jobloc1] AS [jobloc1], 
-    [Resumes].[jobloc2] AS [jobloc2], 
-    [Resumes].[jobloc3] AS [jobloc3]
-    FROM [dbo].[Resumes] AS [Resumes]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[Resumes].[resid] AS [resid],
+							[Resumes].[lname] AS [lname],
+							[Resumes].[fname] AS [fname],
+							[Resumes].[phone] AS [phone],
+							[Resumes].[email] AS [email],
+							[Resumes].[resume] AS [resume],
+							[Resumes].[resdt] AS [resdt],
+							[Resumes].[jobtitle] AS [jobtitle],
+							[Resumes].[jobloc] AS [jobloc],
+							[Resumes].[jobloc1] AS [jobloc1],
+							[Resumes].[jobloc2] AS [jobloc2],
+							[Resumes].[jobloc3] AS [jobloc3]
+							FROM [dbo].[Resumes] AS [Resumes]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="SiteUsers" EntityType="Self.SiteUsers" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [SiteUsers].[userid] AS [userid], 
-    [SiteUsers].[fname] AS [fname], 
-    [SiteUsers].[lname] AS [lname], 
-    [SiteUsers].[email] AS [email], 
-    [SiteUsers].[username] AS [username], 
-    [SiteUsers].[pw] AS [pw], 
-    [SiteUsers].[userlevel] AS [userlevel]
-    FROM [dbo].[SiteUsers] AS [SiteUsers]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[SiteUsers].[userid] AS [userid],
+							[SiteUsers].[fname] AS [fname],
+							[SiteUsers].[lname] AS [lname],
+							[SiteUsers].[email] AS [email],
+							[SiteUsers].[username] AS [username],
+							[SiteUsers].[pw] AS [pw],
+							[SiteUsers].[userlevel] AS [userlevel]
+							FROM [dbo].[SiteUsers] AS [SiteUsers]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="States" EntityType="Self.States" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [States].[state_id] AS [state_id], 
-    [States].[state] AS [state], 
-    [States].[abbr] AS [abbr]
-    FROM [dbo].[States] AS [States]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[States].[state_id] AS [state_id],
+							[States].[state] AS [state],
+							[States].[abbr] AS [abbr]
+							FROM [dbo].[States] AS [States]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="TrainingDocuments" EntityType="Self.TrainingDocuments" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [TrainingDocuments].[TrainingDocumentLinkID] AS [TrainingDocumentLinkID], 
-    [TrainingDocuments].[TrainingDocumentName] AS [TrainingDocumentName], 
-    [TrainingDocuments].[TrainingDocumentLink] AS [TrainingDocumentLink], 
-    [TrainingDocuments].[TrainingDocumentComments] AS [TrainingDocumentComments], 
-    [TrainingDocuments].[ShowLink] AS [ShowLink], 
-    [TrainingDocuments].[TrainingDocumentOrder] AS [TrainingDocumentOrder]
-    FROM [dbo].[TrainingDocuments] AS [TrainingDocuments]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[TrainingDocuments].[TrainingDocumentLinkID] AS [TrainingDocumentLinkID],
+							[TrainingDocuments].[TrainingDocumentName] AS [TrainingDocumentName],
+							[TrainingDocuments].[TrainingDocumentLink] AS [TrainingDocumentLink],
+							[TrainingDocuments].[TrainingDocumentComments] AS [TrainingDocumentComments],
+							[TrainingDocuments].[ShowLink] AS [ShowLink],
+							[TrainingDocuments].[TrainingDocumentOrder] AS [TrainingDocumentOrder]
+							FROM [dbo].[TrainingDocuments] AS [TrainingDocuments]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="Workers" EntityType="Self.Workers" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [Workers].[Id] AS [Id], 
-    [Workers].[Name] AS [Name], 
-    [Workers].[Email] AS [Email], 
-    [Workers].[Password] AS [Password], 
-    [Workers].[CheckIn] AS [CheckIn], 
-    [Workers].[CreateDate] AS [CreateDate], 
-    [Workers].[ModifiedDate] AS [ModifiedDate]
-    FROM [dbo].[Workers] AS [Workers]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[Workers].[Id] AS [Id],
+							[Workers].[Name] AS [Name],
+							[Workers].[Email] AS [Email],
+							[Workers].[Password] AS [Password],
+							[Workers].[CheckIn] AS [CheckIn],
+							[Workers].[CreateDate] AS [CreateDate],
+							[Workers].[ModifiedDate] AS [ModifiedDate]
+							FROM [dbo].[Workers] AS [Workers]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="WorkersLog" EntityType="Self.WorkersLog" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [WorkersLog].[Id] AS [Id], 
-    [WorkersLog].[WorkerId] AS [WorkerId], 
-    [WorkersLog].[Description] AS [Description], 
-    [WorkersLog].[LogType] AS [LogType], 
-    [WorkersLog].[CreateDate] AS [CreateDate]
-    FROM [dbo].[WorkersLog] AS [WorkersLog]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[WorkersLog].[Id] AS [Id],
+							[WorkersLog].[WorkerId] AS [WorkerId],
+							[WorkersLog].[Description] AS [Description],
+							[WorkersLog].[LogType] AS [LogType],
+							[WorkersLog].[CreateDate] AS [CreateDate]
+							FROM [dbo].[WorkersLog] AS [WorkersLog]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_Applications" EntityType="Self.vw_aspnet_Applications" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_Applications].[ApplicationName] AS [ApplicationName], 
-    [vw_aspnet_Applications].[LoweredApplicationName] AS [LoweredApplicationName], 
-    [vw_aspnet_Applications].[ApplicationId] AS [ApplicationId], 
-    [vw_aspnet_Applications].[Description] AS [Description]
-    FROM [dbo].[vw_aspnet_Applications] AS [vw_aspnet_Applications]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_Applications].[ApplicationName] AS [ApplicationName],
+							[vw_aspnet_Applications].[LoweredApplicationName] AS [LoweredApplicationName],
+							[vw_aspnet_Applications].[ApplicationId] AS [ApplicationId],
+							[vw_aspnet_Applications].[Description] AS [Description]
+							FROM [dbo].[vw_aspnet_Applications] AS [vw_aspnet_Applications]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="Self.vw_aspnet_MembershipUsers" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_MembershipUsers].[UserId] AS [UserId], 
-    [vw_aspnet_MembershipUsers].[PasswordFormat] AS [PasswordFormat], 
-    [vw_aspnet_MembershipUsers].[MobilePIN] AS [MobilePIN], 
-    [vw_aspnet_MembershipUsers].[Email] AS [Email], 
-    [vw_aspnet_MembershipUsers].[LoweredEmail] AS [LoweredEmail], 
-    [vw_aspnet_MembershipUsers].[PasswordQuestion] AS [PasswordQuestion], 
-    [vw_aspnet_MembershipUsers].[PasswordAnswer] AS [PasswordAnswer], 
-    [vw_aspnet_MembershipUsers].[IsApproved] AS [IsApproved], 
-    [vw_aspnet_MembershipUsers].[IsLockedOut] AS [IsLockedOut], 
-    [vw_aspnet_MembershipUsers].[CreateDate] AS [CreateDate], 
-    [vw_aspnet_MembershipUsers].[LastLoginDate] AS [LastLoginDate], 
-    [vw_aspnet_MembershipUsers].[LastPasswordChangedDate] AS [LastPasswordChangedDate], 
-    [vw_aspnet_MembershipUsers].[LastLockoutDate] AS [LastLockoutDate], 
-    [vw_aspnet_MembershipUsers].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount], 
-    [vw_aspnet_MembershipUsers].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart], 
-    [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount], 
-    [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart], 
-    [vw_aspnet_MembershipUsers].[Comment] AS [Comment], 
-    [vw_aspnet_MembershipUsers].[ApplicationId] AS [ApplicationId], 
-    [vw_aspnet_MembershipUsers].[UserName] AS [UserName], 
-    [vw_aspnet_MembershipUsers].[MobileAlias] AS [MobileAlias], 
-    [vw_aspnet_MembershipUsers].[IsAnonymous] AS [IsAnonymous], 
-    [vw_aspnet_MembershipUsers].[LastActivityDate] AS [LastActivityDate]
-    FROM [dbo].[vw_aspnet_MembershipUsers] AS [vw_aspnet_MembershipUsers]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_MembershipUsers].[UserId] AS [UserId],
+							[vw_aspnet_MembershipUsers].[PasswordFormat] AS [PasswordFormat],
+							[vw_aspnet_MembershipUsers].[MobilePIN] AS [MobilePIN],
+							[vw_aspnet_MembershipUsers].[Email] AS [Email],
+							[vw_aspnet_MembershipUsers].[LoweredEmail] AS [LoweredEmail],
+							[vw_aspnet_MembershipUsers].[PasswordQuestion] AS [PasswordQuestion],
+							[vw_aspnet_MembershipUsers].[PasswordAnswer] AS [PasswordAnswer],
+							[vw_aspnet_MembershipUsers].[IsApproved] AS [IsApproved],
+							[vw_aspnet_MembershipUsers].[IsLockedOut] AS [IsLockedOut],
+							[vw_aspnet_MembershipUsers].[CreateDate] AS [CreateDate],
+							[vw_aspnet_MembershipUsers].[LastLoginDate] AS [LastLoginDate],
+							[vw_aspnet_MembershipUsers].[LastPasswordChangedDate] AS [LastPasswordChangedDate],
+							[vw_aspnet_MembershipUsers].[LastLockoutDate] AS [LastLockoutDate],
+							[vw_aspnet_MembershipUsers].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount],
+							[vw_aspnet_MembershipUsers].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart],
+							[vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount],
+							[vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart],
+							[vw_aspnet_MembershipUsers].[Comment] AS [Comment],
+							[vw_aspnet_MembershipUsers].[ApplicationId] AS [ApplicationId],
+							[vw_aspnet_MembershipUsers].[UserName] AS [UserName],
+							[vw_aspnet_MembershipUsers].[MobileAlias] AS [MobileAlias],
+							[vw_aspnet_MembershipUsers].[IsAnonymous] AS [IsAnonymous],
+							[vw_aspnet_MembershipUsers].[LastActivityDate] AS [LastActivityDate]
+							FROM [dbo].[vw_aspnet_MembershipUsers] AS [vw_aspnet_MembershipUsers]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_Profiles" EntityType="Self.vw_aspnet_Profiles" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_Profiles].[UserId] AS [UserId], 
-    [vw_aspnet_Profiles].[LastUpdatedDate] AS [LastUpdatedDate], 
-    [vw_aspnet_Profiles].[DataSize] AS [DataSize]
-    FROM [dbo].[vw_aspnet_Profiles] AS [vw_aspnet_Profiles]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_Profiles].[UserId] AS [UserId],
+							[vw_aspnet_Profiles].[LastUpdatedDate] AS [LastUpdatedDate],
+							[vw_aspnet_Profiles].[DataSize] AS [DataSize]
+							FROM [dbo].[vw_aspnet_Profiles] AS [vw_aspnet_Profiles]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_Roles" EntityType="Self.vw_aspnet_Roles" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_Roles].[ApplicationId] AS [ApplicationId], 
-    [vw_aspnet_Roles].[RoleId] AS [RoleId], 
-    [vw_aspnet_Roles].[RoleName] AS [RoleName], 
-    [vw_aspnet_Roles].[LoweredRoleName] AS [LoweredRoleName], 
-    [vw_aspnet_Roles].[Description] AS [Description]
-    FROM [dbo].[vw_aspnet_Roles] AS [vw_aspnet_Roles]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_Roles].[ApplicationId] AS [ApplicationId],
+							[vw_aspnet_Roles].[RoleId] AS [RoleId],
+							[vw_aspnet_Roles].[RoleName] AS [RoleName],
+							[vw_aspnet_Roles].[LoweredRoleName] AS [LoweredRoleName],
+							[vw_aspnet_Roles].[Description] AS [Description]
+							FROM [dbo].[vw_aspnet_Roles] AS [vw_aspnet_Roles]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_Users" EntityType="Self.vw_aspnet_Users" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_Users].[ApplicationId] AS [ApplicationId], 
-    [vw_aspnet_Users].[UserId] AS [UserId], 
-    [vw_aspnet_Users].[UserName] AS [UserName], 
-    [vw_aspnet_Users].[LoweredUserName] AS [LoweredUserName], 
-    [vw_aspnet_Users].[MobileAlias] AS [MobileAlias], 
-    [vw_aspnet_Users].[IsAnonymous] AS [IsAnonymous], 
-    [vw_aspnet_Users].[LastActivityDate] AS [LastActivityDate]
-    FROM [dbo].[vw_aspnet_Users] AS [vw_aspnet_Users]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_Users].[ApplicationId] AS [ApplicationId],
+							[vw_aspnet_Users].[UserId] AS [UserId],
+							[vw_aspnet_Users].[UserName] AS [UserName],
+							[vw_aspnet_Users].[LoweredUserName] AS [LoweredUserName],
+							[vw_aspnet_Users].[MobileAlias] AS [MobileAlias],
+							[vw_aspnet_Users].[IsAnonymous] AS [IsAnonymous],
+							[vw_aspnet_Users].[LastActivityDate] AS [LastActivityDate]
+							FROM [dbo].[vw_aspnet_Users] AS [vw_aspnet_Users]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="Self.vw_aspnet_UsersInRoles" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_UsersInRoles].[UserId] AS [UserId], 
-    [vw_aspnet_UsersInRoles].[RoleId] AS [RoleId]
-    FROM [dbo].[vw_aspnet_UsersInRoles] AS [vw_aspnet_UsersInRoles]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_UsersInRoles].[UserId] AS [UserId],
+							[vw_aspnet_UsersInRoles].[RoleId] AS [RoleId]
+							FROM [dbo].[vw_aspnet_UsersInRoles] AS [vw_aspnet_UsersInRoles]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="Self.vw_aspnet_WebPartState_Paths" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_WebPartState_Paths].[ApplicationId] AS [ApplicationId], 
-    [vw_aspnet_WebPartState_Paths].[PathId] AS [PathId], 
-    [vw_aspnet_WebPartState_Paths].[Path] AS [Path], 
-    [vw_aspnet_WebPartState_Paths].[LoweredPath] AS [LoweredPath]
-    FROM [dbo].[vw_aspnet_WebPartState_Paths] AS [vw_aspnet_WebPartState_Paths]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_WebPartState_Paths].[ApplicationId] AS [ApplicationId],
+							[vw_aspnet_WebPartState_Paths].[PathId] AS [PathId],
+							[vw_aspnet_WebPartState_Paths].[Path] AS [Path],
+							[vw_aspnet_WebPartState_Paths].[LoweredPath] AS [LoweredPath]
+							FROM [dbo].[vw_aspnet_WebPartState_Paths] AS [vw_aspnet_WebPartState_Paths]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="Self.vw_aspnet_WebPartState_Shared" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_WebPartState_Shared].[PathId] AS [PathId], 
-    [vw_aspnet_WebPartState_Shared].[DataSize] AS [DataSize], 
-    [vw_aspnet_WebPartState_Shared].[LastUpdatedDate] AS [LastUpdatedDate]
-    FROM [dbo].[vw_aspnet_WebPartState_Shared] AS [vw_aspnet_WebPartState_Shared]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_WebPartState_Shared].[PathId] AS [PathId],
+							[vw_aspnet_WebPartState_Shared].[DataSize] AS [DataSize],
+							[vw_aspnet_WebPartState_Shared].[LastUpdatedDate] AS [LastUpdatedDate]
+							FROM [dbo].[vw_aspnet_WebPartState_Shared] AS [vw_aspnet_WebPartState_Shared]
+						</DefiningQuery>
     </EntitySet>
     <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="Self.vw_aspnet_WebPartState_User" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [vw_aspnet_WebPartState_User].[PathId] AS [PathId], 
-    [vw_aspnet_WebPartState_User].[UserId] AS [UserId], 
-    [vw_aspnet_WebPartState_User].[DataSize] AS [DataSize], 
-    [vw_aspnet_WebPartState_User].[LastUpdatedDate] AS [LastUpdatedDate]
-    FROM [dbo].[vw_aspnet_WebPartState_User] AS [vw_aspnet_WebPartState_User]</DefiningQuery>
+      <DefiningQuery>
+							SELECT
+							[vw_aspnet_WebPartState_User].[PathId] AS [PathId],
+							[vw_aspnet_WebPartState_User].[UserId] AS [UserId],
+							[vw_aspnet_WebPartState_User].[DataSize] AS [DataSize],
+							[vw_aspnet_WebPartState_User].[LastUpdatedDate] AS [LastUpdatedDate]
+							FROM [dbo].[vw_aspnet_WebPartState_User] AS [vw_aspnet_WebPartState_User]
+						</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__aspnet_Me__Appli__2EA5EC27" Association="Self.FK__aspnet_Me__Appli__2EA5EC27">
       <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />

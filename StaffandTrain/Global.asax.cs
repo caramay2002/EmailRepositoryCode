@@ -1,4 +1,5 @@
 ﻿using StaffandTrain.Common;
+using StaffandTrain.DataModel;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,6 +15,7 @@ namespace StaffandTrain
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        SATConn context = new SATConn();
         private Timer timer;
         protected void Application_Start()
         {
@@ -39,12 +41,14 @@ namespace StaffandTrain
 
         private void TimerCallback(object state)
         {
+
             DateTime date = DateTime.Now;
             if (date.DayOfWeek != DayOfWeek.Saturday && date.DayOfWeek != DayOfWeek.Sunday)
             {
                 SendEmail email = new SendEmail();
-             //   email.ScheduleWorkerEmail();
+                email.ScheduleWorkerEmail();
             }
+
         }
     }
 }

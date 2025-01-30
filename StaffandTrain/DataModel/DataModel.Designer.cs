@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Densible\StaffandTrain\StaffandTrain\DataModel\DataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'E:\Asad Projects\EmailS_50\EmailIssue_noman12172024\Noman\12172024_EmailRepositoryCode\StaffandTrain\DataModel\DataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

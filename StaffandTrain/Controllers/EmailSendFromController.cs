@@ -46,11 +46,31 @@ namespace StaffandTrain.Controllers
         {
             try
             {
-                ViewData["CityCircle"] = context.SpgetProspectingselectlist().Select(xx => new SelectListItem { Value = xx.listid.ToString(), Text = xx.listname }).ToList();
+                //ViewData["CityCircle"] = context.SpgetProspectingselectlist().Select(xx => new SelectListItem { Value = xx.listid.ToString(), Text = xx.listname }).ToList();
                 ViewData["Titlelist"] = context.SPgettitle().Select(xx => new SelectListItem { Value = xx.ToString(), Text = xx.ToString() }).ToList();
-                
+                var citycircleList = context.SpgetProspectingselectlist().Select(xx => new SelectListItem { Value = xx.listid.ToString(), Text = xx.listname }).ToList();
+                var citycircleListGroupKeys = context.SpgetProspectingselectlist().GroupBy(e=>e.group_number);
+
+
+                var CircleListData = new List<SelectListItem>();
+                foreach (var group in citycircleListGroupKeys)
+                {
+                    var optionGroup = new SelectListGroup() { Name = $"Group {group.Key}" };
+                    foreach (var item in group)
+                    {
+                        CircleListData.Add(new SelectListItem()
+                        {
+                            Value = item.listid.ToString(),
+                            Text = item.listname.ToString(),
+                            Group = group.Key != null ? optionGroup : null,
+                        });
+                    }
+                }
+                ViewData["CityCircle"] = CircleListData;
+
+
+
                 var templateList = context.SpGetEmailtemplatelist().GroupBy(e=>e.GroupingNumber);
-                
                 var templateListData = new List<SelectListItem>();
                 foreach (var group in templateList)
                 {
@@ -110,8 +130,18 @@ namespace StaffandTrain.Controllers
 
                     if (data != null)
                     {
-                        data.EmailBody = (data.EmailBody).Replace("&nbsp;", " ").Replace("nbsp;", " ");
+                        if(data.EmailBody != null)
+                        {
+                            data.EmailBody = (data.EmailBody).Replace("&nbsp;", " ").Replace("nbsp;", " ");
+
+                        }
+                        else
+                        {
+                            data.EmailBody = data.EmailBodyTextArea;
+
+                        }
                     }
+
                 }
                 catch (Exception ex)
                 {
@@ -125,7 +155,38 @@ namespace StaffandTrain.Controllers
                 return Json("LoginRequired");
             }
         }
+        // Helper Method to Remove HTML Tags from Rich Text
 
+        private string ConvertRichTextToPlainText(string html)
+        {
+            if (string.IsNullOrEmpty(html))
+                return string.Empty;
+
+            // Replace <br> and <p> tags with a single newline
+            string plainText = Regex.Replace(html, @"<br\s*/?>", "\n", RegexOptions.IgnoreCase);
+            plainText = Regex.Replace(plainText, @"<p.*?>", "\n", RegexOptions.IgnoreCase); // Opening <p> tags
+            plainText = Regex.Replace(plainText, @"</p>", "\n", RegexOptions.IgnoreCase);   // Closing </p> tags
+
+            // Remove all other HTML tags
+            plainText = Regex.Replace(plainText, @"<[^>]+>", string.Empty);
+
+            // Decode HTML entities (e.g., &nbsp;)
+            plainText = WebUtility.HtmlDecode(plainText);
+
+            // Normalize whitespace: replace multiple newlines with a single newline
+            plainText = Regex.Replace(plainText, @"(\r?\n\s*){2,}", "\n");
+
+            // Trim leading and trailing spaces
+            return plainText.Trim();
+        }
+
+        //private string ConvertRichTextToPlainText(string richText)
+        //{
+        //    if (string.IsNullOrEmpty(richText)) return string.Empty;
+
+        //    // Remove HTML tags and return clean text
+        //    return Regex.Replace(richText, "<.*?>", string.Empty);
+        //}
         //OLD SEND EMAIL METHOD [NOT IN USE NOW] - Commented by Shivam
         //[HttpPost]
         //[ValidateInput(false)]
@@ -308,6 +369,7 @@ namespace StaffandTrain.Controllers
         {
             try
             {
+                
                 bool enablessl = false;
 
                 if (Request.Form["ddlenablessl"] == "1")
@@ -318,6 +380,23 @@ namespace StaffandTrain.Controllers
                 {
                     enablessl = false;
                 }
+
+
+                bool isRichText = false;
+
+                if (Request.Form["ddlEmailType"] == "1")
+                {
+                    isRichText = false;
+                }
+                else if (Request.Form["ddlEmailType"] == "2")
+                {
+                    isRichText = true;
+                }
+                else
+                {
+                    isRichText = false;
+                }
+
                 //sendemailcontact("Noman", "noman.ali@arcanainfo.com", "Testing", "Asad khan Bhestang", "asad@dominicanrecruiters.com", "server.nearshore-usa.com", "asadpassword", "587", true, "");
                 //int intmailCount =  sendemailcontact("Asad - BLC", "dev@talkboxsolutions.com", Request.Form["txtsubject"], "Asad Tesing normal email from somee", Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, int.Parse(Request.Form["ddlspacing"].ToString()), "");
 
@@ -444,7 +523,7 @@ namespace StaffandTrain.Controllers
                     for (int i = 0; i < contact_details.Count; i++)
                     {
                         var item = contact_details[i];
-                        int value = sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, spacing, ImageName);
+                        int value = sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, spacing,isRichText, ImageName);
                         if (value == 1) intmailCount++;
                     }
                 }
@@ -454,13 +533,19 @@ namespace StaffandTrain.Controllers
                     for (int i = 0; i < contact_details.Count; i++)
                     {
                         var item = contact_details[i];
-                        int value =     sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, spacing, ImageName);
+                        int value =     sendemailcontact(item.contactfullname, item.contactemail, Request.Form["txtsubject"], templatedata.EmailBody, Request.Form["txtcompany"], Request.Form["txtemail"], Request.Form["txtservername"], Request.Form["txtpassword"], Request.Form["txtportno"], enablessl, spacing,isRichText, ImageName);
                         if (value == 1) intmailCount++;
                     }
                 }
+                if (isRichText == true)
+                {
+                    TempData["Message"] = "Total Mail sent : " + intmailCount +", as Rich Text Format";
+                }
+                else
+                {
+                    TempData["Message"] = "Total Mail sent : " + intmailCount;
 
-                TempData["Message"] = "Total Mail sent : " + intmailCount;
-
+                }
                 // TempData["Message"] = "Total Mail sent : " + intmailCount;
             }
             catch (Exception ex)
@@ -473,7 +558,7 @@ namespace StaffandTrain.Controllers
         }
 
         [ValidateInput(false)]
-        public int sendemailcontact(string Name, string ContactEmail, string Subject, string EmailBody,string companyname, string senderemail, string servername, string password, string portno, bool enablessl, int spacing, string ImageName = "")
+        public int sendemailcontact(string Name, string ContactEmail, string Subject, string EmailBody, string companyname, string senderemail, string servername, string password, string portno, bool enablessl, int spacing,bool isRichorHtml, string ImageName = "")
         {
             int returnvalue = 0;
 
@@ -483,48 +568,51 @@ namespace StaffandTrain.Controllers
                 string[] fName = string.IsNullOrEmpty(Name) ? new string[] { "" } : Name.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
                 string str = EmailBody;
+                
                 string subj = Subject;
 
-                string[] strArr = null;
-                string[] stringSeparators = new string[] { "<p>" };
-                strArr = str.Split(stringSeparators, StringSplitOptions.None);
-
-                if (strArr.Length > 1)
+                if (str != null)
                 {
-                    foreach (var item in strArr)
+                    string[] strArr = null;
+                    string[] stringSeparators = new string[] { "<p>" };
+                    strArr = str.Split(stringSeparators, StringSplitOptions.None);
+
+                    if (strArr.Length > 1)
                     {
-                        try
+                        foreach (var item in strArr)
                         {
-                            if (item.Contains("img"))
+                            try
                             {
-                                fullbody += "<p>" + item;
-                            }
-                            else
-                            {
-                                if (item != "")
+                                if (item.Contains("img"))
                                 {
-                                    if (item != "" && !item.Contains("<br></p>"))
+                                    fullbody += "<p>" + item;
+                                }
+                                else
+                                {
+                                    if (item != "")
                                     {
-                                        fullbody += "<p>" + item;
-                                    }
-                                    else
-                                    {
-                                        fullbody += "<p>" + item;
+                                        if (item != "" && !item.Contains("<br></p>"))
+                                        {
+                                            fullbody += "<p>" + item;
+                                        }
+                                        else
+                                        {
+                                            fullbody += "<p>" + item;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        catch (Exception ex)
-                        {
-                            continue;
+                            catch (Exception ex)
+                            {
+                                continue;
+                            }
                         }
                     }
+                    else
+                    {
+                        fullbody = str;
+                    }
                 }
-                else
-                {
-                    fullbody = str;
-                }
-
 
                 string addfnamesubject = "";
                 // Logic for font size for Name section in Email Body Starts here [SHIVAM]
@@ -541,9 +629,7 @@ namespace StaffandTrain.Controllers
                     placeholders2.Add("FirstName", fName[0]);
                 }
 
-                //if (addfnamesubject.Contains("{{name_script}}")){
-                //    addfnamesubject = addfnamesubject.Replace(" Hi {{name_script}}, ", "");
-                //}
+                
 
 
                 subj = Regex.Replace(Subject, @"\{\{(\w+)\}\}", match =>
@@ -559,19 +645,22 @@ namespace StaffandTrain.Controllers
                     }
                 });
                 // Replace placeholders with values using regular expressions
-                str = Regex.Replace(EmailBody, @"\{\{(\w+)\}\}", match =>
+                if (EmailBody != null)
                 {
-                    string placeholder = match.Groups[1].Value;
-                    if (placeholders.ContainsKey(placeholder))
+                    str = Regex.Replace(EmailBody, @"\{\{(\w+)\}\}", match =>
                     {
-                        return placeholders[placeholder];
-                    }
-                    else
-                    {
-                        return match.Value; // Keep original if no match
-                    }
-                });
-
+                        string placeholder = match.Groups[1].Value;
+                        if (placeholders.ContainsKey(placeholder))
+                        {
+                            return placeholders[placeholder];
+                        }
+                        else
+                        {
+                            return match.Value; // Keep original if no match
+                        }
+                    });
+                }
+               
                 
 
 
@@ -596,6 +685,7 @@ namespace StaffandTrain.Controllers
                             .email-preview u{text-decoration:underline !important}
                             .email-preview div{margin:10px 0;padding:10px;border:1px solid #ccc !important}
                         </style>";
+                string mailBody;
 
                 var htmlbody = $@"
                     <html>
@@ -603,7 +693,9 @@ namespace StaffandTrain.Controllers
                     <body><div class=""email-preview"">{str}</div></body>
                     </html>";
 
-                string mailBody = Server.HtmlDecode(htmlbody);
+                
+              
+
                 string Email = ContactEmail.Trim();
 
                 // Regular expression for basic email validation
@@ -614,48 +706,94 @@ namespace StaffandTrain.Controllers
                 var validEmail = regex.IsMatch(Email);
                 if (!validEmail) throw new Exception($"Invalid Email: {Email}");
 
-  
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                ServicePointManager.ServerCertificateValidationCallback =
-                    (sender, certificate, chain, sslPolicyErrors) => true;
-               
 
                 MailMessage message = new MailMessage();
-
-                //message.To.Add("info.usamaali@gmail.com");
-                message.To.Add(ContactEmail);
                 //message.To.Add("dev@talkboxsolutions.com");
-                message.Subject = subj;// addfnamesubject;
-                message.From = new System.Net.Mail.MailAddress(senderemail,companyname);
+                //message.To.Add("khuhronomi@gmail.com");
+                message.To.Add(ContactEmail);
 
-                var plainText = AlternateView.CreateAlternateViewFromString("This is the plain text version of the email.", null, "text/plain");
-                var htmlBody = AlternateView.CreateAlternateViewFromString(mailBody, null, "text/html");
+                message.Subject = subj;
+                message.From = new MailAddress(senderemail, companyname);
 
-                message.AlternateViews.Add(plainText);
-                message.AlternateViews.Add(htmlBody);
+                //mailBody = Server.HtmlDecode(htmlbody);
+                //message.IsBodyHtml = true;
 
-                message.IsBodyHtml = true;
-                message.AlternateViews.Add(Mail_Body(ImageName, mailBody));
-                message.Headers.Add("Message-ID", $"<{Guid.NewGuid()}@nearshore-usa.com>");
-                message.Headers.Add("X-Mailer", "Near Shore SMTP v1.0");
+                if (isRichorHtml != true)
+                {
+                    mailBody = Server.HtmlDecode(htmlbody);
+                    message.IsBodyHtml = true;
+                }
+                else
+                {
+                    mailBody = ConvertRichTextToPlainText(str);
+                    // message.IsBodyHtml = true;
+
+                }
+
+                message.Body = mailBody;
+                
+
+                
                 using (SmtpClient SmtpMail = new SmtpClient())
                 {
-                    SmtpMail.Timeout = 30000; // Increase the timeout to 30 seconds
+                    SmtpMail.Timeout = 30000;
                     SmtpMail.UseDefaultCredentials = false;
-                    SmtpMail.Host =  servername;
-                    SmtpMail.Port =  Convert.ToInt32(portno);//Port for sending the mail  
-                    SmtpMail.Credentials = new System.Net.NetworkCredential(senderemail, password);
+                    SmtpMail.Host = servername;
+                    SmtpMail.Port = Convert.ToInt32(portno);
+                    SmtpMail.Credentials = new NetworkCredential(senderemail, password);
                     SmtpMail.DeliveryMethod = SmtpDeliveryMethod.Network;
-                    SmtpMail.EnableSsl = Convert.ToBoolean(enablessl);
+                    SmtpMail.EnableSsl = Convert.ToBoolean(enablessl); 
                     SmtpMail.ServicePoint.MaxIdleTime = 10000;
                     SmtpMail.ServicePoint.SetTcpKeepAlive(true, 12000, 12000);
-                    message.BodyEncoding = Encoding.Default;
-                    
-                    SmtpMail.Send(message); //Smtpclient to send the mail message  
 
-                    // One second of delay while email processing in loop (BY SHIVAM)
+                        SmtpMail.Send(message);
+                   
+                
 
-                    if (spacing != 0) {
+                //ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                //ServicePointManager.ServerCertificateValidationCallback =
+                //    (sender, certificate, chain, sslPolicyErrors) => true;
+
+
+                //MailMessage message = new MailMessage();
+
+                ////message.To.Add("info.usamaali@gmail.com");
+                ////message.To.Add(ContactEmail);
+                //message.To.Add("dev@talkboxsolutions.com");
+                //message.To.Add("noman.ali@arcanainfo.com");
+
+                //message.Subject = subj;// addfnamesubject;
+                //message.From = new System.Net.Mail.MailAddress(senderemail,companyname);
+
+                //var plainText = AlternateView.CreateAlternateViewFromString("This is the plain text version of the email.", null, "text/plain");
+                //var htmlBody = AlternateView.CreateAlternateViewFromString(mailBody, null, "text/html");
+
+                //message.AlternateViews.Add(plainText);
+                //message.AlternateViews.Add(htmlBody);
+
+                //message.IsBodyHtml = true;
+                //message.AlternateViews.Add(Mail_Body(ImageName, mailBody));
+                //message.Headers.Add("Message-ID", $"<{Guid.NewGuid()}@nearshore-usa.com>");
+                //message.Headers.Add("X-Mailer", "Near Shore SMTP v1.0");
+                //using (SmtpClient SmtpMail = new SmtpClient())
+                //{
+                //    SmtpMail.Timeout = 30000; // Increase the timeout to 30 seconds
+                //    SmtpMail.UseDefaultCredentials = false;
+                //    SmtpMail.Host =  servername;
+                //    SmtpMail.Port =  Convert.ToInt32(portno);//Port for sending the mail  
+                //    SmtpMail.Credentials = new System.Net.NetworkCredential(senderemail, password);
+                //    SmtpMail.DeliveryMethod = SmtpDeliveryMethod.Network;
+                //    SmtpMail.EnableSsl = Convert.ToBoolean(enablessl);
+                //    SmtpMail.ServicePoint.MaxIdleTime = 10000;
+                //    SmtpMail.ServicePoint.SetTcpKeepAlive(true, 12000, 12000);
+                //    message.BodyEncoding = Encoding.Default;
+
+                //    SmtpMail.Send(message); //Smtpclient to send the mail message  
+
+                // One second of delay while email processing in loop (BY SHIVAM)
+
+                if (spacing != 0) {
                         spacing = spacing * 1000;
                     }
 
